@@ -8,7 +8,7 @@ import {
     NavDropdown
 
  } from 'react-bootstrap';
- import SearchBar from "material-ui-search-bar";
+
 // Logo components
 import Logo from "../Assests/images/goa-natural-logo-mini.jpg"
 import { Link } from 'react-router-dom';
@@ -22,11 +22,22 @@ const NavbarMenu = () => {
         }
     }
     window.addEventListener("scroll", changeColor)
+
+    // lOGO size changed
+    const [size, setsize] = useState(false)
+    const changeSize = () => {
+        if(window.scrollY >= 90) {
+            setsize(true)
+        } else {
+            setsize(false)
+        }
+    }
+    window.addEventListener("scroll", changeSize)
   return (
     <div>
     <Navbar collapseOnSelect expand="lg" fixed="top" className={color ? "navbar navbar-bg ": "navbar"}>
       <Container fluid>
-        <Navbar.Brand as={Link} to="/" ><img src={Logo} alt="Goa Natural Logo" /></Navbar.Brand>
+        <Navbar.Brand as={Link} to="/"  className={size ? "navbar-brand img" :"navbar-brand-changed-size img" }><img src={Logo} alt="Goa Natural Logo" /></Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="ms-auto">
