@@ -9,8 +9,8 @@ const CoconutSection = () => {
   // };
 
   return (
-    <div>
-      <></>
+    <div className="container">
+      <image src="/item-pics/100ml-coconut-back.jpg" />
     </div>
   );
 };
