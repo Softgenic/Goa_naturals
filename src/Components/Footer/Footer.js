@@ -1,0 +1,52 @@
+import React from 'react'
+import { 
+    Container,
+    Row,
+    Col
+ } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
+ import "./Footer.css";
+const Footer = () => {
+  return (
+    <div>
+        <Container fluid className="footer">
+            <Row>
+                <Col md={4}>
+                    <h5>GOA NATURAL</h5>
+                    <p>The Original Cold Pressed Oil from Goa, India</p>
+                    <span className="mt-2"><i className="fas fa-map-marker-alt"></i></span>
+                    <p>Plot 34, Kakoda Industrial Estate – Phase III, Kakoda, Curchorem, Goa, India 403706</p>
+                    <span className="mt-2"><i className="fas fa-envelope"></i></span>
+                    <p>adwingoa@gmail.com | goanatural2222@gmail.com</p>
+                    <span className="d-flex mt-2"><i className="fas fa-phone-alt me-2"></i> <p>9822168979 | 8007774122 | 8605070650</p></span>
+                </Col>
+                <Col md={4}>
+                    <h5>QUICK LINKS</h5>
+                    <ul>
+                        <li><Link to="/">About us</Link></li>
+                        <li><Link to="/">Contact us</Link></li>
+                        <li><Link to="/">View all products</Link></li>
+                        <li><Link to="/">Blog</Link></li>
+                        <li><Link to="/">Rewards</Link></li>
+                    </ul>
+                    <h5>Follow us on Social Media</h5>
+                    <div className="d-flex social-icon">
+                    <i className="fab fa-facebook"></i>
+                    <i className="fab fa-twitter ms-2"></i>
+                    <i className="fab fa-instagram ms-2"></i>
+                    </div>
+                </Col>
+                <Col md={4}>
+                    <h5>NEWSLETTER</h5>
+                    <p>Subscribe to our newsletter & stay updated about latest products, offers and blogs</p>
+                    <input type="email" placeholder="Enter Email Addres" />
+                    <br></br>
+                    <button>Subscribe</button>
+                </Col>
+            </Row>
+        </Container>
+    </div>
+  )
+}
+
+export default Footer
