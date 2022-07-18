@@ -23,7 +23,7 @@
   width: auto;
   text-align: center;
   padding: 2rem;
-  height: fit-content;
+  height: 370px;
   color: black;
   border: 2px solid var(--light-green);
   box-shadow: 5px 5px 10px var(--india-green);
@@ -39,8 +39,15 @@
 
 .fff-card-title {
   padding-top: 1rem;
+  font-weight: bold;
 }
 
 .fff-card-description {
   padding-top: 1rem;
+}
+
+@media only screen and (max-width: 1100px) {
+  .fff-flex {
+    flex-direction: column;
+  }
 }
