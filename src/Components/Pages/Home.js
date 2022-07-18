@@ -9,7 +9,7 @@ const Home = () => {
       <NavbarMenu />
       <HeroSection />
       <FarmToFork />
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };
