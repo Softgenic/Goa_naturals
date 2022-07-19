@@ -27,7 +27,7 @@ const CoconutSection = () => {
                 <BsStarFill color="green" className="star" />
                 <BsStarFill color="green" className="star" />
                 <BsStarFill color="green" className="star" />
-                <BsStarFill color="green" className="star" />
+                <BsStar color="green" className="star" />
                 <BsStar color="green" className="star" />
               </div>
             </div>
@@ -44,7 +44,7 @@ const CoconutSection = () => {
                 <BsStarFill color="green" className="star" />
                 <BsStarFill color="green" className="star" />
                 <BsStarFill color="green" className="star" />
-                <BsStarFill color="green" className="star" />
+                <BsStarHalf color="green" className="star" />
                 <BsStar color="green" className="star" />
               </div>
             </div>
@@ -61,7 +61,7 @@ const CoconutSection = () => {
                 <BsStarFill color="green" className="star" />
                 <BsStarFill color="green" className="star" />
                 <BsStarFill color="green" className="star" />
-                <BsStarFill color="green" className="star" />
+                <BsStarHalf color="green" className="star" />
                 <BsStar color="green" className="star" />
               </div>
             </div>
@@ -79,7 +79,7 @@ const CoconutSection = () => {
                 <BsStarFill color="green" className="star" />
                 <BsStarFill color="green" className="star" />
                 <BsStarFill color="green" className="star" />
-                <BsStar color="green" className="star" />
+                <BsStarFill color="green" className="star" />
               </div>
             </div>
           </Col>
