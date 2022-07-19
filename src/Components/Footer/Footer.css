@@ -1,7 +1,9 @@
 .footer {
     background-color: rgb(37, 37, 37);
-    color: #fff;
-   padding: 4rem;
+     color: #fff;
+   padding-left: 4rem !important;
+   padding-right: 4rem !important;
+  
 }
 .footer .row .col-md-4 h5 {
     font-size: 18px;
@@ -21,7 +23,7 @@
    
 }
 .footer input[type="email" i] {
-    padding: 1px 2px;
+   
     width: 70%;
     height: 40px;
 }

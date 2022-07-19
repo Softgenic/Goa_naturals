@@ -15,7 +15,19 @@ const NavbarMenu = () => {
       setcolor(false);
     }
   };
+
   window.addEventListener("scroll", changeColor);
+
+  // lOGO size changed
+  const [size, setsize] = useState(false);
+  const changeSize = () => {
+    if (window.scrollY >= 90) {
+      setsize(true);
+    } else {
+      setsize(false);
+    }
+  };
+  window.addEventListener("scroll", changeSize);
   return (
     <div>
       <Navbar

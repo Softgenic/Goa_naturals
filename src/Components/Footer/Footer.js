@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 const Footer = () => {
   return (
     <div>
-        <Container fluid className="footer">
+        <Container fluid className="footer py-5">
             <Row>
                 <Col md={4}>
                     <h5>GOA NATURAL</h5>
