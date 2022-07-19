@@ -4,7 +4,7 @@ import { BsStarFill, BsStarHalf, BsStar } from "react-icons/bs";
 
 import Coconut from "../Assests/images/coconut.jpg";
 import "./Products.css";
-const GroundnutSection = () => {
+const SafflowerSection = () => {
   // const [index, setIndex] = useState(0);
 
   // const handleSelect = (selectedIndex, e) => {
@@ -13,16 +13,16 @@ const GroundnutSection = () => {
 
   return (
     <Container className="body" fluid>
-      <h1 className="heading">ColdPressed Groundnut oil</h1>
+      <h1 className="heading">ColdPressed Safflower oil</h1>
       <div className="container-box">
         <Row>
           <Col xs={12} md={3}>
             <div className="prd-col">
               <img
-                src="/item-pics/500ml-groundnut-front.jpg"
+                src="/item-pics/500ml-safflower-front.jpg"
                 className="prd-img"
               />
-              <h4 className="prd-heading">500ml groundnut oil</h4>
+              <h4 className="prd-heading">500ml safflower oil</h4>
               <div className="stars">
                 <BsStarFill color="green" className="star" />
                 <BsStarFill color="green" className="star" />
@@ -30,17 +30,17 @@ const GroundnutSection = () => {
                 <BsStarHalf color="green" className="star" />
                 <BsStar color="green" className="star" />
               </div>
-              <span>₹ 350.00 - ₹ 273.00</span>
+              <span>₹ 325.00 - ₹ 287.00</span>
             </div>
           </Col>
 
           <Col xs={12} md={3}>
             <div className="prd-col">
               <img
-                src="/item-pics/1ltr-groundnut-front.jpg"
+                src="/item-pics/1ltr-safflower-front.jpg"
                 className="prd-img"
               />
-              <h4 className="prd-heading">1ltr groundnut oil</h4>
+              <h4 className="prd-heading">1ltr safflower oil</h4>
               <div className="stars">
                 <BsStarFill color="green" className="star" />
                 <BsStarFill color="green" className="star" />
@@ -48,7 +48,7 @@ const GroundnutSection = () => {
                 <BsStarFill color="green" className="star" />
                 <BsStarFill color="green" className="star" />
               </div>
-              <span>₹ 700.00 - ₹ 525.00</span>
+              <span>₹ 750.00 - ₹ 546.00</span>
             </div>
           </Col>
         </Row>
@@ -57,4 +57,4 @@ const GroundnutSection = () => {
   );
 };
 
-export default GroundnutSection;
+export default SafflowerSection;

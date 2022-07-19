@@ -13,7 +13,7 @@ const CoconutSection = () => {
 
   return (
     <Container className="body" fluid>
-      <h1 className="heading"> Coconut oil</h1>
+      <h1 className="heading">ColdPressed Coconut oil</h1>
       <div className="container-box">
         <Row>
           <Col xs={12} md={3}>
