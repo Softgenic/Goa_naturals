@@ -13,34 +13,16 @@ const GroundnutSection = () => {
 
   return (
     <Container className="body" fluid>
-      <h1 className="heading"> Coconut oil</h1>
+      <h1 className="heading"> Groundnut oil</h1>
       <div className="container-box">
         <Row>
           <Col xs={12} md={3}>
             <div className="prd-col">
               <img
-                src="/item-pics/100ml-coconut-front.jpg"
+                src="/item-pics/500ml-groundnut-front.jpg"
                 className="prd-img"
               />
-              <h4 className="prd-heading">100ml coconut oil</h4>
-              <div className="stars">
-                <BsStarFill color="green" className="star" />
-                <BsStarFill color="green" className="star" />
-                <BsStarFill color="green" className="star" />
-                <BsStar color="green" className="star" />
-                <BsStar color="green" className="star" />
-              </div>
-              <span>₹ 75.00 - ₹ 62.00</span>
-            </div>
-          </Col>
-
-          <Col xs={12} md={3}>
-            <div className="prd-col">
-              <img
-                src="/item-pics/500ml-coconut-front.jpg"
-                className="prd-img"
-              />
-              <h4 className="prd-heading">500ml coconut oil</h4>
+              <h4 className="prd-heading">500ml groundnut oil</h4>
               <div className="stars">
                 <BsStarFill color="green" className="star" />
                 <BsStarFill color="green" className="star" />
@@ -48,35 +30,17 @@ const GroundnutSection = () => {
                 <BsStarHalf color="green" className="star" />
                 <BsStar color="green" className="star" />
               </div>
-              <span>₹ 300.00 - ₹ 259.00</span>
+              <span>₹ 350.00 - ₹ 273.00</span>
             </div>
           </Col>
 
           <Col xs={12} md={3}>
             <div className="prd-col">
               <img
-                src="/item-pics/750ml-coconut-front.jpg"
+                src="/item-pics/1ltr-groundnut-front.jpg"
                 className="prd-img"
               />
-              <h4 className="prd-heading">750ml coconut oil</h4>
-              <div className="stars">
-                <BsStarFill color="green" className="star" />
-                <BsStarFill color="green" className="star" />
-                <BsStarFill color="green" className="star" />
-                <BsStarHalf color="green" className="star" />
-                <BsStar color="green" className="star" />
-              </div>
-              <span>₹ 500.00 - ₹ 385.00</span>
-            </div>
-          </Col>
-
-          <Col xs={12} md={3}>
-            <div className="prd-col">
-              <img
-                src="/item-pics/1ltr-coconut-front.jpg"
-                className="prd-img"
-              />
-              <h4 className="prd-heading">1ltr coconut oil</h4>
+              <h4 className="prd-heading">1ltr groundnut oil</h4>
               <div className="stars">
                 <BsStarFill color="green" className="star" />
                 <BsStarFill color="green" className="star" />
@@ -84,7 +48,7 @@ const GroundnutSection = () => {
                 <BsStarFill color="green" className="star" />
                 <BsStarFill color="green" className="star" />
               </div>
-              <span>₹ 600.00 - ₹ 490.00</span>
+              <span>₹ 700.00 - ₹ 525.00</span>
             </div>
           </Col>
         </Row>
