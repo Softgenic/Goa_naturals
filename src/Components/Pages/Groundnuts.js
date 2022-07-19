@@ -2,7 +2,7 @@ import React from "react";
 import NavbarMenu from "../NavbarMenu/NavbarMenu";
 import GroundnutSection from "../Products/GroundnutSection";
 import Footer from "../Footer/Footer";
-const Groundnut = () => {
+const Groundnuts = () => {
   return (
     <div>
       <NavbarMenu />
@@ -12,4 +12,4 @@ const Groundnut = () => {
   );
 };
 
-export default Groundnut;
+export default Groundnuts;
