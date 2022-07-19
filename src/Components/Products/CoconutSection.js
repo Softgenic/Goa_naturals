@@ -17,22 +17,22 @@ const CoconutSection = () => {
         <Row>
           <Col xs={12} md={3} className="prd-col">
             <img src="/item-pics/100ml-coconut-front.jpg" className="prd-img" />
-            <h4>100ml coconut oil</h4>
+            <h4 className="prd-heading">100ml coconut oil</h4>
           </Col>
 
           <Col xs={12} md={3} className="prd-col">
             <img src="/item-pics/500ml-coconut-front.jpg" className="prd-img" />
-            <h4>500ml coconut oil</h4>
+            <h4 className="prd-heading">500ml coconut oil</h4>
           </Col>
 
           <Col xs={12} md={3} className="prd-col">
             <img src="/item-pics/750ml-coconut-front.jpg" className="prd-img" />
-            <h4>750ml coconut oil</h4>
+            <h4 className="prd-heading">750ml coconut oil</h4>
           </Col>
 
           <Col xs={12} md={3} className="prd-col">
             <img src="/item-pics/1ltr-coconut-front.jpg" className="prd-img" />
-            <h4>1ltr coconut oil</h4>
+            <h4 className="prd-heading">1ltr coconut oil</h4>
           </Col>
         </Row>
       </div>

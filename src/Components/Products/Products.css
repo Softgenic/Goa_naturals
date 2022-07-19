@@ -12,6 +12,7 @@
   margin-top: 90px;
   text-align: center;
   font-family: Manrope;
+  margin-bottom: 30px;
 }
 
 .prd-col {
@@ -20,8 +21,14 @@
 }
 
 .prd-img {
-  width: 80%;
+  width: 90%;
   height: 300px;
+  border-radius: 10px;
+}
+
+.prd-heading {
+  font-family: Manrope;
+  margin-top: 10px;
 }
 
 /* Extra small devices (phones, 600px and down) */
