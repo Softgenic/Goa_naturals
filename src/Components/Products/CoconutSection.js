@@ -14,18 +14,23 @@ const CoconutSection = () => {
     <Container className="body" fluid>
       <h1 className="heading"> Coconut oil</h1>
       <div className="container-box">
-        <div className="col-md-4">
-          <img src="/item-pics/100ml-coconut-back.jpg" height="700px" />
-        </div>
-        <div className="col-md-4">
-          <img src="/item-pics/100ml-coconut-back.jpg" height="700px" />
-        </div>
-        <div className="col-md-4">
-          <img src="/item-pics/100ml-coconut-back.jpg" height="700px" />
-        </div>
-        <div className="col-md-4">
-          <img src="/item-pics/100ml-coconut-back.jpg" height="700px" />
-        </div>
+        <Row>
+          <Col xs={12} md={3} className="prd-col">
+            <img src="/item-pics/100ml-coconut-back.jpg" className="prd-img" />
+          </Col>
+
+          <Col xs={12} md={3} className="prd-col">
+            <img src="/item-pics/100ml-coconut-back.jpg" className="prd-img" />
+          </Col>
+
+          <Col xs={12} md={3} className="prd-col">
+            <img src="/item-pics/100ml-coconut-back.jpg" className="prd-img" />
+          </Col>
+
+          <Col xs={12} md={3} className="prd-col">
+            <img src="/item-pics/100ml-coconut-back.jpg" className="prd-img" />
+          </Col>
+        </Row>
       </div>
     </Container>
   );
