@@ -21,6 +21,7 @@ const TurmericSection = () => {
               <img
                 src="/item-pics/500gm-turmeric-front.jpg"
                 className="prd-img"
+                alt=""
               />
               <h4 className="prd-heading">500gm turmeric powder</h4>
               <div className="stars">
@@ -39,6 +40,7 @@ const TurmericSection = () => {
               <img
                 src="/item-pics/1kg-turmeric-front.jpg"
                 className="prd-img"
+                alt=""
               />
               <h4 className="prd-heading">1kg turmeric powder</h4>
               <div className="stars">

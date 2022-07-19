@@ -2,11 +2,16 @@ import React, { useState } from "react";
 import "./NavbarMenu.css";
 // React-bootstrap components
 import { Navbar, Container, Nav, NavDropdown } from "react-bootstrap";
-import SearchBar from "material-ui-search-bar";
+
 // Logo components
 import Logo from "../Assets/images/goa-natural-logo-mini.jpg";
 import { Link } from "react-router-dom";
 const NavbarMenu = () => {
+// close mobile menu Navbar
+const [click, setClick] = useState(false);
+const handleClick = () => setClick(!click);
+const closeMobileMenu = () => setClick(false);
+
   const [color, setcolor] = useState(false);
   const changeColor = () => {
     if (window.scrollY >= 90) {
@@ -48,31 +53,33 @@ const NavbarMenu = () => {
           >
             <img src={Logo} alt="Goa Natural Logo" />
           </Navbar.Brand>
-          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+          <Navbar.Toggle aria-controls="responsive-navbar-nav" onClick={handleClick}><i className={click ? 'fas fa-times' : 'fas fa-bars' } /></Navbar.Toggle>
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="ms-auto">
               {/* Product dropdown start here */}
               <NavDropdown title="Products" id="collasible-nav-dropdown" show={showdropdown} onMouseEnter={() => setshowdropdown(true)} onMouseLeave={() => setshowdropdown(false)}>
-                <NavDropdown.Item href="#action/3.1">SunFlower Oil</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.2">
+                <NavDropdown.Item as={Link} to="/" eventKey={1} onClick={closeMobileMenu}>SunFlower Oil</NavDropdown.Item>
+                <NavDropdown.Item as={Link} to="/" eventKey={2} onClick={closeMobileMenu}>
                   Turmeric Powder
                 </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">
+                <NavDropdown.Item as={Link} to="/" eventKey={3} onClick={closeMobileMenu}>
                   Groundnut Oil
                 </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.4">
+                <NavDropdown.Item as={Link} to="/" eventKey={4} onClick={closeMobileMenu}>
                   Coconut Oil
                 </NavDropdown.Item>
               </NavDropdown>
               {/* Product dropdown end */}
 
             {/* More section Dropdown start */}
-              <Nav.Link as={Link} to="/">Contact Us</Nav.Link>
-              <Nav.Link as={Link} to="/">About Us</Nav.Link>
+              <Nav.Link as={Link} to="/" onClick={closeMobileMenu} eventKey={1}>Contact Us</Nav.Link>
+              <Nav.Link as={Link} to="/" onClick={closeMobileMenu} eventKey={2}>About Us</Nav.Link>
               
             {/* Login Link */}
-            <Nav.Link as={Link} to="/">Login</Nav.Link>
+            <Nav.Link as={Link} to="/" onClick={closeMobileMenu} eventKey={3}>Login</Nav.Link>
+            
           </Nav>
+          
           </Navbar.Collapse>
           
           <span class="fa-stack fa-1x has-badge" data-count="5">
@@ -82,6 +89,7 @@ const NavbarMenu = () => {
         </Container>
        
       </Navbar>
+     
     </div>
   );
 };

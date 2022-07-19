@@ -25,9 +25,11 @@
     font-family: Signika,serif;
     color: green !important;
     margin-right: 1rem;
+    outline:  #96e072ff;
     
 }
 .navbar-brand img {
+    border-radius: 10px;
     height: 60px;
     width: auto;
     transition: all 0.4s ease 0s;
@@ -47,24 +49,40 @@
     border-radius: 999px;
     line-height: 0.55em;
     color: white;
-    color: #131212;
+    color: #f6f0f0;
     text-align: center;
     min-width: 2em;
     font-weight: bold;
-    background: white;
-    border: 1px solid black;
+    background: rgb(234, 20, 20);
+   
     
   }
   .navbar .fa-shopping-cart{
     transform: scale(1.8);
+    width: 45px;
+    color:  #96e072ff;
    
   }
 
-  
-  .navbar.red-cart {
-    color: #0c0b0b;
-    
-    
+
+  .navbar-nav .dropdown-menu {
+    border: none !important;
+    border-radius: 0 ;
+    margin-top: 1rem;
+    width: 250px;
+
+  }
+  .navbar-nav .dropdown-menu .dropdown-item {
+    font-family: Montserrat;
+    line-height: 35px;
+    font-size: 16px;
+    background: none !important;
+
+  }
+  .navbar-nav .dropdown-menu .dropdown-item:hover{
+    color: green;
+    transform : translateX(10px);
+    transition: all .5s;
   }
 @media(max-width: 992px) {
     .navbar, .navbar-bg {
@@ -94,5 +112,7 @@
         background-color: #fff;
         box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
     }
- 
+    .navbar-nav .dropdown-menu {
+        width: auto;
+    }
 }

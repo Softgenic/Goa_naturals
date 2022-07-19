@@ -75,6 +75,7 @@ const CoconutSection = () => {
               <img
                 src="/item-pics/1ltr-coconut-front.jpg"
                 className="prd-img"
+                alt=""
               />
               <h4 className="prd-heading">1ltr coconut oil</h4>
               <div className="stars">

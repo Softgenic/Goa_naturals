@@ -21,6 +21,7 @@ const GroundnutSection = () => {
               <img
                 src="/item-pics/500ml-groundnut-front.jpg"
                 className="prd-img"
+                alt=""
               />
               <h4 className="prd-heading">500ml groundnut oil</h4>
               <div className="stars">
@@ -39,6 +40,7 @@ const GroundnutSection = () => {
               <img
                 src="/item-pics/1ltr-groundnut-front.jpg"
                 className="prd-img"
+                alt=""
               />
               <h4 className="prd-heading">1ltr groundnut oil</h4>
               <div className="stars">
