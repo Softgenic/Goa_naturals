@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./NavbarMenu.css";
 // React-bootstrap components
 import { Navbar, Container, Nav, NavDropdown } from "react-bootstrap";
-
+import SearchBar from "material-ui-search-bar";
 // Logo components
 import Logo from "../Assets/images/goa-natural-logo-mini.jpg";
 import { Link } from "react-router-dom";
@@ -27,6 +27,9 @@ const NavbarMenu = () => {
     }
   };
   window.addEventListener("scroll", changeSize);
+
+  // Show drop down on mousehover
+  const [showdropdown, setshowdropdown] = useState(false);
   return (
     <div>
       <Navbar
@@ -49,7 +52,7 @@ const NavbarMenu = () => {
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="ms-auto">
               {/* Product dropdown start here */}
-              <NavDropdown title="Products" id="collasible-nav-dropdown">
+              <NavDropdown title="Products" id="collasible-nav-dropdown" show={showdropdown} onMouseEnter={() => setshowdropdown(true)} onMouseLeave={() => setshowdropdown(false)}>
                 <NavDropdown.Item href="#action/3.1">SunFlower Oil</NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.2">
                   Turmeric Powder
@@ -71,6 +74,7 @@ const NavbarMenu = () => {
             <Nav.Link as={Link} to="/">Login</Nav.Link>
           </Nav>
           </Navbar.Collapse>
+          
           <span class="fa-stack fa-1x has-badge" data-count="5">
         
           <i  className="fa fa-shopping-cart  red-cart"></i>

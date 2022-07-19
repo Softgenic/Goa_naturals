@@ -18,11 +18,14 @@
 .navbar .navbar-toggler:focus{
     box-shadow: none;
 }
+
 .navbar-nav .nav-link {
     font-weight: 600;
     font-size: 17px;
     font-family: Signika,serif;
     color: green !important;
+    margin-right: 1rem;
+    
 }
 .navbar-brand img {
     height: 60px;
@@ -50,22 +53,32 @@
     font-weight: bold;
     background: white;
     border: 1px solid black;
+    
   }
-  
+  .navbar .fa-shopping-cart{
+    transform: scale(1.8);
+   
+  }
 
   
   .navbar.red-cart {
     color: #0c0b0b;
+    
     
   }
 @media(max-width: 992px) {
     .navbar, .navbar-bg {
         background-color: #fff !important;
         padding: auto;
+        padding-right: 1rem;
+        
     }
     .navbar img {
         margin-left: 6rem;
-        height: 80;
+        height: 80 ;
+    }
+    .navbar-brand img,.navbar-brand-changed-size img {
+        height: 60px !important;
     }
     .navbar .navbar-collapse {
         position: fixed;
