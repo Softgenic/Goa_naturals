@@ -5,6 +5,7 @@ import Coconuts from "./Components/Pages/Coconuts";
 import Groundnuts from "./Components/Pages/Groundnuts";
 import Safflowers from "./Components/Pages/Safflowers";
 import Turmerics from "./Components/Pages/Turmerics";
+import Products from "./Components/Pages/Products";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/groundnut" element={<Groundnuts />} />
           <Route path="/safflower" element={<Safflowers />} />
           <Route path="/turmeric" element={<Turmerics />} />
+          <Route path="/products" element={<Products />} />
         </Routes>
       </BrowserRouter>
     </div>
