@@ -30,6 +30,7 @@ const CoconutSection = () => {
                 <BsStar color="green" className="star" />
                 <BsStar color="green" className="star" />
               </div>
+              <span>₹ 75.00 - ₹ 62.00</span>
             </div>
           </Col>
 
@@ -47,6 +48,7 @@ const CoconutSection = () => {
                 <BsStarHalf color="green" className="star" />
                 <BsStar color="green" className="star" />
               </div>
+              <span>₹ 300.00 - ₹ 259.00</span>
             </div>
           </Col>
 
@@ -64,6 +66,7 @@ const CoconutSection = () => {
                 <BsStarHalf color="green" className="star" />
                 <BsStar color="green" className="star" />
               </div>
+              <span>₹ 500.00 - ₹ 385.00</span>
             </div>
           </Col>
 
@@ -81,6 +84,7 @@ const CoconutSection = () => {
                 <BsStarFill color="green" className="star" />
                 <BsStarFill color="green" className="star" />
               </div>
+              <span>₹ 600.00 - ₹ 490.00</span>
             </div>
           </Col>
         </Row>
