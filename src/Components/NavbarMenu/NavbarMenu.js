@@ -71,6 +71,10 @@ const NavbarMenu = () => {
             <Nav.Link as={Link} to="/">Login</Nav.Link>
           </Nav>
           </Navbar.Collapse>
+          <span class="fa-stack fa-1x has-badge" data-count="5">
+        
+          <i  className="fa fa-shopping-cart  red-cart"></i>
+        </span>
         </Container>
        
       </Navbar>

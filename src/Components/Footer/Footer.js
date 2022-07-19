@@ -18,7 +18,7 @@ const Footer = () => {
                     <p>Plot 34, Kakoda Industrial Estate – Phase III, Kakoda, Curchorem, Goa, India 403706</p>
                     <span className="mt-2"><i className="fas fa-envelope"></i></span>
                     <p>adwingoa@gmail.com | goanatural2222@gmail.com</p>
-                    <span className="d-flex mt-2"><i className="fas fa-phone-alt me-2"></i> <p>9822168979 | 8007774122 | 8605070650</p></span>
+                    <span className="d-flex mt-2"><i className="fas fa-phone-alt me-2 mt-2"></i> <p>9822168979 | 8007774122 | 8605070650</p></span>
                 </Col>
                 <Col md={4}>
                     <h5>QUICK LINKS</h5>

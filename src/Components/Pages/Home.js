@@ -8,7 +8,6 @@ const Home = () => {
     <div>
       <NavbarMenu />
       <HeroSection />
-      <br></br>
       <FarmToFork />
       <Footer />
     </div>
