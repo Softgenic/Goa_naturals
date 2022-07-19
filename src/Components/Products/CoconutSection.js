@@ -16,31 +16,72 @@ const CoconutSection = () => {
       <h1 className="heading"> Coconut oil</h1>
       <div className="container-box">
         <Row>
-          <Col xs={12} md={3} className="prd-col">
-            <img src="/item-pics/100ml-coconut-front.jpg" className="prd-img" />
-            <h4 className="prd-heading">100ml coconut oil</h4>
-            <div className="stars">
-              <BsStarFill color="green" className="star" />
-              <BsStarFill color="green" className="star" />
-              <BsStarFill color="green" className="star" />
-              <BsStarFill color="green" className="star" />
-              <BsStar color="green" className="star" />
+          <Col xs={12} md={3}>
+            <div className="prd-col">
+              <img
+                src="/item-pics/100ml-coconut-front.jpg"
+                className="prd-img"
+              />
+              <h4 className="prd-heading">100ml coconut oil</h4>
+              <div className="stars">
+                <BsStarFill color="green" className="star" />
+                <BsStarFill color="green" className="star" />
+                <BsStarFill color="green" className="star" />
+                <BsStarFill color="green" className="star" />
+                <BsStar color="green" className="star" />
+              </div>
             </div>
           </Col>
 
-          <Col xs={12} md={3} className="prd-col">
-            <img src="/item-pics/500ml-coconut-front.jpg" className="prd-img" />
-            <h4 className="prd-heading">500ml coconut oil</h4>
+          <Col xs={12} md={3}>
+            <div className="prd-col">
+              <img
+                src="/item-pics/500ml-coconut-front.jpg"
+                className="prd-img"
+              />
+              <h4 className="prd-heading">500ml coconut oil</h4>
+              <div className="stars">
+                <BsStarFill color="green" className="star" />
+                <BsStarFill color="green" className="star" />
+                <BsStarFill color="green" className="star" />
+                <BsStarFill color="green" className="star" />
+                <BsStar color="green" className="star" />
+              </div>
+            </div>
           </Col>
 
-          <Col xs={12} md={3} className="prd-col">
-            <img src="/item-pics/750ml-coconut-front.jpg" className="prd-img" />
-            <h4 className="prd-heading">750ml coconut oil</h4>
+          <Col xs={12} md={3}>
+            <div className="prd-col">
+              <img
+                src="/item-pics/750ml-coconut-front.jpg"
+                className="prd-img"
+              />
+              <h4 className="prd-heading">750ml coconut oil</h4>
+              <div className="stars">
+                <BsStarFill color="green" className="star" />
+                <BsStarFill color="green" className="star" />
+                <BsStarFill color="green" className="star" />
+                <BsStarFill color="green" className="star" />
+                <BsStar color="green" className="star" />
+              </div>
+            </div>
           </Col>
 
-          <Col xs={12} md={3} className="prd-col">
-            <img src="/item-pics/1ltr-coconut-front.jpg" className="prd-img" />
-            <h4 className="prd-heading">1ltr coconut oil</h4>
+          <Col xs={12} md={3}>
+            <div className="prd-col">
+              <img
+                src="/item-pics/1ltr-coconut-front.jpg"
+                className="prd-img"
+              />
+              <h4 className="prd-heading">1ltr coconut oil</h4>
+              <div className="stars">
+                <BsStarFill color="green" className="star" />
+                <BsStarFill color="green" className="star" />
+                <BsStarFill color="green" className="star" />
+                <BsStarFill color="green" className="star" />
+                <BsStar color="green" className="star" />
+              </div>
+            </div>
           </Col>
         </Row>
       </div>
