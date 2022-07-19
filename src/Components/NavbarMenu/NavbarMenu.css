@@ -116,3 +116,35 @@
         width: auto;
     }
 }
+
+/* LOGIN SIGNUP MODAL MODAL CSS */
+.auth-modal {
+    padding: auto;
+}
+.auth-modal .modal-header {
+    border-bottom: none !important;
+}
+.auth-modal .modal-header .btn-close {
+    background-color: red !important;
+    border-radius: 50px;
+    color: #fff !important;
+}
+.auth-modal .modal-header .btn-close:hover{
+    translate: translateX(20px);
+}
+.auth-modal .toggler{
+    justify-content: center;
+}
+.auth-modal .toggler .card {
+    width: 10rem;
+    height: 3rem;
+    justify-content: center;
+    text-align: center;
+    font-family: Montserrat, sans-serif;
+    font-weight: 700;
+    border-radius: 0;
+}
+.auth-modal .toggler .active {
+    background-color: rgb(48, 218, 10);
+    color: #fff;
+}

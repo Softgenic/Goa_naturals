@@ -1,11 +1,16 @@
 import React, { useState } from "react";
 import "./NavbarMenu.css";
 // React-bootstrap components
-import { Navbar, Container, Nav, NavDropdown } from "react-bootstrap";
+import { Navbar, Container, Nav, NavDropdown,Modal, Col, Row, Image, Card } from "react-bootstrap";
 
 // Logo components
 import Logo from "../Assets/images/goa-natural-logo-mini.jpg";
+// Modal Left Image 
+import ModalImage from "../Assets/Goa-natural/Goa-Natural-modal1.png";
 import { Link } from "react-router-dom";
+
+// SignIn component
+import SignIn from "../SignIn/SignIn";
 const NavbarMenu = () => {
 // close mobile menu Navbar
 const [click, setClick] = useState(false);
@@ -35,6 +40,15 @@ const closeMobileMenu = () => setClick(false);
 
   // Show drop down on mousehover
   const [showdropdown, setshowdropdown] = useState(false);
+
+  //Modal state
+  const [showModal, setShowModal] = useState(false);
+
+  const handleClose = () => setShowModal(false);
+  const handleShow = () => setShowModal(true);
+  // Toggler switch state
+  const [switcher, setswitcher]= useState(false);
+  const handleSwitcher = ()=> setswitcher(!switcher);
   return (
     <div>
       <Navbar
@@ -76,7 +90,7 @@ const closeMobileMenu = () => setClick(false);
               <Nav.Link as={Link} to="/" onClick={closeMobileMenu} eventKey={2}>About Us</Nav.Link>
               
             {/* Login Link */}
-            <Nav.Link as={Link} to="/" onClick={closeMobileMenu} eventKey={3}>Login</Nav.Link>
+            <Nav.Link  onClick={closeMobileMenu && handleShow } >Login</Nav.Link>
             
           </Nav>
           
@@ -89,7 +103,33 @@ const closeMobileMenu = () => setClick(false);
         </Container>
        
       </Navbar>
+
+  {/* Login signup Modal box */}
+      <Modal show={showModal} onHide={handleClose} size="lg" className="auth-modal">
+        <Modal.Header closeButton>
+         
+        </Modal.Header>
+        <Modal.Body>
+          <Row>
+            <Col lg={5}>
+              <Image src={ModalImage} fluid />
+            </Col>
+            <Col lg={7}>
+              {/* card button for switch SignIn to signup */}
+                <div className="d-flex toggler mt-4">
+                  <Card onClick={handleSwitcher} className={switcher ? "active" :"notactive"}>
+                    Sign In
+                  </Card>
+                  <Card onClick={handleSwitcher} className={switcher ? "active" :"notactive"}>
+                   sign Up
+                  </Card>
+                </div>
+              <SignIn />
+            </Col>
+          </Row>
+        </Modal.Body>
      
+      </Modal>
     </div>
   );
 };
