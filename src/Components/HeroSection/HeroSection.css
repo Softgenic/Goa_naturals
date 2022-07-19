@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300&family=Montserrat&family=Playfair+Display&family=Poppins:wght@200&family=Signika:wght@300&display=swap');
-.carousel-item img {
-    height: 90vh;
-}
+/* .carousel-item img {
+
+} */
 .carousel-indicators{
     display: none !important;
 }
 .carousel-caption {
 
- top: 395px;
+ top: 250px;
 }
 .carousel-caption .btn {
     border-radius: 0;
