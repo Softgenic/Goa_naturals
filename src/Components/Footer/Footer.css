@@ -1,37 +1,34 @@
 .footer {
-    background-color: rgb(37, 37, 37);
-     color: #fff;
-   padding-left: 4rem !important;
-   padding-right: 4rem !important;
-  
+  background-color: rgb(37, 37, 37);
+  color: #fff;
+  padding-left: 5rem !important;
+  padding-right: 5rem !important;
 }
 .footer .row .col-md-4 h5 {
-    font-size: 18px;
+  font-size: 18px;
 }
 .footer .row .col-md-4 p {
-    color: #808285;
+  color: #808285;
 }
 .footer .row .col-md-4 ul {
-    list-style: none;
+  list-style: none;
 }
 .footer .row .col-md-4 ul li {
-    line-height: 30px;
+  line-height: 30px;
 }
-.footer .row .col-md-4 ul li a{
-    text-decoration: none;
-    color: #808285;
-   
+.footer .row .col-md-4 ul li a {
+  text-decoration: none;
+  color: #808285;
 }
 .footer input[type="email" i] {
-   
-    width: 70%;
-    height: 40px;
+  width: 70%;
+  height: 40px;
 }
 .footer button {
-    margin-top: 0.4rem;
-    background-color: rgb(6, 136, 6);
-    color: #fff;
-    padding: 10px;
-    width: 50%;
-    border: none;
+  margin-top: 0.4rem;
+  background-color: rgb(6, 136, 6);
+  color: #fff;
+  padding: 10px;
+  width: 50%;
+  border: none;
 }

@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import "./NavbarMenu.css";
 // React-bootstrap components
 import { Navbar, Container, Nav, NavDropdown } from "react-bootstrap";
-import SearchBar from "material-ui-search-bar";
 // Logo components
-import Logo from "../Assests/images/goa-natural-logo-mini.jpg";
+import Logo from "../Assets/images/goa-natural-logo-mini.jpg";
+import SearchBar from "material-ui-search-bar";
 import { Link } from "react-router-dom";
 const NavbarMenu = () => {
   const [color, setcolor] = useState(false);
@@ -37,7 +37,13 @@ const NavbarMenu = () => {
         className={color ? "navbar navbar-bg " : "navbar"}
       >
         <Container fluid>
-          <Navbar.Brand as={Link} to="/">
+          <Navbar.Brand
+            as={Link}
+            to="/"
+            className={
+              size ? "navbar-brand img" : "navbar-brand-changed-size img"
+            }
+          >
             <img src={Logo} alt="Goa Natural Logo" />
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -45,6 +51,7 @@ const NavbarMenu = () => {
             <Nav className="ms-auto">
               {/* Product dropdown start here */}
               <NavDropdown title="Products" id="collasible-nav-dropdown">
+
                 <NavDropdown.Item href="/coconut">Coconut oil</NavDropdown.Item>
                 <NavDropdown.Item href="/groundnut">
                   Groundnut oil
