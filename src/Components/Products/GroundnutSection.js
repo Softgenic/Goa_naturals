@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { BsStarFill, BsStarHalf, BsStar } from "react-icons/bs";
 
-import Coconut from "../Assests/images/coconut.jpg";
+// import Coconut from "../Assets/images/coconut.jpg";
 import "./Products.css";
 const GroundnutSection = () => {
   // const [index, setIndex] = useState(0);
@@ -21,6 +21,7 @@ const GroundnutSection = () => {
               <img
                 src="/item-pics/500ml-groundnut-front.jpg"
                 className="prd-img"
+                alt=""
               />
               <h4 className="prd-heading">500ml groundnut oil</h4>
               <div className="stars">
@@ -39,6 +40,7 @@ const GroundnutSection = () => {
               <img
                 src="/item-pics/1ltr-groundnut-front.jpg"
                 className="prd-img"
+                alt=""
               />
               <h4 className="prd-heading">1ltr groundnut oil</h4>
               <div className="stars">
