@@ -7,6 +7,8 @@ import Groundnuts from "./Components/Pages/Groundnuts";
 import Safflowers from "./Components/Pages/Safflowers";
 import Turmerics from "./Components/Pages/Turmerics";
 import Products from "./Components/Pages/Products";
+import AboutUs from "./Components/AboutUs/AboutUs";
+import ContactUs from "./Components/ContactUs/ContactUs";
 function App() {
   return (
     <div>
@@ -18,6 +20,8 @@ function App() {
           <Route path="/safflower" element={<Safflowers />} />
           <Route path="/turmeric" element={<Turmerics />} />
           <Route path="/products" element={<Products />} />
+          <Route path="/About-Us" element={<AboutUs />} />
+          <Route path="/Contact-Us" element={<ContactUs />} />
         </Routes>
       </BrowserRouter>
       <WhatsApp />

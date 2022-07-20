@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
  import "./Footer.css";
 //  flipkart amazon mini icon
 import Amzaon from "../Assets/Goa-natural/mini-amazon.png";
-import Flipkart from "../Assets/Goa-natural/mini-flipkart.png";
+import Flipkart from "../Assets/images/flipkart-logo.png";
 const Footer = () => {
   return (
     <div>
@@ -42,7 +42,7 @@ const Footer = () => {
                 <Col md={4}>
                     <h5>NEWSLETTER</h5>
                     <p>Subscribe to our newsletter & stay updated about latest products, offers and blogs</p>
-                    <input type="email" placeholder="Enter Email Addres" />
+                    <input type="email" placeholder="Enter Email Address" />
                     <br></br>
                     <button>Subscribe</button>
                     <h5 className='mt-3'>We are also available on…</h5>
