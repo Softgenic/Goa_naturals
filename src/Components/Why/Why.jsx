@@ -37,10 +37,10 @@ const Why = () => {
                 alt="only best"
                 className="features-grid-card-img"
               ></img>
-              <p className="features-grid-card-title">Only the best</p>
+              <p className="features-grid-card-title">Reviving Traditions</p>
               <p className="features-grid-card-description">
-                Selected ingredients, unrefined, chemical-free hygenic processes
-                to provide genuine products
+                Use of techniques like Cold Press, Stone Grinder, Mortar Pestle,
+                Sun Drying, etc. to promote local craft.
               </p>
             </div>
           </div>
@@ -51,10 +51,10 @@ const Why = () => {
                 alt="only best"
                 className="features-grid-card-img"
               ></img>
-              <p className="features-grid-card-title">Only the best</p>
+              <p className="features-grid-card-title">Higher Nutrition</p>
               <p className="features-grid-card-description">
-                Selected ingredients, unrefined, chemical-free hygenic processes
-                to provide genuine products
+                Natural, Whole & Unrefined food retain more nutrients than
+                conventionally produced food.
               </p>
             </div>
             <div className="features-grid-card">
@@ -63,10 +63,10 @@ const Why = () => {
                 alt="only best"
                 className="features-grid-card-img"
               ></img>
-              <p className="features-grid-card-title">Only the best</p>
+              <p className="features-grid-card-title">Residue-Free</p>
               <p className="features-grid-card-description">
-                Selected ingredients, unrefined, chemical-free hygenic processes
-                to provide genuine products
+                All by-products after processing are used as livestock feed,
+                thus leaving zero leftovers.
               </p>
             </div>
           </div>
@@ -77,10 +77,10 @@ const Why = () => {
                 alt="only best"
                 className="features-grid-card-img"
               ></img>
-              <p className="features-grid-card-title">Only the best</p>
+              <p className="features-grid-card-title">Sustainability</p>
               <p className="features-grid-card-description">
-                Selected ingredients, unrefined, chemical-free hygenic processes
-                to provide genuine products
+                Supports natural, organic agricultural practices that serve and
+                protect Mother Nature.
               </p>
             </div>
             <div className="features-grid-card">
@@ -89,10 +89,10 @@ const Why = () => {
                 alt="only best"
                 className="features-grid-card-img"
               ></img>
-              <p className="features-grid-card-title">Only the best</p>
+              <p className="features-grid-card-title">And only the Best</p>
               <p className="features-grid-card-description">
-                Selected ingredients, unrefined, chemical-free hygenic processes
-                to provide genuine products
+                Our endeavor is to create not just the best products but the
+                best lifestyle.
               </p>
             </div>
           </div>
