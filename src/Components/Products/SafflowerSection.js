@@ -20,8 +20,7 @@ const SafflowerSection = () => {
             <div className="prd-col">
               <img
                 src="/item-pics/500ml-safflower-front.jpg"
-                className="prd-img"
-                alt=""
+                className="prd-img" alt=""
               />
               <h4 className="prd-heading">500ml safflower oil</h4>
               <div className="stars">
