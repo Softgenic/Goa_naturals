@@ -9,6 +9,7 @@ import Turmerics from "./Components/Pages/Turmerics";
 import Products from "./Components/Pages/Products";
 import AboutUs from "./Components/AboutUs/AboutUs";
 import ContactUs from "./Components/ContactUs/ContactUs";
+import { ViewProduct } from "./Components/Pages/ViewProduct";
 function App() {
   return (
     <div>
@@ -22,6 +23,7 @@ function App() {
           <Route path="/products" element={<Products />} />
           <Route path="/About-Us" element={<AboutUs />} />
           <Route path="/Contact-Us" element={<ContactUs />} />
+          <Route path="/ViewProduct" element={<ViewProduct />} />
         </Routes>
       </BrowserRouter>
       <WhatsApp />
