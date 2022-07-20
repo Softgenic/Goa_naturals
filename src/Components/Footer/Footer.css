@@ -12,9 +12,11 @@
 }
 .footer .row .col-md-4 ul {
   list-style: none;
+  padding-inline-start: 0;
 }
 .footer .row .col-md-4 ul li {
   line-height: 30px;
+  
 }
 .footer .row .col-md-4 ul li a {
   text-decoration: none;
@@ -31,4 +33,7 @@
   padding: 10px;
   width: 50%;
   border: none;
+}
+.footer .affiliate img{
+  width: 100px;
 }

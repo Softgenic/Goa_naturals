@@ -1,20 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300&family=Montserrat&family=Playfair+Display&family=Poppins:wght@200&family=Signika:wght@300&display=swap');
-.carousel-item img {
-    height: 90vh;
+/* .carousel-item img {
+height: 100vh;
+position: fixed;
+
+} */
+.carousel {
+    margin-top: 6rem;
 }
 .carousel-indicators{
     display: none !important;
 }
 .carousel-caption {
 
- top: 395px;
+ top: 280px;
 }
 .carousel-caption .btn {
-    border-radius: 0;
+  
     border: 0 !important;
     background-color: black;
     font-family: Montserrat;
     padding-left: 20px;
+    font-weight: 700;
     padding-right: 20px;
 }
 
@@ -58,3 +64,11 @@
              padding-top: 0.5rem;
          }
      } */
+     @media(max-width:992px){
+        .carousel {
+            margin-top: 5rem;
+        }
+        .carousel-item img {
+            height: 30vh;
+        }
+     }

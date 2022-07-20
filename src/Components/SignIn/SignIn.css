@@ -1,0 +1,14 @@
+.signin {
+    padding: 1rem;
+}
+.signin .input-group>.form-control:focus{
+    box-shadow: none !important;
+    border: 1px solid green;
+}
+.signin .btn-signin {
+    width: 100%;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    font-family: Montserrat, sans-serif;
+    font-weight: 700;
+}
