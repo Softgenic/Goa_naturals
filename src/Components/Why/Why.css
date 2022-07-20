@@ -4,6 +4,7 @@
   display: flex;
   flex-direction: row;
   max-width: 100vw;
+  text-align: center;
 }
 
 .img-container {
@@ -14,6 +15,7 @@
 
 .features-container {
   flex: 1;
+  overflow: hidden;
 }
 
 .img-container > img {
@@ -41,7 +43,7 @@ h1 {
 }
 
 .features-grid-card {
-  width: 150px;
+  max-width: 150px;
   padding: 1rem;
   margin: 1rem;
 }
@@ -54,5 +56,12 @@ h1 {
 @media only screen and (max-width: 900px) {
   .why-container {
     flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .features-grid {
+    flex-direction: column;
+    align-items: center;
   }
 }
