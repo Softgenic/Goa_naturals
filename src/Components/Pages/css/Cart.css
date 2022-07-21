@@ -30,11 +30,10 @@ td {
 }
 table {
   max-width: 80vw !important;
-  /* width: fit-content; */
+  margin: auto;
   border-collapse: separate !important;
   border: 2px solid var(--india-green) !important;
   border-radius: 10px !important;
-  /* display: table; */
   border-spacing: 0 15px;
 }
 
@@ -149,13 +148,13 @@ tbody > tr:last-child > td {
     margin-right: 10%;
   }
   .cart-total-container {
-    margin-left: 20%;
+    margin: auto;
     justify-self: center;
     text-align: center;
   }
   .banner-container {
-    width: 100vw;
-    margin-left: 10%;
-    margin-right: 0;
+    /* width: 100vw; */
+    /* margin-right: 0;*/
+    margin: 1rem;
   }
 }
