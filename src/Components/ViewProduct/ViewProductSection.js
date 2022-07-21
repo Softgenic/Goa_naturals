@@ -6,6 +6,7 @@ import {
   OverlayTrigger,
   Tooltip,
   Card,
+  Alert
 } from "react-bootstrap";
 import { BsStarFill, BsStarHalf, BsStar } from "react-icons/bs";
 import Carousel from "react-multi-carousel";
@@ -41,6 +42,11 @@ const ViewProductSection = () => {
   // };
 
   const [quantity, setQuantity] = useState(0);
+  if(quantity<0){
+    
+    setQuantity(0)
+    
+  }
 
   useEffect(() => {
     let productItem = state.cart.cartItems.find((item) => {
@@ -138,9 +144,9 @@ const ViewProductSection = () => {
               >
                 <p className="ms-2">&nbsp; 1 Ltr &nbsp;</p>
               </OverlayTrigger>
-              <h3 className="ms-3">₹ 287.00</h3>
+              <h3 className="ms-3">₹ {287.00*quantity}</h3>
               <h3 className="text-decoration-line-through text-success ms-2">
-                ₹325.00
+                ₹{325.00*quantity}
               </h3>
             </div>
             {/* add to cart input field + - button , add cart button in row and col */}
@@ -152,6 +158,7 @@ const ViewProductSection = () => {
                 onChange={(e) => {
                   setQuantity(e.target.value);
                 }}
+
               />
               <br></br>
               <button
