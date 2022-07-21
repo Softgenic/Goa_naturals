@@ -23,7 +23,7 @@ function App() {
           <Route path="/products" element={<Products />} />
           <Route path="/About-Us" element={<AboutUs />} />
           <Route path="/Contact-Us" element={<ContactUs />} />
-          <Route path="/ViewProduct" element={<ViewProduct />} />
+          <Route path="/ViewProduct/:id" element={<ViewProduct />} />
         </Routes>
       </BrowserRouter>
       <WhatsApp />
