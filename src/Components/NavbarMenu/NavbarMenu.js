@@ -16,7 +16,7 @@ import { Store } from "../../utils/Store";
 
 // Logo components
 import Logo from "../Assets/images/goa-natural-logo-mini.jpg";
-import SearchBar from "material-ui-search-bar";
+
 // Modal Left Image
 import ModalImage from "../Assets/Goa-natural/Goa-Natural-modal1.png";
 import { Link } from "react-router-dom";
