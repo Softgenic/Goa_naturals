@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { BsStarFill, BsStarHalf, BsStar } from "react-icons/bs";
+import { Link } from "react-router-dom";
 
-import Coconut from "../Assests/images/coconut.jpg";
+// import Coconut from "../Assets/images/coconut.jpg";
 import "./Products.css";
 const SafflowerSection = () => {
   // const [index, setIndex] = useState(0);
@@ -14,13 +15,14 @@ const SafflowerSection = () => {
   return (
     <Container className="body" fluid>
       <h1 className="heading">ColdPressed Safflower oil</h1>
-      <div className="container-box">
+      <div className="container-box" >
         <Row>
-          <Col xs={12} md={3}>
-            <div className="prd-col">
+          <Col xs={12} md={3} as={Link} to="/ViewProduct">
+            <div className="prd-col" >
               <img
                 src="/item-pics/500ml-safflower-front.jpg"
                 className="prd-img"
+                alt=""
               />
               <h4 className="prd-heading">500ml safflower oil</h4>
               <div className="stars">
@@ -39,6 +41,7 @@ const SafflowerSection = () => {
               <img
                 src="/item-pics/1ltr-safflower-front.jpg"
                 className="prd-img"
+                alt=""
               />
               <h4 className="prd-heading">1ltr safflower oil</h4>
               <div className="stars">

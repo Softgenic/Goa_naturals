@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { BsStarFill, BsStarHalf, BsStar } from "react-icons/bs";
 
-// import Coconut from "../Assests/images/coconut.jpg";
+import Coconut from "../Assets/images/coconut.jpg";
 import "./Products.css";
 const CoconutSection = () => {
   // const [index, setIndex] = useState(0);
@@ -21,6 +21,7 @@ const CoconutSection = () => {
               <img
                 src="/item-pics/100ml-coconut-front.jpg"
                 className="prd-img"
+                alt=""
               />
               <h4 className="prd-heading">100ml coconut oil</h4>
               <div className="stars">
@@ -39,6 +40,7 @@ const CoconutSection = () => {
               <img
                 src="/item-pics/500ml-coconut-front.jpg"
                 className="prd-img"
+                alt=""
               />
               <h4 className="prd-heading">500ml coconut oil</h4>
               <div className="stars">
@@ -57,6 +59,7 @@ const CoconutSection = () => {
               <img
                 src="/item-pics/750ml-coconut-front.jpg"
                 className="prd-img"
+                alt=""
               />
               <h4 className="prd-heading">750ml coconut oil</h4>
               <div className="stars">
@@ -75,6 +78,7 @@ const CoconutSection = () => {
               <img
                 src="/item-pics/1ltr-coconut-front.jpg"
                 className="prd-img"
+                alt=""
               />
               <h4 className="prd-heading">1ltr coconut oil</h4>
               <div className="stars">
@@ -92,6 +96,7 @@ const CoconutSection = () => {
               <img
                 src="/item-pics/500ml-groundnut-front.jpg"
                 className="prd-img"
+                alt=""
               />
               <h4 className="prd-heading">500ml groundnut oil</h4>
               <div className="stars">
@@ -110,6 +115,7 @@ const CoconutSection = () => {
               <img
                 src="/item-pics/1ltr-groundnut-front.jpg"
                 className="prd-img"
+                alt=""
               />
               <h4 className="prd-heading">1ltr groundnut oil</h4>
               <div className="stars">
@@ -127,6 +133,7 @@ const CoconutSection = () => {
               <img
                 src="/item-pics/500ml-safflower-front.jpg"
                 className="prd-img"
+                alt=""
               />
               <h4 className="prd-heading">500ml safflower oil</h4>
               <div className="stars">
@@ -145,6 +152,7 @@ const CoconutSection = () => {
               <img
                 src="/item-pics/1ltr-safflower-front.jpg"
                 className="prd-img"
+                alt=""
               />
               <h4 className="prd-heading">1ltr safflower oil</h4>
               <div className="stars">
@@ -162,6 +170,7 @@ const CoconutSection = () => {
               <img
                 src="/item-pics/500gm-turmeric-front.jpg"
                 className="prd-img"
+                alt=""
               />
               <h4 className="prd-heading">500gm turmeric powder</h4>
               <div className="stars">
@@ -180,6 +189,7 @@ const CoconutSection = () => {
               <img
                 src="/item-pics/1kg-turmeric-front.jpg"
                 className="prd-img"
+                alt=""
               />
               <h4 className="prd-heading">1kg turmeric powder</h4>
               <div className="stars">

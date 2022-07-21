@@ -6,6 +6,9 @@ import {
  } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
  import "./Footer.css";
+//  flipkart amazon mini icon
+import Amzaon from "../Assets/Goa-natural/mini-amazon.png";
+import Flipkart from "../Assets/images/flipkart-logo.png";
 const Footer = () => {
   return (
     <div>
@@ -18,7 +21,7 @@ const Footer = () => {
                     <p>Plot 34, Kakoda Industrial Estate – Phase III, Kakoda, Curchorem, Goa, India 403706</p>
                     <span className="mt-2"><i className="fas fa-envelope"></i></span>
                     <p>adwingoa@gmail.com | goanatural2222@gmail.com</p>
-                    <span className="d-flex mt-2"><i className="fas fa-phone-alt me-2"></i> <p>9822168979 | 8007774122 | 8605070650</p></span>
+                    <span className="d-flex mt-2"><i className="fas fa-phone-alt me-2 mt-2"></i> <p>9822168979 | 8007774122 | 8605070650</p></span>
                 </Col>
                 <Col md={4}>
                     <h5>QUICK LINKS</h5>
@@ -30,7 +33,7 @@ const Footer = () => {
                         <li><Link to="/">Rewards</Link></li>
                     </ul>
                     <h5>Follow us on Social Media</h5>
-                    <div className="d-flex social-icon">
+                    <div className="d-flex social-icon mb-3">
                     <i className="fab fa-facebook"></i>
                     <i className="fab fa-twitter ms-2"></i>
                     <i className="fab fa-instagram ms-2"></i>
@@ -39,9 +42,14 @@ const Footer = () => {
                 <Col md={4}>
                     <h5>NEWSLETTER</h5>
                     <p>Subscribe to our newsletter & stay updated about latest products, offers and blogs</p>
-                    <input type="email" placeholder="Enter Email Addres" />
+                    <input type="email" placeholder="Enter Email Address" />
                     <br></br>
                     <button>Subscribe</button>
+                    <h5 className='mt-3'>We are also available on…</h5>
+                    <div className='d-flex affiliate'>
+                        <img src={Amzaon} alt='amazon'/>
+                        <img src={Flipkart} alt='flipkart'/>
+                    </div>
                 </Col>
             </Row>
         </Container>
