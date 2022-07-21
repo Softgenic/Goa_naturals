@@ -12,12 +12,13 @@ import ContactUs from "./Components/ContactUs/ContactUs";
 import ViewProduct from "./Components/Pages/ViewProduct";
 import ViewCart from "./Components/Pages/ViewCart";
 import { StoreProvider } from "./utils/Store";
-
+import ScrollToTop from "./Components/ScrollToTop/ScrollToTop";
 function App() {
   return (
     <StoreProvider>
       <div>
         <BrowserRouter>
+        <ScrollToTop />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/coconut" element={<Coconuts />} />
