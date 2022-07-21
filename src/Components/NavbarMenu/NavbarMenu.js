@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import "./NavbarMenu.css";
 // React-bootstrap components
 import {
@@ -12,6 +12,7 @@ import {
   Image,
   Card,
 } from "react-bootstrap";
+import { Store } from "../../utils/Store";
 
 // Logo components
 import Logo from "../Assets/images/goa-natural-logo-mini.jpg";
@@ -63,6 +64,10 @@ const NavbarMenu = () => {
   // Toggler switch state
   const [switcher, setswitcher] = useState("active");
   const handleSwitcher = () => setswitcher(!switcher);
+
+  const { state, dispatch } = useContext(Store);
+  const { cart } = state;
+
   return (
     <div>
       <Navbar
@@ -155,7 +160,10 @@ const NavbarMenu = () => {
             </Nav>
           </Navbar.Collapse>
 
-          <span className="fa-stack fa-1x has-badge" data-count="3">
+          <span
+            className="fa-stack fa-1x has-badge"
+            data-count={cart.cartItems.length}
+          >
             <i className="fa fa-shopping-cart ms-3 red-cart"></i>
           </span>
         </Container>
