@@ -160,12 +160,14 @@ const NavbarMenu = () => {
             </Nav>
           </Navbar.Collapse>
 
-          <span
-            className="fa-stack fa-1x has-badge"
-            data-count={cart.cartItems.length}
-          >
-            <i className="fa fa-shopping-cart ms-3 red-cart"></i>
-          </span>
+          <Link to="/ViewCart">
+            <span
+              className="fa-stack fa-1x has-badge"
+              data-count={cart.cartItems.length}
+            >
+              <i className="fa fa-shopping-cart ms-3 red-cart"></i>
+            </span>
+          </Link>
         </Container>
       </Navbar>
       {/* Login signup Modal box */}

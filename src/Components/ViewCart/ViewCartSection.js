@@ -34,4 +34,4 @@ const ViewCartSection = () => {
   );
 };
 
-export default ViewProductSection;
+export default ViewCartSection;
