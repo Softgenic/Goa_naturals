@@ -1,0 +1,161 @@
+.cart-container {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.banner-container {
+  padding: 3rem 2rem;
+  /* border: 3px solid var(--light-green); */
+  border-radius: 10px;
+  margin: 5rem;
+  max-width: 100vw;
+  background: var(--background-1);
+  box-shadow: 2px 5px 10px var(--india-green);
+}
+
+.banner-text {
+  color: black;
+}
+
+table,
+thead,
+tbody,
+tr,
+th,
+td {
+  border-color: var(--forest-green-traditional) !important;
+}
+table {
+  max-width: 80vw !important;
+  /* width: fit-content; */
+  border-collapse: separate !important;
+  border: 2px solid var(--india-green) !important;
+  border-radius: 10px !important;
+  /* display: table; */
+  border-spacing: 0 15px;
+}
+
+thead {
+  width: 100vw !important;
+  border-bottom: 1px solid var(--india-green) !important;
+}
+
+th,
+td {
+  text-align: center;
+  border-width: 0 0 1px 0 !important;
+  padding: 5px;
+}
+
+tbody > tr:last-child > td {
+  border-width: 0 !important;
+}
+
+.table-row-img {
+  width: 80px;
+  margin: 0.4rem;
+}
+
+.table-row-quantity {
+  width: 50px;
+}
+
+.table-row-quantity > input {
+  width: 50px;
+}
+
+.table-row-quantity > button {
+  width: 100%;
+}
+
+.quantity-btn {
+  background: var(--background-1);
+  border: none;
+  outline: none;
+  margin: 0;
+  padding: 0px 8px;
+  cursor: pointer;
+}
+.quantity-btn svg {
+  width: 15px;
+  height: 15px;
+}
+.quantity-input {
+  outline: none;
+  user-select: none;
+  text-align: center;
+  width: 47px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+}
+.quantity-input::-webkit-inner-spin-button,
+.quantity-input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.coupon-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  border-style: hidden;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+}
+
+.coupon-row > input {
+  border: 1px solid var(--india-green);
+  border-radius: 10px;
+  padding: 0.8rem 0.6rem;
+  box-shadow: 5px 5px 8px var(--light-green);
+}
+
+.coupon-row > button {
+  border-radius: 10px;
+  padding: 0.8rem 0.6rem;
+  border: 1px double var(--green-pigment);
+  background: var(--background-1);
+  box-shadow: 5px 5px 8px var(--light-green);
+}
+
+.cart-total-container {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding: 1rem;
+  margin: 1rem;
+}
+
+.total-row {
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid var(--india-green);
+}
+
+.total-row-para-1 {
+  width: 150px;
+  padding-right: 2rem;
+}
+
+@media only screen and (max-width: 396px) {
+  .coupon-row {
+    margin-left: 20%;
+    margin-right: 10%;
+  }
+  .cart-total-container {
+    margin-left: 20%;
+    justify-self: center;
+    text-align: center;
+  }
+  .banner-container {
+    width: 100vw;
+    margin-left: 10%;
+    margin-right: 0;
+  }
+}

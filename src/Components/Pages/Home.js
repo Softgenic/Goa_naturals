@@ -5,16 +5,18 @@ import Footer from "../Footer/Footer";
 import FarmToFork from "../FarmToFork/FarmToFork";
 import Why from "../Why/Why.jsx";
 import Benefits from "../Benefits/Benefits.jsx";
+import Cart from "../Pages/Cart.jsx";
 
 const Home = () => {
   return (
     <div>
       <NavbarMenu />
-      <HeroSection />
+      <Cart />
+      {/* <HeroSection />
       <FarmToFork />
       <Why />
       <Benefits />
-      <Footer />
+      <Footer /> */}
     </div>
   );
 };
