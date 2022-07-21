@@ -10,6 +10,7 @@ import Products from "./Components/Pages/Products";
 import AboutUs from "./Components/AboutUs/AboutUs";
 import ContactUs from "./Components/ContactUs/ContactUs";
 import ViewProduct from "./Components/Pages/ViewProduct";
+import ViewCart from "./Components/Pages/ViewCart";
 import { StoreProvider } from "./utils/Store";
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
             <Route path="/About-Us" element={<AboutUs />} />
             <Route path="/Contact-Us" element={<ContactUs />} />
             <Route path="/ViewProduct" element={<ViewProduct />} />
+            <Route path="/ViewCart" element={<ViewCart />} />
           </Routes>
         </BrowserRouter>
         <WhatsApp />
