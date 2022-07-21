@@ -1,15 +1,15 @@
 import React from "react";
 import NavbarMenu from "../NavbarMenu/NavbarMenu";
-import ViewProductSection from "../ViewProduct/ViewProductSection";
+import ViewCartSection from "../ViewCart/ViewCartSection";
 import Footer from "../Footer/Footer";
-const ViewProduct = () => {
+const ViewCart = () => {
   return (
     <div>
       <NavbarMenu />
-      <ViewProductSection />
+      <ViewCartSection />
       <Footer />
     </div>
   );
 };
 
-export default ViewProduct;
+export default ViewCart;

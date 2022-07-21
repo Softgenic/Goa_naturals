@@ -9,25 +9,31 @@ import Turmerics from "./Components/Pages/Turmerics";
 import Products from "./Components/Pages/Products";
 import AboutUs from "./Components/AboutUs/AboutUs";
 import ContactUs from "./Components/ContactUs/ContactUs";
-import { ViewProduct } from "./Components/Pages/ViewProduct";
+import ViewProduct from "./Components/Pages/ViewProduct";
+import ViewCart from "./Components/Pages/ViewCart";
+import { StoreProvider } from "./utils/Store";
+
 function App() {
   return (
-    <div>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/coconut" element={<Coconuts />} />
-          <Route path="/groundnut" element={<Groundnuts />} />
-          <Route path="/safflower" element={<Safflowers />} />
-          <Route path="/turmeric" element={<Turmerics />} />
-          <Route path="/products" element={<Products />} />
-          <Route path="/About-Us" element={<AboutUs />} />
-          <Route path="/Contact-Us" element={<ContactUs />} />
-          <Route path="/ViewProduct" element={<ViewProduct />} />
-        </Routes>
-      </BrowserRouter>
-      <WhatsApp />
-    </div>
+    <StoreProvider>
+      <div>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/coconut" element={<Coconuts />} />
+            <Route path="/groundnut" element={<Groundnuts />} />
+            <Route path="/safflower" element={<Safflowers />} />
+            <Route path="/turmeric" element={<Turmerics />} />
+            <Route path="/products" element={<Products />} />
+            <Route path="/About-Us" element={<AboutUs />} />
+            <Route path="/Contact-Us" element={<ContactUs />} />
+            <Route path="/ViewProduct" element={<ViewProduct />} />
+            <Route path="/ViewCart" element={<ViewCart />} />
+          </Routes>
+        </BrowserRouter>
+        <WhatsApp />
+      </div>
+    </StoreProvider>
   );
 }
 
