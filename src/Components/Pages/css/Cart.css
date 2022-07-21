@@ -142,16 +142,28 @@ tbody > tr:last-child > td {
   padding-right: 2rem;
 }
 
+.checkout-button {
+  border-radius: 10px;
+  padding: 0.8rem 0.6rem;
+  border: 1px double var(--green-pigment);
+  background: var(--background-1);
+  box-shadow: 5px 5px 8px var(--light-green);
+  width: 20vw;
+  margin: auto;
+}
+
 @media only screen and (max-width: 396px) {
   .coupon-row {
     margin-left: 20%;
     margin-right: 10%;
   }
+
   .cart-total-container {
     margin: auto;
     justify-self: center;
     text-align: center;
   }
+
   .banner-container {
     /* width: 100vw; */
     /* margin-right: 0;*/
