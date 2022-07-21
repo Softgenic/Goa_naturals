@@ -161,6 +161,7 @@ const Cart = (props) => {
           </p>
         </div>
       </div>
+      <button className="checkout-button">Proceed to checkout</button>
       {/* table container */}
     </div>
   );
