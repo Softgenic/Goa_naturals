@@ -105,7 +105,7 @@ const cardslider = [{cardno:"1"},{cardno:"2"},{cardno:"3"},{cardno:"4"},{cardno:
               <br></br>
               <button>+</button>
               <button>-</button>
-              <button className="ms-5 mt-0" style={{width:"60%", backgroundColor:"black", color:"#fff"}}> Add to cart</button>
+              <button className="ms-5 mt-0" style={{width:"60%", backgroundColor:"black", color:"#fff"}} onClick={addToCartHandler}> Add to cart</button>
               </div>
               <p className="category-sec mt-3">Category : <span className="text-muted"> Safflower Oil</span></p>
               <p className="category-sec-desc mt-3 text-muted">Pure, cold pressed oil made from the seeds of the Carthamus tinctorius botanical, a relative of Sunflower. Safflower is native to India and has been a popular choice for healthy lifestyle. Safflower oil has a neutral flavor, making it an ideal choice for many recipes.</p>
