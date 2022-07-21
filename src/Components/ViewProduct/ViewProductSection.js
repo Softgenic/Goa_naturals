@@ -49,7 +49,7 @@ const ViewProductSection = () => {
     if (productItem) {
       setQuantity(productItem.quantity);
     }
-  }, [product]);
+  }, []);
 
   // Carousel slider responsive card
   const responsive = {
@@ -74,7 +74,7 @@ const ViewProductSection = () => {
   // end
   const addToCartHandler = async () => {
     const existItem = state.cart.cartItems.find((x) => x._id === product._id);
-    const quantity = existItem ? existItem.quantity + 1 : 1;
+    //const quantity = existItem ? existItem.quantity + 1 : 1;
     // const { data } = await axios.get(`/api/products/${product._id}`);
     // if (data.countInStock < quantity) {
     //   window.alert("Sorry. Product is out of stock");
@@ -146,10 +146,28 @@ const ViewProductSection = () => {
             {/* add to cart input field + - button , add cart button in row and col */}
             <p className="clear-btn"> Clear</p>
             <div className="input-fields d-flex">
-              <input type="number" value={quantity} />
+              <input
+                type="number"
+                value={quantity}
+                onChange={(e) => {
+                  setQuantity(e.target.value);
+                }}
+              />
               <br></br>
-              <button>+</button>
-              <button>-</button>
+              <button
+                onClick={() => {
+                  setQuantity(quantity + 1);
+                }}
+              >
+                +
+              </button>
+              <button
+                onClick={() => {
+                  setQuantity(quantity - 1);
+                }}
+              >
+                -
+              </button>
               <button
                 className="ms-5 mt-0"
                 style={{
