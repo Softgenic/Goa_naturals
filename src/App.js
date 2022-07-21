@@ -9,7 +9,7 @@ import Turmerics from "./Components/Pages/Turmerics";
 import Products from "./Components/Pages/Products";
 import AboutUs from "./Components/AboutUs/AboutUs";
 import ContactUs from "./Components/ContactUs/ContactUs";
-import { ViewProduct } from "./Components/Pages/ViewProduct";
+import ViewProduct from "./Components/Pages/ViewProduct";
 import { StoreProvider } from "./utils/Store";
 
 function App() {
