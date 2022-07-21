@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import { BsStarFill, BsStarHalf, BsStar } from "react-icons/bs";
+import { BsStarFill, BsStar } from "react-icons/bs";
 
 import Coconut from "../Assets/images/coconut.jpg";
 import "./Products.css";

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { BsStarFill, BsStarHalf, BsStar } from "react-icons/bs";
 
@@ -21,6 +21,7 @@ const CoconutSection = () => {
               <img
                 src="/item-pics/100ml-coconut-front.jpg"
                 className="prd-img"
+                alt=""
               />
               <h4 className="prd-heading">100ml coconut oil</h4>
               <div className="stars">
@@ -39,6 +40,7 @@ const CoconutSection = () => {
               <img
                 src="/item-pics/500ml-coconut-front.jpg"
                 className="prd-img"
+                alt=""
               />
               <h4 className="prd-heading">500ml coconut oil</h4>
               <div className="stars">
@@ -57,6 +59,7 @@ const CoconutSection = () => {
               <img
                 src="/item-pics/750ml-coconut-front.jpg"
                 className="prd-img"
+                alt=""
               />
               <h4 className="prd-heading">750ml coconut oil</h4>
               <div className="stars">

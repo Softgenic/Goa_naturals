@@ -14,8 +14,12 @@
     "react-dom": "^18.2.0",
     "react-floating-whatsapp": "^4.0.5",
     "react-icons": "^4.4.0",
+<<<<<<< HEAD
     "react-iframe": "^1.8.0",
     "react-parallax": "^3.5.1",
+=======
+    "react-owl-carousel": "^2.3.3",
+>>>>>>> main
     "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"

@@ -4,6 +4,8 @@ import HeroSection from "../HeroSection/HeroSection";
 import Footer from "../Footer/Footer";
 import FarmToFork from "../FarmToFork/FarmToFork";
 import Why from "../Why/Why";
+import Benefits from "../Benefits/Benefits";
+
 const Home = () => {
   return (
     <div>
@@ -11,6 +13,7 @@ const Home = () => {
       <HeroSection />
       <FarmToFork />
       <Why />
+      <Benefits />
       <Footer />
     </div>
   );

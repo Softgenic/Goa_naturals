@@ -3,10 +3,11 @@ import "./NavbarMenu.css";
 // React-bootstrap components
 import { Navbar, Container, Nav, NavDropdown,Modal, Col, Row, Image, Card } from "react-bootstrap";
 
-// Logo components
-import Logo from "../Assets/images/goa-natural-logo-mini.jpg";
 // Modal Left Image 
 import ModalImage from "../Assets/Goa-natural/Goa-Natural-modal1.png";
+// Logo components
+import Logo from "../Assets/images/goa-natural-logo-mini.jpg";
+// import SearchBar from "material-ui-search-bar";
 import { Link } from "react-router-dom";
 
 // SignIn component
@@ -27,6 +28,7 @@ const closeMobileMenu = () => setClick(false);
       setcolor(false);
     }
   };
+
   window.addEventListener("scroll", changeColor);
 
   // lOGO size changed
