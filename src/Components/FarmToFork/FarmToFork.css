@@ -15,8 +15,10 @@
 }
 
 .fff-heading {
-  font-weight: 500;
+  font-weight: 700;
   font-style: normal;
+  color: #2d2c2c;
+  
 }
 
 .fff-card {

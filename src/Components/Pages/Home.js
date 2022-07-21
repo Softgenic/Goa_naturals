@@ -3,8 +3,8 @@ import NavbarMenu from "../NavbarMenu/NavbarMenu";
 import HeroSection from "../HeroSection/HeroSection";
 import Footer from "../Footer/Footer";
 import FarmToFork from "../FarmToFork/FarmToFork";
-import Why from "../Why/Why.jsx";
-import Benefits from "../Benefits/Benefits.jsx";
+import Why from "../Why/Why";
+import Benefits from "../Benefits/Benefits";
 
 const Home = () => {
   return (
