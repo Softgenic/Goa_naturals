@@ -6,12 +6,11 @@ import {
   OverlayTrigger,
   Tooltip,
   Card,
-  Alert
+  
 } from "react-bootstrap";
 import { BsStarFill, BsStarHalf, BsStar } from "react-icons/bs";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import axios from "axios";
 import { Store } from "../../utils/Store";
 import { Link } from "react-router-dom";
 import SunFlowerOrgatma from "../Assets/images/safflower-orgatma.jpg";
@@ -49,13 +48,13 @@ const ViewProductSection = () => {
   }
 
   useEffect(() => {
-    let productItem = state.cart.cartItems.find((item) => {
-      return item._id === product?._id;
-    });
-    if (productItem) {
-      setQuantity(productItem.quantity);
-    }
-  }, []);
+    // let productItem = state.cart.cartItems.find((item) => {
+    //   return item._id === product?._id;
+    // });
+    // if (productItem) {
+    //   setQuantity(productItem.quantity);
+    // }
+  },[]);
 
   // Carousel slider responsive card
   const responsive = {
@@ -80,6 +79,7 @@ const ViewProductSection = () => {
   // end
   const addToCartHandler = async () => {
     const existItem = state.cart.cartItems.find((x) => x._id === product._id);
+    console.log(existItem)
     //const quantity = existItem ? existItem.quantity + 1 : 1;
     // const { data } = await axios.get(`/api/products/${product._id}`);
     // if (data.countInStock < quantity) {
@@ -223,7 +223,7 @@ const ViewProductSection = () => {
               </p>
             </Col>
             <Col md={4} sm={12}>
-              <img src={Memory} />
+              <img src={Memory} alt="" />
               <h4>BODY MAINTENANCE</h4>
               <p>
                 Fatty acids are necessary for hormone regulation and memory
