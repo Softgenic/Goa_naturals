@@ -67,7 +67,7 @@ const NavbarMenu = () => {
 
   const { state, dispatch } = useContext(Store);
   const { cart } = state;
-
+console.log(dispatch)
   return (
     <div>
       <Navbar

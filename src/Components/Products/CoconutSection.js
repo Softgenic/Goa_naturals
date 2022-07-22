@@ -2,7 +2,7 @@ import React from "react";
 import { Container, Row, Col, Card } from "react-bootstrap";
 import { BsStarFill, BsStarHalf, BsStar } from "react-icons/bs";
 import { Link } from "react-router-dom";
-import Coconut from "../Assets/images/coconut.jpg";
+// import Coconut from "../Assets/images/coconut.jpg";
 import "./Products.css";
 const CoconutSection = () => {
   // const [index, setIndex] = useState(0);
