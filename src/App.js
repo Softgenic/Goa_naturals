@@ -9,16 +9,18 @@ import Turmerics from "./Components/Pages/Turmerics";
 import Products from "./Components/Pages/Products";
 import AboutUs from "./Components/AboutUs/AboutUs";
 import ContactUs from "./Components/ContactUs/ContactUs";
+import Checkout from "./Components/Pages/Checkout";
 import ViewProduct from "./Components/Pages/ViewProduct";
 import ViewCart from "./Components/Pages/ViewCart";
 import { StoreProvider } from "./utils/Store";
 import ScrollToTop from "./Components/ScrollToTop/ScrollToTop";
+
 function App() {
   return (
     <StoreProvider>
       <div>
         <BrowserRouter>
-        <ScrollToTop />
+          <ScrollToTop />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/coconut" element={<Coconuts />} />
@@ -30,6 +32,7 @@ function App() {
             <Route path="/Contact-Us" element={<ContactUs />} />
             <Route path="/ViewProduct" element={<ViewProduct />} />
             <Route path="/ViewCart" element={<ViewCart />} />
+            <Route path="checkout" element={<Checkout />} />
           </Routes>
         </BrowserRouter>
         <WhatsApp />

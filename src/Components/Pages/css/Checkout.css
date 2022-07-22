@@ -1,0 +1,51 @@
+.checkout-container {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  vertical-align: middle;
+  padding: 1rem;
+  margin: 3rem auto 3rem auto;
+  background: var(--background-1);
+}
+
+.form-item {
+  display: flex;
+  flex-direction: column;
+  line-height: 30px;
+}
+
+label {
+  color: var(--forest-green-traditional);
+}
+
+input,
+select,
+textarea {
+  padding: 0.5rem;
+  border-radius: 10px;
+  outline: none;
+  border: 1px solid var(--india-green);
+}
+.your-order {
+  display: flex;
+  flex-direction: row;
+}
+
+.your-order > .product {
+  flex: 1;
+}
+
+.your-order > .subtotal {
+  flex: 1;
+}
+
+.different-address-heading {
+  display: flex;
+  flex-direction: row;
+  padding: 1rem;
+}
+
+.different-address-heading > input {
+  margin-right: 1rem;
+}

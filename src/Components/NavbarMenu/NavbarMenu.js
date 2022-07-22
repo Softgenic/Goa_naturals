@@ -20,7 +20,6 @@ import Logo from "../Assets/images/goa-natural-logo-mini.jpg";
 // Modal Left Image
 import ModalImage from "../Assets/Goa-natural/Goa-Natural-modal1.png";
 import { Link } from "react-router-dom";
-
 // SignIn component
 import SignIn from "../SignIn/SignIn";
 // Sign UP Components
@@ -67,7 +66,7 @@ const NavbarMenu = () => {
 
   const { state, dispatch } = useContext(Store);
   const { cart } = state;
-console.log(dispatch)
+  console.log(dispatch);
   return (
     <div>
       <Navbar
