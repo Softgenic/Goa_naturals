@@ -2,7 +2,7 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { BsStarFill, BsStar } from "react-icons/bs";
 
-import Coconut from "../Assets/images/coconut.jpg";
+// import Coconut from "../Assets/images/coconut.jpg";
 import "./Products.css";
 const TurmericSection = () => {
   // const [index, setIndex] = useState(0);

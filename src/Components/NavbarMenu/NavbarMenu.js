@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import "./NavbarMenu.css";
-// import SearchBar from "material-ui-search-bar";
+// React-bootstrap components
 import {
   Navbar,
   Container,
@@ -12,8 +12,11 @@ import {
   Image,
   Card,
 } from "react-bootstrap";
+import { Store } from "../../utils/Store";
+
 // Logo components
 import Logo from "../Assets/images/goa-natural-logo-mini.jpg";
+
 // Modal Left Image
 import ModalImage from "../Assets/Goa-natural/Goa-Natural-modal1.png";
 import { Link } from "react-router-dom";
@@ -60,6 +63,10 @@ const NavbarMenu = () => {
   // Toggler switch state
   const [switcher, setswitcher] = useState("active");
   const handleSwitcher = () => setswitcher(!switcher);
+
+  const { state, dispatch } = useContext(Store);
+  const { cart } = state;
+  console.log(dispatch);
   return (
     <div>
       <Navbar
@@ -152,9 +159,14 @@ const NavbarMenu = () => {
             </Nav>
           </Navbar.Collapse>
 
-          <span className="fa-stack fa-1x has-badge" data-count="3">
-            <i className="fa fa-shopping-cart ms-3 red-cart"></i>
-          </span>
+          <Link to="/ViewCart">
+            <span
+              className="fa-stack fa-1x has-badge"
+              data-count={cart.cartItems.length}
+            >
+              <i className="fa fa-shopping-cart ms-3 red-cart"></i>
+            </span>
+          </Link>
         </Container>
       </Navbar>
       {/* Login signup Modal box */}

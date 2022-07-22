@@ -1,0 +1,223 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed:400&subset=latin,latin-ext");
+
+
+.view-product{
+  margin-top: 7rem;
+}
+.view-product span  {
+  font-family: Roboto system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  text-transform: uppercase;
+  color: rgb(125, 125, 125);
+  font-weight: 400;
+  font-size: 20px;
+}
+.view-product span a {
+  text-decoration: none;
+  color: rgb(55, 52, 52);
+}
+.view-product .product-img-col{
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+}
+.view-product .product-img-col img {
+ width: 350px;
+}
+.view-product .product-img-col img:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+ }
+.view-product .product-disc-col h2{
+  font-family: Roboto Condensed;
+  font-weight: 800;
+}
+.view-product .product-disc-col .size-text {
+  font-family: Roboto Condensed;
+  font-weight: 600;
+  font-size: 17px;
+}
+.view-product .product-disc-col .size-type p {
+  font-family: Roboto Condensed;
+  font-weight: 600;
+  font-size: 17px;
+}
+.view-product .product-disc-col .size-type p:hover{
+  background-color: green;
+  color: #fff;
+}
+.view-product .product-disc-col .clear-btn {
+  font-family: Roboto Condensed;
+  font-weight: 600;
+  font-size: 17px;
+}
+.view-product .product-disc-col .input-fields input{
+  width: 80px;
+  height: 40px;
+  font-family: Roboto Condensed;
+  font-weight: 600;
+
+}
+.view-product .product-disc-col .input-fields button {
+  width: 40px;
+  font-family: Roboto Condensed;
+  font-weight: 500;
+  font-size: 20px;
+  border: 1px solid gray;
+}
+.view-product .product-disc-col .input-fields button:hover{
+  background-color: black;
+  color: #fff;
+}
+.view-product .product-disc-col .category-sec {
+  font-family: Roboto Condensed;
+  font-weight: 700;
+  font-size: 18px;
+}
+.view-product .product-disc-col .category-sec span {
+  font-family: Roboto Condensed;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 3px;
+}
+.view-product .product-disc-col .category-sec-desc {
+  font-family: Roboto Condensed;
+  font-weight: 500;
+  font-size: 16px;
+
+}
+/* did you know section css */
+.did-u-know-main-section{
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.did-u-know{
+  background-color: rgb(222, 252, 194);
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+.did-u-know h1 {
+  font-family: Signika,serif;
+  
+}
+.did-u-know h4{
+  font-family: Signika,serif;
+  font-weight: 900;
+}.did-u-know p {
+  font-family: Signika,serif;
+  font-weight: 600;
+  font-size: 15px;
+  color: rgb(115, 113, 113);
+}
+.did-u-know img {
+  width: 150px;
+  height: 150px;
+}
+
+
+/* Relaed product slider card */
+.related-product-slider{
+  width: 14rem;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 2px 3px rgba(0,0,0,0.2);
+}
+.related-product-slider img {
+ width: 200px;
+ height: 200px;
+}
+ a {
+  text-decoration: none !important;
+  text-align: center;
+  color: black;
+}
+.related-product-slider .card-title, .card-text{
+  color: black;
+}
+
+/* :root {
+  --forest-green-traditional: #134611ff;
+  --india-green: #3e8914ff;
+  --green-pigment: #3da35dff;
+  --light-green: #96e072ff;
+  --nyanza: #e8fccfff;
+}
+
+.body {
+  background-color: rgb(60, 138, 50);
+}
+
+.container-box {
+  width: 100%;
+}
+
+.heading {
+  margin-top: 90px;
+  text-align: center;
+  font-family: Manrope;
+  margin-bottom: 30px;
+}
+
+.prd-col {
+  text-align: center;
+  margin: 10px;
+  margin-bottom: 50px;
+  background-color: rgb(120, 199, 109);
+  border: 2px solid var(--light-green);
+  box-shadow: 5px 5px 10px var(--india-green);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.prd-img {
+  width: 90%;
+  height: 300px;
+  border-radius: 10px;
+}
+
+.prd-heading {
+  font-family: Manrope;
+  margin-top: 10px;
+}
+
+.stars {
+  flex-direction: row;
+}
+
+.star {
+  padding-right: 5px;
+}
+
+.btn-addToCart {
+  color: "black";
+}
+
+/* Extra small devices (phones, 600px and down) */
+/* @media only screen and (max-width: 600px) {
+  .prd-img {
+    width: 50%;
+    height: 300px;
+  }
+} */
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+/* @media only screen and (min-width: 600px) {
+  .prd-img {
+    width: 80%;
+    height: 300px;
+  }
+} */
+
+/* Medium devices (landscape tablets, 768px and up) */
+/* @media only screen and (min-width: 768px) {
+} */
+
+/* Large devices (laptops/desktops, 992px and up) */
+/* @media only screen and (min-width: 992px) {
+} */
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+/* @media only screen and (min-width: 1200px) {
+} */ 
