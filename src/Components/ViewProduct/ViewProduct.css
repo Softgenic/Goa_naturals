@@ -111,8 +111,9 @@
   color: rgb(115, 113, 113);
 }
 .did-u-know img {
-  width: 150px;
-  height: 150px;
+  width: 100px;
+  height: 100px;
+  margin-bottom: 1.5rem;
 }
 
 
