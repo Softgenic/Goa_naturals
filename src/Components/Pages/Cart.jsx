@@ -3,7 +3,7 @@ import "./css/Cart.css";
 import image1 from "../Assets/images/benefits1.png";
 import CloseButton from "react-bootstrap/CloseButton";
 import NavbarMenu from "../NavbarMenu/NavbarMenu";
-
+import Footer from "../Footer/Footer"
 const Cart = (props) => {
   const [total, setTotal] = useState(350);
   const [shippingState, setShippingState] = useState("Jharkhand");
@@ -127,6 +127,7 @@ const Cart = (props) => {
                   </button>
                 </p>
               </td>
+              
               <td>
                 <p className="table-row-subtotal">Rs {200}</p>
               </td>
@@ -169,6 +170,7 @@ const Cart = (props) => {
         <button className="checkout-button">Proceed to checkout</button>
         {/* table container */}
       </div>
+      <Footer />
     </>
   );
 };

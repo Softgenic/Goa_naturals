@@ -19,6 +19,7 @@ const ViewCartSection = () => {
       <div className="container-box">
         <Row className="crt-col">
           {state?.cart?.cartItems?.map((item) => {
+            
             return (
               <Col xs={12} md={12} className="crt-item">
                 <img src={item.image} className="crt-img" alt="" />
@@ -27,7 +28,9 @@ const ViewCartSection = () => {
                 <span>quantity:{item.quantity}</span>
               </Col>
             );
-          })}
+          }
+          
+          )}
         </Row>
       </div>
     </Container>

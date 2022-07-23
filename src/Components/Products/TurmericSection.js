@@ -1,61 +1,65 @@
-import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
-import { BsStarFill, BsStar } from "react-icons/bs";
-
+import React,{useState, useEffect} from "react";
+import { Container, Row, Col, Card } from "react-bootstrap";
+import { Link } from "react-router-dom";
+import { BsStarFill, BsStar, BsStarHalf } from "react-icons/bs";
+import axios from "axios";
 // import Coconut from "../Assets/images/coconut.jpg";
 import "./Products.css";
 const TurmericSection = () => {
-  // const [index, setIndex] = useState(0);
-
-  // const handleSelect = (selectedIndex, e) => {
-  //   setIndex(selectedIndex);
-  // };
+  // for store all data of product table in product state
+  const [product, SetProduct] = useState([]);
+  
+  const totalProduct = product.map((item)=> item.category==='sunflower')
+  console.log("all item here",totalProduct)
+// Fetching data from mysql table using useEffect
+  useEffect(() => {
+    const fetchProduct = async () =>{
+      const res = await axios.get("https://golden.softgenics.in/api/allProduct");
+      SetProduct(res.data)
+    }
+    fetchProduct();
+  },[]);
 
   return (
-    <Container className="body" fluid>
-      <h1 className="heading">Turmeric powder</h1>
-      <div className="container-box">
-        <Row>
-          <Col xs={12} md={3}>
-            <div className="prd-col">
-              <img
-                src="/item-pics/500gm-turmeric-front.jpg"
-                className="prd-img"
-                alt=""
-              />
-              <h4 className="prd-heading">500gm turmeric powder</h4>
-              <div className="stars">
-                <BsStarFill color="green" className="star" />
-                <BsStarFill color="green" className="star" />
-                <BsStarFill color="green" className="star" />
-                <BsStarFill color="green" className="star" />
-                <BsStar color="green" className="star" />
-              </div>
-              <span>₹ 166.00 - ₹ 156.00</span>
-            </div>
-          </Col>
+    <Container className="Product mb-5">
+    <span>
+      <Link to="/">Home</Link> » Turmeric Powder
+    </span>
+    <br></br>
+    <span
+      style={{ fontSize: "0.95rem", textTransform: "none" }}
+      className="text-muted mt-5"
+    >
+      Showing all 1 resuls
+    </span>
+    <Row className="mt-5">
+      {product.map((item)=>
+      {
+        if(item.category==="turmeric"){
+        return(<>
+      <Col lg={3} sm={6} className="Product-col">
+        <Card as={Link} to={`/ViewProduct/${item.id}`}>
+          <Card.Img src={`https://golden.softgenics.in/uploads/${item.image}`} />
 
-          <Col xs={12} md={3}>
-            <div className="prd-col">
-              <img
-                src="/item-pics/1kg-turmeric-front.jpg"
-                className="prd-img"
-                alt=""
-              />
-              <h4 className="prd-heading">1kg turmeric powder</h4>
-              <div className="stars">
-                <BsStarFill color="green" className="star" />
-                <BsStarFill color="green" className="star" />
-                <BsStarFill color="green" className="star" />
-                <BsStarFill color="green" className="star" />
-                <BsStarFill color="green" className="star" />
-              </div>
-              <span>₹ 298.00 - ₹ 288.00</span>
+          <Card.Body>
+            <div className="d-flex justify-content-center mb-3">
+              <BsStarFill color="#00d084" />
+              <BsStarFill color="#00d084" className="ms-2" />
+              <BsStarFill color="#00d084" className="ms-2" />
+              <BsStarHalf color="#00d084" className="ms-2" />
+              <BsStar color="#00d084" className="ms-2" />
             </div>
-          </Col>
-        </Row>
-      </div>
-    </Container>
+            <Card.Title>
+              {item.p_name} <br></br>{item.waight}{" "}
+            </Card.Title>
+            <Card.Text>₹ {item.price-item.discount}.00 - ₹ {item.price}.00</Card.Text>
+            
+          </Card.Body>
+        </Card>
+      </Col>
+      </>)}})}
+    </Row>
+  </Container>
   );
 };
 

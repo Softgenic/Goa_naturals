@@ -19,9 +19,9 @@ label {
   color: var(--forest-green-traditional);
 }
 
-input,
-select,
-textarea {
+.form-item input,
+.form-item select,
+.form-item textarea {
   padding: 0.5rem;
   border-radius: 10px;
   outline: none;
