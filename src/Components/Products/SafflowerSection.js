@@ -57,26 +57,6 @@ const SafflowerSection = () => {
           </Card>
         </Col>
         </>)}})}
-        <Col lg={3} sm={6} className="Product-col">
-          <Card as={Link} to="/ViewProduct">
-            <Card.Img src="/item-pics/1ltr-safflower-front.jpg" />
-
-            <Card.Body>
-              <div className="d-flex justify-content-center mb-3">
-                <BsStarFill color="#00d084" />
-                <BsStarFill color="#00d084" className="ms-2" />
-                <BsStarFill color="#00d084" className="ms-2" />
-                <BsStarFill color="#00d084" className="ms-2" />
-                <BsStarFill color="#00d084" className="ms-2" />
-              </div>
-              <Card.Title>
-                {" "}
-                Safflower Oil <br></br>1 Ltr{" "}
-              </Card.Title>
-              <Card.Text>₹ 546.00 - ₹ 750.00 </Card.Text>
-            </Card.Body>
-          </Card>
-        </Col>
       </Row>
     </Container>
   );
