@@ -1,8 +1,21 @@
-import React from "react";
+import { getSpaceUntilMaxLength } from "@testing-library/user-event/dist/utils";
+import React, { useState } from "react";
 import NavbarMenu from "../NavbarMenu/NavbarMenu";
 import "./css/Checkout.css";
 
 const Checkout = () => {
+  const [items, setItems] = useState([]);
+  const [shipping, setShipping] = useState(100);
+  const [cgst, setCgst] = useState(26.68);
+  const [sgst, setSgst] = useState(26.68);
+
+  const getSubTotal = () => {
+    let subtotal = 0;
+    items.forEach((item) => {
+      subtotal += item.price * item.number;
+    });
+    return subtotal;
+  };
   return (
     <>
       <NavbarMenu />
@@ -203,8 +216,39 @@ const Checkout = () => {
           </div>
         </div>
         <div className="your-order">
-          <div className="product"></div>
-          <div className="subtotal"></div>
+          <table className="your-order-table">
+            <thead>
+              <td>Product</td>
+              <td>Subtotal</td>
+            </thead>
+            <tbody>
+              {items.map((item, index) => {
+                return (
+                  <tr data-id={index}>
+                    <td>
+                      {item.name} - {item.quantity} x {item.number}
+                    </td>
+                    <td>{item.price * item.number} (incl. VAT)</td>
+                  </tr>
+                );
+              })}
+              <tr>
+                <td>Subtotal</td>
+                <td>{getSubTotal()} (incl. VAT)</td>
+              </tr>
+              <tr>
+                <td>Shipping</td>
+                <td>Shipping: Rs. {shipping}.00</td>
+              </tr>
+              <tr>
+                <td>Total</td>
+                <td>
+                  Rs. {getSubTotal() + shipping} (includes Rs. {cgst} CGST, Rs.{" "}
+                  {sgst} SGST)
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
     </>

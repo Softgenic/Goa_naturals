@@ -12,8 +12,8 @@ import ContactUs from "./Components/ContactUs/ContactUs";
 import Checkout from "./Components/Pages/Checkout";
 import ViewProduct from "./Components/Pages/ViewProduct";
 import ViewCart from "./Components/Pages/ViewCart";
-import { StoreProvider } from "./utils/Store";
 import ScrollToTop from "./Components/ScrollToTop/ScrollToTop";
+import { StoreProvider } from "./utils/Store";
 
 function App() {
   return (

@@ -49,3 +49,40 @@ textarea {
 .different-address-heading > input {
   margin-right: 1rem;
 }
+
+table,
+thead,
+tbody,
+tr,
+th,
+td {
+  border-color: var(--forest-green-traditional) !important;
+}
+table {
+  max-width: 80vw !important;
+  margin: auto;
+  border-collapse: separate !important;
+  border: 2px solid var(--india-green) !important;
+  border-radius: 10px !important;
+  border-spacing: 0 15px;
+}
+
+thead {
+  width: 100vw !important;
+  border-bottom: 1px solid var(--india-green) !important;
+}
+
+th,
+td {
+  text-align: center;
+  border-width: 0 0 1px 0 !important;
+  padding: 5px;
+}
+
+tbody > tr:last-child > td {
+  border-width: 0 !important;
+}
+
+.your-order-table {
+  margin-top: 2rem !important;
+}
