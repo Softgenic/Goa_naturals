@@ -36,10 +36,15 @@ const ViewCartSection = () => {
     dispatch({ type: "CART_ADD_ITEM", payload: { ...product, quantity } });
   };
   const onQuantityChange = async ({ product, quantity }) => {
-    if (product.stock < quantity) {
+    if (parseInt(product.stock) < quantity) {
       window.alert("Sorry. Product is out of stock");
       return;
     }
+    if (quantity < 1) {
+      window.alert("quantity should not be less than 1");
+      return;
+    }
+
     dispatch({ type: "CART_ADD_ITEM", payload: { ...product, quantity } });
   };
 
