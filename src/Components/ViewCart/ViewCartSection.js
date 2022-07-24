@@ -128,29 +128,55 @@ const ViewCartSection = () => {
                 );
               })}
 
-              <div class="card mb-4">
-                <div class="card-body p-4 d-flex flex-row">
-                  <div class="form-outline flex-fill">
-                    <input
-                      type="text"
-                      id="form1"
-                      class="form-control form-control-lg"
-                    />
-                    <label class="form-label" for="form1">
-                      Discound code
-                    </label>
+              <div class="col-md-6">
+                <div class="card mb-4">
+                  <div class="card-header py-3">
+                    <h5 class="mb-0">Summary</h5>
                   </div>
-                  <button
-                    type="button"
-                    class="btn btn-outline-warning btn-lg ms-3"
-                  >
-                    Apply
-                  </button>
-                </div>
-              </div>
+                  <div class="card-body">
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 pb-0">
+                        Products
+                        <span>$53.98</span>
+                      </li>
+                      <li class="list-group-item d-flex justify-content-between align-items-center px-0">
+                        Shipping
+                        <span>Gratis</span>
+                      </li>
+                      <li class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 mb-3">
+                        <div>
+                          <strong>Total amount</strong>
+                          <strong>
+                            <p class="mb-0">(including VAT)</p>
+                          </strong>
+                        </div>
+                        <span>
+                          <strong>$53.98</strong>
+                        </span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div>
+                    <div class="p-4 d-flex flex-row">
+                      <div class="form-outline flex-fill">
+                        <input
+                          type="text"
+                          id="form1"
+                          class="form-control form-control-lg"
+                        />
+                        <label class="form-label" for="form1">
+                          Discound code
+                        </label>
+                      </div>
+                      <button
+                        type="button"
+                        class="btn btn-outline-warning btn-lg ms-3"
+                      >
+                        Apply
+                      </button>
+                    </div>
+                  </div>
 
-              <div class="card">
-                <div class="card-body">
                   <button
                     type="button"
                     class="btn btn-warning btn-block btn-lg"
