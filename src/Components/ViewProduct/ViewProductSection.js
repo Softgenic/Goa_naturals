@@ -181,7 +181,7 @@ const ViewProductSection = () => {
                 <br></br>
                 <button
                   onClick={() => {
-                    setQuantity(quantity + 1);
+                    setQuantity(parseInt(quantity) + 1);
                   }}
                 >
                   +
