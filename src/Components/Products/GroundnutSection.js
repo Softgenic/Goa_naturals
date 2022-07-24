@@ -4,7 +4,7 @@ import { BsStarFill, BsStarHalf, BsStar } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import "./Products.css";
-const CoconutSection = () => {
+const GroundnutSection = () => {
   // for store all data of product table in product state
   const [product, SetProduct] = useState([]);
 
@@ -23,7 +23,7 @@ const CoconutSection = () => {
   return (
     <Container className="Product mb-5">
       <span>
-        <Link to="/">Home</Link> » Coconut Oil
+        <Link to="/">Home</Link> » Groundnut Oil
       </span>
       <br></br>
       <span
@@ -68,4 +68,4 @@ const CoconutSection = () => {
   );
 };
 
-export default CoconutSection;
+export default GroundnutSection;
