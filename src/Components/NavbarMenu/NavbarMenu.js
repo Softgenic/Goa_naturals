@@ -107,7 +107,7 @@ const NavbarMenu = () => {
                   eventKey={1}
                   onClick={closeMobileMenu}
                 >
-                  SunFlower Oil
+                  Safflower Oil
                 </NavDropdown.Item>
                 <NavDropdown.Item
                   as={Link}

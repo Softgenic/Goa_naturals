@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Button, Carousel } from "react-bootstrap";
 // Background hero images
-import Sunflower from "../Assets/images/safflower.jpg";
+import Safflower from "../Assets/images/safflower.jpg";
 import Turmeric from "../Assets/images/turmeric.jpg";
 import Groundnut from "../Assets/images/groundnut.jpg";
 import Coconut from "../Assets/images/coconut.jpg";
@@ -16,7 +16,7 @@ const HeroSection = () => {
     <div>
       <Carousel activeIndex={index} onSelect={handleSelect}>
         <Carousel.Item>
-          <img className="d-block w-100" src={Sunflower} alt="SunFlower" />
+          <img className="d-block w-100" src={Safflower} alt="Safflower" />
           <Carousel.Caption>
             <Button>Buy Now</Button>
           </Carousel.Caption>
