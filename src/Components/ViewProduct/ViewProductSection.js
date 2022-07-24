@@ -48,16 +48,7 @@ const ViewProductSection = () => {
     };
     fetchProductInfo();
   }, []);
-  // const product = {
-  //   _id: "product1",
-  //   name: "1ltr safflower oil",
-  //   category: "Safflower oil",
-  //   image: "/item-pics/500ml-safflower-front.jpg",
-  //   price: 70,
-  //   rating: 4.5,
-  //   countInStock: 20,
-  //   description: "Coldpressed Safflower oil",
-  // };
+
   const { state, dispatch } = useContext(Store);
 
   console.log("cart data", state);
@@ -103,14 +94,10 @@ const ViewProductSection = () => {
   };
   // end
   const addToCartHandler = async () => {
-    // const existItem = state.cart.cartItems.find((x) => x._id === ProductInfo.id);
-    // console.log(existItem);
-    //const quantity = existItem ? existItem.quantity + 1 : 1;
-    // const { data } = await axios.get(`/api/products/${product._id}`);
-    // if (data.countInStock < quantity) {
-    //   window.alert("Sorry. Product is out of stock");
-    //   return;
-    // }
+    if (ProductInfo.stock < quantity) {
+      window.alert("Sorry. Product is out of stock");
+      return;
+    }
     dispatch({ type: "CART_ADD_ITEM", payload: { ...ProductInfo, quantity } });
     //router.push("/cart");
   };
