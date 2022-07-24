@@ -130,7 +130,7 @@ const ViewCartSection = () => {
                 );
               })}
 
-              <div class="col-md-6">
+              <div class="col-md-8">
                 <div class="card mb-4">
                   <div class="card-header py-3">
                     <h5 class="mb-0">Summary</h5>
