@@ -13,8 +13,8 @@ const ViewCartSection = () => {
     0
   );
 
-  const onRemove = (product) => {
-    console.log("product", product);
+  const onRemove = (item) => {
+    dispatch({ type: "CART_REMOVE_ITEM", payload: item });
   };
 
   const onMinus = (product) => {
