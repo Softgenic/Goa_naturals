@@ -21,7 +21,13 @@ const ViewCartSection = () => {
     console.log("product", product);
   };
   const onAdd = (product) => {
-    console.log("product", product);
+    const quantity = product.quantity + 1;
+
+    if (product.stock < quantity) {
+      window.alert("Sorry. Product is out of stock");
+      return;
+    }
+    dispatch({ type: "CART_ADD_ITEM", payload: { ...product, quantity } });
   };
   const onQuantityChange = async ({ product, quantity }) => {
     if (product.stock < quantity) {
