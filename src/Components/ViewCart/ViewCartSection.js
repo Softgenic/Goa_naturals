@@ -18,7 +18,13 @@ const ViewCartSection = () => {
   };
 
   const onMinus = (product) => {
-    console.log("product", product);
+    const quantity = product.quantity - 1;
+
+    if (quantity < 1) {
+      window.alert("quantity should not be less than 1");
+      return;
+    }
+    dispatch({ type: "CART_ADD_ITEM", payload: { ...product, quantity } });
   };
   const onAdd = (product) => {
     const quantity = product.quantity + 1;
