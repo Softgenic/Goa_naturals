@@ -263,8 +263,9 @@ const ViewProductSection = () => {
       </div>
       {/* Relaed product slider */}
       <Carousel responsive={responsive} autoPlay>
-        {products.map((item) => {
-          if (item.category === "safflower" || "turmeric") {
+        {products
+          .filter((item) => item.category === ProductInfo.category)
+          .map((item) => {
             return (
               <>
                 <Card
@@ -295,8 +296,7 @@ const ViewProductSection = () => {
                 </Card>
               </>
             );
-          }
-        })}
+          })}
       </Carousel>
     </div>
 
