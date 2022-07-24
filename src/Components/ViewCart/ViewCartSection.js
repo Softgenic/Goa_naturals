@@ -13,6 +13,8 @@ const ViewCartSection = () => {
     0
   );
 
+  let shippingAmount = 100;
+
   const onRemove = (item) => {
     dispatch({ type: "CART_REMOVE_ITEM", payload: item });
   };
@@ -137,11 +139,11 @@ const ViewCartSection = () => {
                     <ul class="list-group list-group-flush">
                       <li class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 pb-0">
                         Products
-                        <span>$53.98</span>
+                        <span>₹{totalPrice}</span>
                       </li>
                       <li class="list-group-item d-flex justify-content-between align-items-center px-0">
                         Shipping
-                        <span>Gratis</span>
+                        <span>{shippingAmount}</span>
                       </li>
                       <li class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 mb-3">
                         <div>
@@ -151,7 +153,7 @@ const ViewCartSection = () => {
                           </strong>
                         </div>
                         <span>
-                          <strong>$53.98</strong>
+                          <strong>{totalPrice + shippingAmount}</strong>
                         </span>
                       </li>
                     </ul>
