@@ -103,11 +103,20 @@ const NavbarMenu = () => {
               >
                 <NavDropdown.Item
                   as={Link}
+                  to="/products"
+                  eventKey={1}
+                  onClick={closeMobileMenu}
+                >
+                  All Products
+                </NavDropdown.Item>
+
+                <NavDropdown.Item
+                  as={Link}
                   to="/safflower"
                   eventKey={1}
                   onClick={closeMobileMenu}
                 >
-                  SunFlower Oil
+                  Safflower Oil
                 </NavDropdown.Item>
                 <NavDropdown.Item
                   as={Link}

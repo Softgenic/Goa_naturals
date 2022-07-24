@@ -16,6 +16,7 @@
 }
 .Product .Product-col .card {
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+  margin-bottom: 30px;
 }
 .Product .Product-col .card:hover {
   transition: all 0.4s ease 0s;
