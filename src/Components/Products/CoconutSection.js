@@ -15,7 +15,8 @@ const CoconutSection = () => {
       const res = await axios.get(
         "https://golden.softgenics.in/api/allProduct"
       );
-      SetProduct(res.data);
+      let data = res.data.filter((item) => item?.category === "coconut");
+      SetProduct(data);
     };
     fetchProduct();
   }, []);
@@ -30,40 +31,38 @@ const CoconutSection = () => {
         style={{ fontSize: "0.95rem", textTransform: "none" }}
         className="text-muted mt-5"
       >
-        Showing all 1 resuls
+        Showing all {product?.length} results
       </span>
       <Row className="mt-5">
         {product.map((item) => {
-          if (item.category === "coconut") {
-            return (
-              <>
-                <Col lg={3} sm={6} className="Product-col">
-                  <Card as={Link} to={`/ViewProduct/${item.id}`}>
-                    <Card.Img
-                      src={`https://golden.softgenics.in/uploads/${item.image}`}
-                    />
+          return (
+            <>
+              <Col lg={3} sm={6} className="Product-col">
+                <Card as={Link} to={`/ViewProduct/${item.id}`}>
+                  <Card.Img
+                    src={`https://golden.softgenics.in/uploads/${item.image}`}
+                  />
 
-                    <Card.Body>
-                      <div className="d-flex justify-content-center mb-3">
-                        <BsStarFill color="#00d084" />
-                        <BsStarFill color="#00d084" className="ms-2" />
-                        <BsStarFill color="#00d084" className="ms-2" />
-                        <BsStarHalf color="#00d084" className="ms-2" />
-                        <BsStar color="#00d084" className="ms-2" />
-                      </div>
-                      <Card.Title>
-                        {item.p_name} <br></br>
-                        {item.waight}{" "}
-                      </Card.Title>
-                      <Card.Text>
-                        ₹ {item.price - item.discount}.00 - ₹ {item.price}.00
-                      </Card.Text>
-                    </Card.Body>
-                  </Card>
-                </Col>
-              </>
-            );
-          }
+                  <Card.Body>
+                    <div className="d-flex justify-content-center mb-3">
+                      <BsStarFill color="#00d084" />
+                      <BsStarFill color="#00d084" className="ms-2" />
+                      <BsStarFill color="#00d084" className="ms-2" />
+                      <BsStarHalf color="#00d084" className="ms-2" />
+                      <BsStar color="#00d084" className="ms-2" />
+                    </div>
+                    <Card.Title>
+                      {item.p_name} <br></br>
+                      {item.waight}{" "}
+                    </Card.Title>
+                    <Card.Text>
+                      ₹ {item.price - item.discount}.00 - ₹ {item.price}.00
+                    </Card.Text>
+                  </Card.Body>
+                </Card>
+              </Col>
+            </>
+          );
         })}
       </Row>
     </Container>
