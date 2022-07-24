@@ -94,7 +94,7 @@ const ViewProductSection = () => {
   };
   // end
   const addToCartHandler = async () => {
-    if (ProductInfo.stock < quantity) {
+    if (parseInt(ProductInfo.stock) < quantity) {
       window.alert("Sorry. Product is out of stock");
       return;
     }
