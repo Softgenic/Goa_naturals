@@ -59,11 +59,12 @@ const ApplyPromo= ()=>{
   if(promo==="goa"){
     setpromsg("Coupon apllied");
     setpromoValid("text-success");
-    setpromoAmount(50)
+    setpromoAmount(100)
   }
   else{
     setpromsg("invalide promo")
     setpromoValid("text-danger")
+    setpromoAmount(0)
   }
 }
   return (

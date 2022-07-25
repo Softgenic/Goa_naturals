@@ -14,7 +14,7 @@ import ViewProduct from "./Components/Pages/ViewProduct";
 import ViewCart from "./Components/Pages/ViewCart";
 import { StoreProvider } from "./utils/Store";
 import ScrollToTop from "./Components/ScrollToTop/ScrollToTop";
-import Cart from "./Components/Pages/Cart";
+// import Cart from "./Components/Pages/Cart";
 function App() {
   return (
     <StoreProvider>
@@ -33,7 +33,7 @@ function App() {
             <Route path="/ViewProduct/:id" element={<ViewProduct />} />
             <Route path="/ViewCart" element={<ViewCart />} />
             <Route path="/checkout" element={<Checkout />} />
-            <Route path="/cart" element={<Cart />} />
+            {/* <Route path="/cart" element={<Cart />} /> */}
           </Routes>
         </BrowserRouter>
         <WhatsApp />
