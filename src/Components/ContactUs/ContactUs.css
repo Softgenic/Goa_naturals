@@ -1,6 +1,10 @@
 .contact {
    margin-top: 3rem;
+   
   
+}
+.contact section{
+    background-color: #eee;
 }
 
 
@@ -364,7 +368,7 @@ display: block;
 position: relative;
 display: block;   
 background: #ffffff;
-border: 1px solid #eeeeee;
+border: 1px solid rgb(8, 193, 67);
 width: 100%;
 height: 55px;
 font-size: 16px;
@@ -385,7 +389,7 @@ font-family: Signika,serif;
 }
 .contact-form form input[type="text"]:focus{
 color: #222222;
-border-color: #d4d4d4; 
+border-color: rgb(8, 193, 67); 
 }
 .contact-form form input[type="email"]:focus{
 color: #222222;
@@ -393,7 +397,8 @@ border-color: #d4d4d4;
 }
 .contact-form form textarea:focus{
 color: #222222;
-border-color: #d4d4d4;
+border-color:rgb(8, 193, 67);
+
 }
 .contact-form form input[type="text"]::-webkit-input-placeholder {
 color: #848484;
@@ -431,8 +436,8 @@ font-family: Signika,serif;
 position: relative;
 display: block;
 width: 100%;
-background: #23ad1a;
-border: 1px solid #23ad1a;
+background: rgb(8, 193, 67);
+border: 1px solid rgb(8, 193, 67);
 color: #f5f1f1;
 font-size: 16px;
 line-height: 55px;

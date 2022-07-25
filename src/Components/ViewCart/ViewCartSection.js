@@ -1,5 +1,5 @@
-import React, { useContext } from "react";
-import { Container } from "react-bootstrap";
+import React, { useContext, useState } from "react";
+import { Alert, Container } from "react-bootstrap";
 import { Store } from "../../utils/Store";
 // import { FaWindowClose } from "react-icons/fa";
 
@@ -49,32 +49,51 @@ const ViewCartSection = () => {
 
     dispatch({ type: "CART_ADD_ITEM", payload: { ...product, quantity } });
   };
-
+//promo code 
+const [promoValid, setpromoValid]= useState([]);
+const [promomsg, setpromsg]= useState([]);
+const [promo,setpromo]=useState([]);
+const [promoAmount, setpromoAmount]=useState(0);
+const ApplyPromo= ()=>{
+ 
+  if(promo==="goa"){
+    setpromsg("Coupon apllied");
+    setpromoValid("text-success");
+    setpromoAmount(50)
+  }
+  else{
+    setpromsg("invalide promo")
+    setpromoValid("text-danger")
+  }
+}
   return (
-    <Container fluid>
-      <section class="h-100" className="sec">
-        <div class="container h-100 py-5">
-          <div class="row d-flex justify-content-center align-items-center h-100">
-            <div class="col-10">
+    <Container fluid style={{marginTop:"6rem"}}>
+      <section className="h-100 sec">
+        <div className="container h-100 py-5">
+          <div className="row d-flex justify-content-center align-items-center h-100">
+            <div className="col-10">
               <div
-                class="d-flex justify-content-between align-items-center mb-4"
-                className="heading"
+                className="d-flex justify-content-between align-items-center mb-4"
+                
               >
-                <h3 class="fw-normal mb-0 text-black">Shopping Cart</h3>
+                <h3 className="fw-normal mb-0 text-black text-center">Shopping Cart</h3>
               </div>
               {state?.cart?.cartItems?.map((item, index) => {
                 return (
-                  <div class="card rounded-3 mb-4">
-                    <div class="card-body p-4">
-                      <div class="row d-flex justify-content-between align-items-center">
-                        <div class="col-md-2 col-lg-2 col-xl-2">
+                  <div className="card rounded-3 mb-4">
+                    <div className="card-body p-4">
+                      
+                      <div className="row d-flex justify-content-between align-items-center">
+                        <div className="col-md-2 col-lg-2 col-xl-2">
                           <img
                             src={`https://golden.softgenics.in/uploads/${item.image}`}
-                            class="img-fluid rounded-3"
+                            className="img-fluid rounded-3"
                             alt={item.image}
                           />
                         </div>
+                        
                         <div class="col-md-3 col-lg-3 col-xl-3">
+                        
                           <p class="lead fw-normal mb-2">{item.p_name}</p>
                           <p>
                             <span class="text-muted">Weight: </span>
@@ -131,13 +150,13 @@ const ViewCartSection = () => {
               })}
 
               <div class="col-md-8">
-                <div class="card mb-4">
-                  <div class="card-header py-3">
-                    <h5 class="mb-0">Summary</h5>
+                <div class="card mb-4 px-4">
+                  <div className="card-header py-3">
+                    <h5 className="mb-0 nt-2">Summary</h5>
                   </div>
-                  <div class="card-body">
-                    <ul class="list-group list-group-flush">
-                      <li class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 pb-0">
+                  <div className="card-body ">
+                    <ul className="list-group list-group-flush">
+                      <li className="list-group-item d-flex justify-content-between align-items-center border-0 px-0 pb-0">
                         Products
                         <span>₹{totalPrice}</span>
                       </li>
@@ -152,36 +171,46 @@ const ViewCartSection = () => {
                             <p class="mb-0">(including VAT)</p>
                           </strong>
                         </div>
+                        
                         <span>
-                          <strong>{totalPrice + shippingAmount}</strong>
+                          
+                          <strong>{totalPrice + shippingAmount - promoAmount}</strong>
                         </span>
                       </li>
                     </ul>
+                    
                   </div>
                   <div>
-                    <div class="p-4 d-flex flex-row">
-                      <div class="form-outline flex-fill">
+                  
+                    <div className="row py-3 ">
+                  
+                      <div class="col-sm-9">
                         <input
                           type="text"
                           id="form1"
-                          class="form-control form-control-lg"
+                          className="form-control form-control-lg"
+                          value={promo}
+                          onChange={(e)=>setpromo(e.target.value)}
                         />
-                        <label class="form-label" for="form1">
-                          Discound code
-                        </label>
+                        <label className="form-label mt-3" htmlFor="form1">
+                          <span >Discound code <span className={promoValid}>{promomsg}</span></span>
+                        </label> 
                       </div>
+                      <div className="col-sm-3">
                       <button
                         type="button"
-                        class="btn btn-outline-warning btn-lg ms-3"
+                        class="btn btn-outline-success btn-lg"
+                        onClick={ApplyPromo}
                       >
                         Apply
                       </button>
+                      </div>
                     </div>
                   </div>
 
                   <button
                     type="button"
-                    class="btn btn-warning btn-block btn-lg"
+                    class="btn btn-success btn-block btn-lg mb-5"
                   >
                     Proceed to Pay
                   </button>

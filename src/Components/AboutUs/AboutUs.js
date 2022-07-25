@@ -31,8 +31,13 @@ const AboutUs = () => {
                     and this thought process gave birth to a company called <b>‘Goa Natural’</b>.</p>
                     <p>It is now believed that our modern lifestyle and eating habits are responsible
                         for increase in patients of Diabetes, Heart attacks, Pressure, Cancer, etc and
-                        the three major culprits in our kitchen are 1) The Refined Oil 2) The processed
-                        Salt and 3) The Sugar</p>
+                        the three major culprits in our kitchen are 
+                        <ol>
+                          <li>The Refined Oil</li>
+                          <li>The processed Salt</li> 
+                         <li> The Sugar</li>
+                        </ol>
+                        </p>
                         <p>Goa Natural produces Cold pressed Coconut oil, Groundnut oil and Safflower
                 oil. Using cold pressed oils for cooking instead of refined oils could be one of
                 the major answers to these deadly diseases. Infact, some doctors even
