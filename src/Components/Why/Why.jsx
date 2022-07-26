@@ -1,6 +1,5 @@
 import React from "react";
 import oil from "../Assets/images/oil.jpg";
-
 import whyimg1 from "../Assets/images/whyimg1.png";
 import whyimg2 from "../Assets/images/whyimg2.png";
 import whyimg3 from "../Assets/images/whyimg3.png";
