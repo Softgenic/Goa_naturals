@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300&family=Playfair+Display&family=Poppins:wght@200&family=Signika:wght@300&display=swap');
 .navbar {
-   background-color: #fff;
+   background-color: rgb(0, 0, 0);
     padding-right: 3rem;
 }
 .navbar-bg {
-    background-color:#fff !important;
+    background-color:rgb(0, 0, 0) !important;
 }
 .navbar .navbar-toggler {
     border:  none !important;
@@ -19,10 +19,14 @@
     font-weight: 600;
     font-size: 17px;
     font-family: Signika,serif;
-    color: green !important;
+    color: rgb(239, 245, 239) !important;
     margin-right: 1rem;
     outline:  #96e072ff;
+    text-align: left;
     
+}
+.navbar-nav .nav-link:hover{
+    color:  #96e072ff !important;
 }
 .navbar-brand img {
     border-radius: 10px;
@@ -46,7 +50,7 @@
     line-height: 0.55em;
     color: white;
     color: #f6f0f0;
-    text-align: center;
+  
     min-width: 2em;
     font-weight: bold;
     background: rgb(234, 20, 20);
@@ -66,8 +70,11 @@
     border-radius: 0 ;
     margin-top: 1rem;
     width: 250px;
+    transition: 0.2s;
+    
 
   }
+
   .navbar-nav .dropdown-menu .dropdown-item {
     font-family: Montserrat;
     line-height: 35px;
@@ -82,7 +89,7 @@
   }
 @media(max-width: 992px) {
     .navbar, .navbar-bg {
-        background-color: #fff !important;
+        background-color: rgb(10, 10, 10) !important;
         padding: auto;
         padding-right: 1rem;
         
@@ -105,11 +112,23 @@
         width: 100%;
         height: 100%;
         z-index: 110;
-        background-color: #fff;
+        background-color: rgb(0, 0, 0);
         box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
     }
+   
     .navbar-nav .dropdown-menu {
         width: auto;
+    }
+    .navbar-nav .dropdown-menu .dropdown-item{
+        background-color: black !important;
+        color: #fff;
+    }
+    .navbar-nav .dropdown-menu{
+        background-color: black !important;
+    }
+    .navbar .dropdown-toggle::after {     
+        transform: rotate(-90deg);   
+        margin-top: 0.77em;
     }
 }
 

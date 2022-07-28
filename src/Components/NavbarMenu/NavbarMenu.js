@@ -15,7 +15,7 @@ import {
 import { Store } from "../../utils/Store";
 
 // Logo components
-import Logo from "../Assets/images/goa-natural-logo-mini.jpg";
+import Logo from "../Assets/images/goalogo.png";
 
 // Modal Left Image
 import ModalImage from "../Assets/Goa-natural/Goa-Natural-modal1.png";
@@ -54,6 +54,8 @@ const NavbarMenu = () => {
 
   // Show drop down on mousehover
   const [showdropdown, setshowdropdown] = useState(false);
+  const HandleShowDropDown = ()=> setshowdropdown(!showdropdown)
+ 
 
   //Modal state
   const [showModal, setShowModal] = useState(false);
@@ -89,17 +91,18 @@ const NavbarMenu = () => {
             aria-controls="responsive-navbar-nav"
             onClick={handleClick}
           >
-            <i className={click ? "fas fa-times" : "fas fa-bars"} />
+            <i className={click ? "fas fa-times" : "fas fa-bars"} style={{color:"white"}} />
           </Navbar.Toggle>
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="ms-auto">
               {/* Product dropdown start here */}
               <NavDropdown
-                title="Products"
+                title={"Prodcuts"}
                 id="collasible-nav-dropdown"
                 show={showdropdown}
                 onMouseEnter={() => setshowdropdown(true)}
                 onMouseLeave={() => setshowdropdown(false)}
+                onClick={HandleShowDropDown}
               >
                 <NavDropdown.Item
                   as={Link}

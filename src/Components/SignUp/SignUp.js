@@ -7,6 +7,7 @@ const SignUp = () => {
   const [name, setname]= useState([]);
   const [password, setpassword] = useState([]);
   const [Number ,setnumber] = useState("125637");
+  console.log(setnumber)
   const handleSignUp =()=>{
     axios.post('https://golden.softgenics.in/api/users',{
       name:name,

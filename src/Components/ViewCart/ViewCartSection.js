@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import { Alert, Container } from "react-bootstrap";
+import {Container } from "react-bootstrap";
 import { Store } from "../../utils/Store";
 // import { FaWindowClose } from "react-icons/fa";
 

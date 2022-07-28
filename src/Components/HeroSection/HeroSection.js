@@ -1,45 +1,53 @@
 import React, { useState } from "react";
 import { Button, Carousel } from "react-bootstrap";
-// Background hero images
-import Safflower from "../Assets/images/safflower.jpg";
-import Turmeric from "../Assets/images/turmeric.jpg";
-import Groundnut from "../Assets/images/groundnut.jpg";
-import Coconut from "../Assets/images/coconut.jpg";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import "./HeroSection.css";
 const HeroSection = () => {
+  AOS.init();
   const [index, setIndex] = useState(0);
 
   const handleSelect = (selectedIndex, e) => {
     setIndex(selectedIndex);
+    AOS.refresh();
   };
   return (
     <div>
       <Carousel activeIndex={index} onSelect={handleSelect}>
         <Carousel.Item>
-          <img className="d-block w-100" src={Safflower} alt="Safflower" />
+          
+          <img className="" src="/Banner/safflower.jpg" alt="Safflower" />
           <Carousel.Caption>
-            <Button>Buy Now</Button>
+            <p className="carousel-head saff-head" data-aos='fade-up' data-aos-duration='2000'>Safflower Oil</p>
+            <p className="carousel-desc saff-desc" data-aos='fade-up' data-aos-duration='2000'>Keeps the Heart Healthy</p>
+            <Button data-aos='fade-up' data-aos-duration='3000'>Buy Now</Button>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
-          <img className="d-block w-100" src={Turmeric} alt="Turmeric" />
+          <img className="" src="/Banner/turmeric.jpg" alt="Turmeric" />
 
           <Carousel.Caption>
-            <Button>Buy Now</Button>
+          <p className="carousel-head tur-head" data-aos='fade-up' data-aos-duration='2000'>Turmeric Powder</p>
+          <p className="carousel-desc tur-desc" data-aos='fade-up' data-aos-duration='2000'>Include Spoonful illusion in your food</p>
+            <Button data-aos='fade-up' data-aos-duration='3000' className="tur-btn">Buy Now</Button>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
-          <img className="d-block w-100" src={Groundnut} alt="Groundnut" />
+          <img className="" src="/Banner/grndnut.jpg" alt="Groundnut" />
 
           <Carousel.Caption>
-            <Button>Buy Now</Button>
+          <p className="carousel-head gnd-head" data-aos='fade-up' data-aos-duration='2000'>Groundnut Oil</p>
+          <p className="carousel-desc gnd-desc" data-aos='fade-up' data-aos-duration='2000'>Dont't Compromise with Health And Taste</p>
+            <Button data-aos='fade-up' data-aos-duration='3000'>Buy Now</Button>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
-          <img className="d-block w-100" src={Coconut} alt="Coconut" />
 
+          <img className="" src="/Banner/coconut.jpg" alt="Coconut" />
           <Carousel.Caption>
-            <Button>Buy Now</Button>
+          <p className="carousel-head coco-head" data-aos='fade-up' data-aos-duration='2000'>Coconut Oil</p>
+        <p className="carousel-desc coco-desc" data-aos='fade-up' data-aos-duration='2000'>The Real Super Food From Nature</p>
+            <Button data-aos='fade-up' data-aos-duration='3000'>Buy Now</Button>
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>

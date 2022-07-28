@@ -11,6 +11,8 @@
     padding-bottom: 0.5rem;
     font-family: Montserrat, sans-serif;
     font-weight: 700;
+    background-color: black;
+    color: #fff;
 }
 .signup .form-check-input:checked  {
     background-color: green;

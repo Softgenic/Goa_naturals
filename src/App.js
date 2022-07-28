@@ -9,7 +9,6 @@ import Turmerics from "./Components/Pages/Turmerics";
 import Products from "./Components/Pages/Products";
 import AboutUs from "./Components/AboutUs/AboutUs";
 import ContactUs from "./Components/ContactUs/ContactUs";
-import Checkout from "./Components/Pages/Checkout";
 import ViewProduct from "./Components/Pages/ViewProduct";
 import ViewCart from "./Components/Pages/ViewCart";
 import { StoreProvider } from "./utils/Store";
@@ -32,8 +31,6 @@ function App() {
             <Route path="/Contact-Us" element={<ContactUs />} />
             <Route path="/ViewProduct/:id" element={<ViewProduct />} />
             <Route path="/ViewCart" element={<ViewCart />} />
-            <Route path="/checkout" element={<Checkout />} />
-            {/* <Route path="/cart" element={<Cart />} /> */}
           </Routes>
         </BrowserRouter>
         <WhatsApp />

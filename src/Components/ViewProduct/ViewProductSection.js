@@ -106,13 +106,13 @@ const ViewProductSection = () => {
     <div>
       <>
         <Container className="view-product">
-          <span>
-            <Link to="/">Home</Link> »{" "}
-            <a onClick={() => navigate(-1)} style={{ color: "black" }}>
+          <span className="d-flex">
+            <Link to="/">Home</Link> &nbsp;»&nbsp;{" "}
+            <p onClick={() => navigate(-1)} style={{ color: "black" }} >
               {" "}
               {ProductInfo.category}
-            </a>{" "}
-            »{ProductInfo.p_name} {ProductInfo.waight}
+            </p>{" "}
+            &nbsp;»&nbsp;{ProductInfo.p_name} {ProductInfo.waight}
           </span>
 
           <Row>

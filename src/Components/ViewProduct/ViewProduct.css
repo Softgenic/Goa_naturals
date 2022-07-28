@@ -137,7 +137,11 @@
 .related-product-slider .card-title, .card-text{
   color: black;
 }
-
+@media(max-width: 768px){
+  .related-product-slider{
+    width: 100%;
+  }
+}
 /* :root {
   --forest-green-traditional: #134611ff;
   --india-green: #3e8914ff;

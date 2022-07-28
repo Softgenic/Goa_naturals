@@ -4,7 +4,10 @@ import { BsStarFill, BsStarHalf, BsStar } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import "./Products.css";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 const GroundnutSection = () => {
+  AOS.init();
   // for store all data of product table in product state
   const [product, SetProduct] = useState([]);
 
@@ -36,7 +39,7 @@ const GroundnutSection = () => {
         {product.map((item) => {
           return (
             <>
-              <Col lg={3} sm={6} className="Product-col">
+              <Col lg={3} sm={6} className="Product-col" data-aos='fade-up' data-aos-duration='1000'>
                 <Card as={Link} to={`/ViewProduct/${item.id}`}>
                   <Card.Img
                     src={`https://golden.softgenics.in/uploads/${item.image}`}
