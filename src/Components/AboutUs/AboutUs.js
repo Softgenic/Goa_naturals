@@ -2,10 +2,17 @@ import React from 'react'
 import { Container } from 'react-bootstrap'
 import Footer from '../Footer/Footer'
 import NavbarMenu from '../NavbarMenu/NavbarMenu'
+import { Navigate } from 'react-router-dom'
 import './AboutUs.css';
 const AboutUs = () => {
+  let loggedIn = true;
+  let gettoken=localStorage.getItem('token')
+  if(gettoken==null){
+    loggedIn=false;
+  }
   return (
     <div>
+      {loggedIn? <></>: <Navigate to="/"/>}
         <NavbarMenu />
         <Container className='about-us'>
             <h2 className='mb-1'>About Us</h2>
