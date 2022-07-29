@@ -1,5 +1,6 @@
 import React, { useContext, useState } from "react";
 import {Container } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import { Store } from "../../utils/Store";
 // import { FaWindowClose } from "react-icons/fa";
 
@@ -140,9 +141,9 @@ const ApplyPromo= ()=>{
                           class="col-md-1 col-lg-1 col-xl-1 text-end"
                           onClick={() => onRemove(item)}
                         >
-                          <a class="text-danger">
+                          <p class="text-danger">
                             <i class="fas fa-trash fa-lg"></i>
-                          </a>
+                          </p>
                         </div>
                       </div>
                     </div>
@@ -209,12 +210,14 @@ const ApplyPromo= ()=>{
                     </div>
                   </div>
 
-                  <button
+                 <Link to="/CheckOut"> <button
                     type="button"
                     class="btn btn-success btn-block btn-lg mb-5"
+                    style={{width:"100%"}}
                   >
                     Proceed to Pay
                   </button>
+                  </Link>
                 </div>
               </div>
             </div>
