@@ -52,7 +52,7 @@ const ViewCartSection = () => {
   //promo code
   const [promoValid, setpromoValid] = useState([]);
   const [promomsg, setpromsg] = useState([]);
-  const [promo, setpromo] = useState([]);
+  const [promo, setpromo] = useState("");
   const [promoAmount, setpromoAmount] = useState(0);
   const ApplyPromo = () => {
     if (promo === "goa") {
@@ -63,6 +63,21 @@ const ViewCartSection = () => {
       setpromsg("invalide promo");
       setpromoValid("text-danger");
       setpromoAmount(0);
+    }
+  };
+
+  const ProceedToShippingPage = () => {
+    if (state?.cart?.cartItems?.length !== 0) {
+      let setTotalPrice = totalPrice + vatAmount - promoAmount;
+      dispatch({
+        type: "SAVE_TOTAL_AMOUNT_WITH_COUPON_CODE",
+        payload: {
+          promoCode: promo,
+          promoAmount,
+          vatAmount,
+          totalPrice: setTotalPrice,
+        },
+      });
     }
   };
   return (
@@ -208,6 +223,7 @@ const ViewCartSection = () => {
                   <button
                     type="button"
                     class="btn btn-success btn-block btn-lg mb-5"
+                    onClick={ProceedToShippingPage}
                   >
                     Proceed to Pay
                   </button>
