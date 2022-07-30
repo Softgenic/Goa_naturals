@@ -210,22 +210,32 @@ const CheckOut = () => {
           <Card.Body>
             {/* HEADING OF SUBTOTAL */}
             <Row>
-              <Col xs={6}>
+              <Col xs={4}>
                 <h5>Product</h5>
+              </Col>
+              <Col xs={2}>
+                <h5>Quantity</h5>
               </Col>
               <Col xs={6}>
                 <h5>Subtotal</h5>
               </Col>
             </Row>
             <hr></hr>
-            <Row>
-              <Col xs={6}>
-                <h5>Product Name+ qnty</h5>
-              </Col>
-              <Col xs={6}>
-                <h5>1000</h5>
-              </Col>
-            </Row>
+            {state?.cart?.cartItems?.map((item, index) => {
+              return (
+                <Row>
+                  <Col xs={4}>
+                    <h5>{item.p_name}</h5>
+                  </Col>
+                  <Col xs={2}>
+                    <h5>{item.quantity}</h5>
+                  </Col>
+                  <Col xs={6}>
+                    <h5>₹{item.price * item.quantity}</h5>
+                  </Col>
+                </Row>
+              );
+            })}
             <hr></hr>
           </Card.Body>
         </Card>
