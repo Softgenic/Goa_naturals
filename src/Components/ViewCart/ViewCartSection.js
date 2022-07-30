@@ -73,14 +73,13 @@ const ViewCartSection = () => {
 
   const ProceedToShippingPage = () => {
     if (state?.cart?.cartItems?.length !== 0) {
-      let setTotalPrice = totalPrice + vatAmount - promoAmount;
       dispatch({
         type: "SAVE_TOTAL_AMOUNT_WITH_COUPON_CODE",
         payload: {
           promoCode: promo,
           promoAmount,
           vatAmount,
-          totalPrice: setTotalPrice,
+          totalPrice,
         },
       });
       navigate("/CheckOut", { replace: true });
