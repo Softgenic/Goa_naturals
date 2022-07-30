@@ -255,9 +255,9 @@ const ViewCartSection = () => {
                     type="button"
                     class="btn btn-success btn-block btn-lg mb-5"
                     onClick={ProceedToShippingPage}
-                    style={{width:"100%"}}
+                    style={{ width: "100%" }}
                   >
-                    Proceed to Pay
+                    Proceed to Add Shipping Address
                   </button>
                 </div>
               </div>
