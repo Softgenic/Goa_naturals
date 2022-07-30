@@ -11,6 +11,12 @@ import { Store } from "../../utils/Store";
 const CheckOut = () => {
   const { state, dispatch } = useContext(Store);
 
+  const { promoCode, promoAmount, vatAmount, totalPrice } =
+    state?.cart?.cartCheckOutDetails;
+
+  //need to fetch from database
+  const shippingFee = 100;
+
   const States = [
     {
       value: "Bihar",
@@ -214,12 +220,24 @@ const CheckOut = () => {
               <ul className="list-group list-group-flush">
                 <li className="list-group-item d-flex justify-content-between align-items-center border-0 px-0 pb-0">
                   Products
-                  <span>₹{state?.cart?.cartCheckOutDetails?.totalPrice}</span>
+                  <span>₹{totalPrice}</span>
+                </li>
+
+                {promoAmount != 0 && (
+                  <li class="list-group-item d-flex justify-content-between border-0 align-items-center px-0">
+                    Coupon code:{promoCode}
+                    <span>{promoAmount}</span>
+                  </li>
+                )}
+                <li class="list-group-item d-flex justify-content-between border-0 align-items-center px-0">
+                  Vat(0.14%)
+                  <span>{vatAmount}</span>
                 </li>
                 <li class="list-group-item d-flex justify-content-between align-items-center px-0">
-                  Vat(0.14%)
-                  <span>{state?.cart?.cartCheckOutDetails?.vatAmount}</span>
+                  Shipping fee:
+                  <span>{shippingFee}</span>
                 </li>
+
                 <li class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 mb-3">
                   <div>
                     <strong>Total amount</strong>
@@ -230,7 +248,7 @@ const CheckOut = () => {
 
                   <span>
                     <strong>
-                      {state?.cart?.cartCheckOutDetails?.totalPrice}
+                      {totalPrice - promoAmount + vatAmount + shippingFee}
                     </strong>
                   </span>
                 </li>
@@ -240,7 +258,7 @@ const CheckOut = () => {
             <button
               type="button"
               class="btn btn-success btn-block btn-lg mb-5"
-              //onClick={ProceedToShippingPage}
+              //onClick={ProceedToPayment}
               style={{ width: "100%" }}
             >
               Proceed to Pay
