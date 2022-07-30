@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import {Container } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 import { Store } from "../../utils/Store";
 // import { FaWindowClose } from "react-icons/fa";
 
@@ -13,7 +13,7 @@ const ViewCartSection = () => {
     0
   );
 
-  let shippingAmount = 100;
+  let vatAmount = parseFloat((totalPrice * 0.14).toFixed(2));
 
   const onRemove = (item) => {
     dispatch({ type: "CART_REMOVE_ITEM", payload: item });
@@ -49,41 +49,37 @@ const ViewCartSection = () => {
 
     dispatch({ type: "CART_ADD_ITEM", payload: { ...product, quantity } });
   };
-//promo code 
-const [promoValid, setpromoValid]= useState([]);
-const [promomsg, setpromsg]= useState([]);
-const [promo,setpromo]=useState([]);
-const [promoAmount, setpromoAmount]=useState(0);
-const ApplyPromo= ()=>{
- 
-  if(promo==="goa"){
-    setpromsg("Coupon apllied");
-    setpromoValid("text-success");
-    setpromoAmount(100)
-  }
-  else{
-    setpromsg("invalide promo")
-    setpromoValid("text-danger")
-    setpromoAmount(0)
-  }
-}
+  //promo code
+  const [promoValid, setpromoValid] = useState([]);
+  const [promomsg, setpromsg] = useState([]);
+  const [promo, setpromo] = useState([]);
+  const [promoAmount, setpromoAmount] = useState(0);
+  const ApplyPromo = () => {
+    if (promo === "goa") {
+      setpromsg("Coupon apllied");
+      setpromoValid("text-success");
+      setpromoAmount(100);
+    } else {
+      setpromsg("invalide promo");
+      setpromoValid("text-danger");
+      setpromoAmount(0);
+    }
+  };
   return (
-    <Container fluid style={{marginTop:"6rem"}}>
+    <Container fluid style={{ marginTop: "6rem" }}>
       <section className="h-100 sec">
         <div className="container h-100 py-5">
           <div className="row d-flex justify-content-center align-items-center h-100">
             <div className="col-10">
-              <div
-                className="d-flex justify-content-between align-items-center mb-4"
-                
-              >
-                <h3 className="fw-normal mb-0 text-black text-center">Shopping Cart</h3>
+              <div className="d-flex justify-content-between align-items-center mb-4">
+                <h3 className="fw-normal mb-0 text-black text-center">
+                  Shopping Cart
+                </h3>
               </div>
               {state?.cart?.cartItems?.map((item, index) => {
                 return (
                   <div className="card rounded-3 mb-4">
                     <div className="card-body p-4">
-                      
                       <div className="row d-flex justify-content-between align-items-center">
                         <div className="col-md-2 col-lg-2 col-xl-2">
                           <img
@@ -92,9 +88,8 @@ const ApplyPromo= ()=>{
                             alt={item.image}
                           />
                         </div>
-                        
+
                         <div class="col-md-3 col-lg-3 col-xl-3">
-                        
                           <p class="lead fw-normal mb-2">{item.p_name}</p>
                           <p>
                             <span class="text-muted">Weight: </span>
@@ -162,8 +157,8 @@ const ApplyPromo= ()=>{
                         <span>₹{totalPrice}</span>
                       </li>
                       <li class="list-group-item d-flex justify-content-between align-items-center px-0">
-                        Shipping
-                        <span>{shippingAmount}</span>
+                        Vat(0.14%)
+                        <span>{vatAmount}</span>
                       </li>
                       <li class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 mb-3">
                         <div>
@@ -172,39 +167,40 @@ const ApplyPromo= ()=>{
                             <p class="mb-0">(including VAT)</p>
                           </strong>
                         </div>
-                        
+
                         <span>
-                          
-                          <strong>{totalPrice + shippingAmount - promoAmount}</strong>
+                          <strong>
+                            {totalPrice + vatAmount - promoAmount}
+                          </strong>
                         </span>
                       </li>
                     </ul>
-                    
                   </div>
                   <div>
-                  
                     <div className="row py-3 ">
-                  
                       <div class="col-sm-9">
                         <input
                           type="text"
                           id="form1"
                           className="form-control form-control-lg"
                           value={promo}
-                          onChange={(e)=>setpromo(e.target.value)}
+                          onChange={(e) => setpromo(e.target.value)}
                         />
                         <label className="form-label mt-3" htmlFor="form1">
-                          <span >Discound code <span className={promoValid}>{promomsg}</span></span>
-                        </label> 
+                          <span>
+                            Discound code{" "}
+                            <span className={promoValid}>{promomsg}</span>
+                          </span>
+                        </label>
                       </div>
                       <div className="col-sm-3">
-                      <button
-                        type="button"
-                        class="btn btn-outline-success btn-lg"
-                        onClick={ApplyPromo}
-                      >
-                        Apply
-                      </button>
+                        <button
+                          type="button"
+                          class="btn btn-outline-success btn-lg"
+                          onClick={ApplyPromo}
+                        >
+                          Apply
+                        </button>
                       </div>
                     </div>
                   </div>
