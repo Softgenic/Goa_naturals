@@ -48,7 +48,7 @@ const Benefits = () => {
             </p>
           </div>
         </Col>
-        <Col lg={4} sm={12}>
+        <Col lg={4} sm={12} data-aos="fade-up" data-aos-duration="1000">
           <OwlCarousel
             className="owl-theme"
             items="1"
