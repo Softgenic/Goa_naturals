@@ -16,7 +16,13 @@ const Benefits = () => {
   AOS.init();
   return (
     <Container className="benefits">
-      <h2 className="text-center mt-3 mb-3">Benefits Of Cold Pressed Oil</h2>
+      <h2
+        className="text-center mt-3 mb-3"
+        data-aos="zoom-in"
+        data-aos-duration="1000"
+      >
+        Benefits Of Cold Pressed Oil
+      </h2>
       <Row className="py-5">
         <Col lg={4} sm={12} className="col-left">
           <div data-aos="fade-right" data-aos-duration="1000">
