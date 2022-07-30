@@ -1,4 +1,5 @@
 import React, { useContext, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import toast, { Toaster } from "react-hot-toast";
 import { Container } from "react-bootstrap";
 import { Store } from "../../utils/Store";
@@ -7,6 +8,8 @@ import { Store } from "../../utils/Store";
 import "./ViewCart.css";
 const ViewCartSection = () => {
   const { state, dispatch } = useContext(Store);
+
+  let navigate = useNavigate();
 
   console.log("cart data", state);
   let totalPrice = state?.cart?.cartItems?.reduce(
@@ -79,6 +82,7 @@ const ViewCartSection = () => {
           totalPrice: setTotalPrice,
         },
       });
+      navigate("/shipping", { replace: true });
     } else {
       toast("Cart is empty", {
         icon: "🛒",
