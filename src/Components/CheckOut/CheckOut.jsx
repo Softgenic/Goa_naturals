@@ -204,41 +204,49 @@ const CheckOut = () => {
             />
           </Col>
         </Row>
-        {/* Product Table */}
-        <h2>Your order</h2>
-        <Card>
-          <Card.Body>
-            {/* HEADING OF SUBTOTAL */}
-            <Row>
-              <Col xs={4}>
-                <h5>Product</h5>
-              </Col>
-              <Col xs={2}>
-                <h5>Quantity</h5>
-              </Col>
-              <Col xs={6}>
-                <h5>Subtotal</h5>
-              </Col>
-            </Row>
-            <hr></hr>
-            {state?.cart?.cartItems?.map((item, index) => {
-              return (
-                <Row>
-                  <Col xs={4}>
-                    <h5>{item.p_name}</h5>
-                  </Col>
-                  <Col xs={2}>
-                    <h5>{item.quantity}</h5>
-                  </Col>
-                  <Col xs={6}>
-                    <h5>₹{item.price * item.quantity}</h5>
-                  </Col>
-                </Row>
-              );
-            })}
-            <hr></hr>
-          </Card.Body>
-        </Card>
+
+        <div class="col-md-8">
+          <div class="card mb-4 px-4">
+            <div className="card-header py-3">
+              <h5 className="mb-0 nt-2">Order Summary</h5>
+            </div>
+            <div className="card-body ">
+              <ul className="list-group list-group-flush">
+                <li className="list-group-item d-flex justify-content-between align-items-center border-0 px-0 pb-0">
+                  Products
+                  <span>₹{state?.cart?.cartCheckOutDetails?.totalPrice}</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center px-0">
+                  Vat(0.14%)
+                  <span>{state?.cart?.cartCheckOutDetails?.vatAmount}</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 mb-3">
+                  <div>
+                    <strong>Total amount</strong>
+                    <strong>
+                      <p class="mb-0">(including VAT)</p>
+                    </strong>
+                  </div>
+
+                  <span>
+                    <strong>
+                      {state?.cart?.cartCheckOutDetails?.totalPrice}
+                    </strong>
+                  </span>
+                </li>
+              </ul>
+            </div>
+
+            <button
+              type="button"
+              class="btn btn-success btn-block btn-lg mb-5"
+              //onClick={ProceedToShippingPage}
+              style={{ width: "100%" }}
+            >
+              Proceed to Pay
+            </button>
+          </div>
+        </div>
       </Container>
       <Footer />
     </div>
