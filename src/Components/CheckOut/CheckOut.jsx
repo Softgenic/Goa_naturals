@@ -1,12 +1,16 @@
-import React from "react";
+import React, { useContext } from "react";
 import NavbarMenu from "../NavbarMenu/NavbarMenu";
 import Footer from "../Footer/Footer";
 import { Card, Col, Container, Row } from "react-bootstrap";
 import "./CheckOut.css";
 import { Box, MenuItem, TextField } from "@mui/material";
+import { Store } from "../../utils/Store";
+
 //table components @mui
 
 const CheckOut = () => {
+  const { state, dispatch } = useContext(Store);
+
   const States = [
     {
       value: "Bihar",
