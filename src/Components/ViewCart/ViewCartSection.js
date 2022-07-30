@@ -73,14 +73,13 @@ const ViewCartSection = () => {
 
   const ProceedToShippingPage = () => {
     if (state?.cart?.cartItems?.length !== 0) {
-      let setTotalPrice = totalPrice + vatAmount - promoAmount;
       dispatch({
         type: "SAVE_TOTAL_AMOUNT_WITH_COUPON_CODE",
         payload: {
           promoCode: promo,
           promoAmount,
           vatAmount,
-          totalPrice: setTotalPrice,
+          totalPrice,
         },
       });
       navigate("/CheckOut", { replace: true });
@@ -255,9 +254,9 @@ const ViewCartSection = () => {
                     type="button"
                     class="btn btn-success btn-block btn-lg mb-5"
                     onClick={ProceedToShippingPage}
-                    style={{width:"100%"}}
+                    style={{ width: "100%" }}
                   >
-                    Proceed to Pay
+                    Proceed to Add Shipping Address
                   </button>
                 </div>
               </div>

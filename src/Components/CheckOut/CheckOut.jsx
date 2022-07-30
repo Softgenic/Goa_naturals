@@ -1,12 +1,22 @@
-import React from "react";
+import React, { useContext } from "react";
 import NavbarMenu from "../NavbarMenu/NavbarMenu";
 import Footer from "../Footer/Footer";
 import { Card, Col, Container, Row } from "react-bootstrap";
 import "./CheckOut.css";
 import { Box, MenuItem, TextField } from "@mui/material";
+import { Store } from "../../utils/Store";
+
 //table components @mui
 
 const CheckOut = () => {
+  const { state, dispatch } = useContext(Store);
+
+  const { promoCode, promoAmount, vatAmount, totalPrice } =
+    state?.cart?.cartCheckOutDetails;
+
+  //need to fetch from database
+  const shippingFee = 100;
+
   const States = [
     {
       value: "Bihar",
@@ -200,31 +210,61 @@ const CheckOut = () => {
             />
           </Col>
         </Row>
-        {/* Product Table */}
-        <h2>Your order</h2>
-        <Card>
-          <Card.Body>
-            {/* HEADING OF SUBTOTAL */}
-            <Row>
-              <Col xs={6}>
-                <h5>Product</h5>
-              </Col>
-              <Col xs={6}>
-                <h5>Subtotal</h5>
-              </Col>
-            </Row>
-            <hr></hr>
-            <Row>
-              <Col xs={6}>
-                <h5>Product Name+ qnty</h5>
-              </Col>
-              <Col xs={6}>
-                <h5>1000</h5>
-              </Col>
-            </Row>
-            <hr></hr>
-          </Card.Body>
-        </Card>
+
+        <div class="col-md-8">
+          <div class="card mb-4 px-4">
+            <div className="card-header py-3">
+              <h5 className="mb-0 nt-2">Order Summary</h5>
+            </div>
+            <div className="card-body ">
+              <ul className="list-group list-group-flush">
+                <li className="list-group-item d-flex justify-content-between align-items-center border-0 px-0 pb-0">
+                  Products
+                  <span>₹{totalPrice}</span>
+                </li>
+
+                {promoAmount != 0 && (
+                  <li class="list-group-item d-flex justify-content-between border-0 align-items-center px-0">
+                    Coupon code:{promoCode}
+                    <span>{promoAmount}</span>
+                  </li>
+                )}
+                <li class="list-group-item d-flex justify-content-between border-0 align-items-center px-0">
+                  Vat(0.14%)
+                  <span>{vatAmount}</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center px-0">
+                  Shipping fee:
+                  <span>{shippingFee}</span>
+                </li>
+
+                <li class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 mb-3">
+                  <div>
+                    <strong>Total amount</strong>
+                    <strong>
+                      <p class="mb-0">(including VAT)</p>
+                    </strong>
+                  </div>
+
+                  <span>
+                    <strong>
+                      {totalPrice - promoAmount + vatAmount + shippingFee}
+                    </strong>
+                  </span>
+                </li>
+              </ul>
+            </div>
+
+            <button
+              type="button"
+              class="btn btn-success btn-block btn-lg mb-5"
+              //onClick={ProceedToPayment}
+              style={{ width: "100%" }}
+            >
+              Proceed to Pay
+            </button>
+          </div>
+        </div>
       </Container>
       <Footer />
     </div>
