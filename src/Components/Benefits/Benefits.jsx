@@ -75,24 +75,30 @@ const Benefits = () => {
           </OwlCarousel>
         </Col>
         <Col lg={4} sm={12} className="col-right">
-          <p className="fw-bold title">100% RAW</p>
-          <p className="desc">
-            {" "}
-            Pure fruits, nuts & seeds! That’s the only ingredient used in our
-            oils, that too in their very pure & raw form.
-          </p>
-          <p className="fw-bold title">Packed with Antioxidants</p>
-          <p className="desc">
-            {" "}
-            Organic antioxidants are a natural way of getting Vitamin C, Vitamin
-            E, and beta-carotene, good for anti-aging and skincare.
-          </p>
-          <p className="fw-bold title">Zero Trans-Fat</p>
-          <p className="desc">
-            {" "}
-            Cold-pressed essentially means there is no heating or chemical
-            processing, hence the oil is devoid of trans-fat.
-          </p>
+          <div data-aos="fade-left" data-aos-duration="1000">
+            <p className="fw-bold title">100% RAW</p>
+            <p className="desc">
+              {" "}
+              Pure fruits, nuts & seeds! That’s the only ingredient used in our
+              oils, that too in their very pure & raw form.
+            </p>
+          </div>
+          <div data-aos="fade-left" data-aos-duration="1000">
+            <p className="fw-bold title">Packed with Antioxidants</p>
+            <p className="desc">
+              {" "}
+              Organic antioxidants are a natural way of getting Vitamin C,
+              Vitamin E, and beta-carotene, good for anti-aging and skincare.
+            </p>
+          </div>
+          <div data-aos="fade-left" data-aos-duration="1000">
+            <p className="fw-bold title">Zero Trans-Fat</p>
+            <p className="desc">
+              {" "}
+              Cold-pressed essentially means there is no heating or chemical
+              processing, hence the oil is devoid of trans-fat.
+            </p>
+          </div>
         </Col>
       </Row>
     </Container>
