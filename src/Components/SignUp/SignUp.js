@@ -8,7 +8,8 @@ const SignUp = () => {
   const [password, setpassword] = useState([]);
   const [Number ,setnumber] = useState("125637");
   console.log(setnumber)
-  const handleSignUp =()=>{
+  const handleSignUp =(e)=>{
+    e.preventDefault();
     axios.post('https://golden.softgenics.in/api/users',{
       name:name,
       email:email,
@@ -24,7 +25,7 @@ const SignUp = () => {
   }
   return (
     <div className='signup'>
-      <Form onSubmit={handleSignUp}>
+      <Form onSubmit={(e)=>handleSignUp(e)}>
       <InputGroup className="mb-4 mt-3">
         <InputGroup.Text id="basic-addon1"><i className='fas fa-at' /></InputGroup.Text>
         <Form.Control

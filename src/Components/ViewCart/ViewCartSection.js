@@ -2,6 +2,7 @@ import React, { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import toast, { Toaster } from "react-hot-toast";
 import { Container } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import { Store } from "../../utils/Store";
 // import { FaWindowClose } from "react-icons/fa";
 
@@ -82,7 +83,7 @@ const ViewCartSection = () => {
           totalPrice: setTotalPrice,
         },
       });
-      navigate("/shipping", { replace: true });
+      navigate("/CheckOut", { replace: true });
     } else {
       toast("Cart is empty", {
         icon: "🛒",
@@ -180,9 +181,9 @@ const ViewCartSection = () => {
                           class="col-md-1 col-lg-1 col-xl-1 text-end"
                           onClick={() => onRemove(item)}
                         >
-                          <a class="text-danger">
+                          <p class="text-danger">
                             <i class="fas fa-trash fa-lg"></i>
-                          </a>
+                          </p>
                         </div>
                       </div>
                     </div>
@@ -254,6 +255,7 @@ const ViewCartSection = () => {
                     type="button"
                     class="btn btn-success btn-block btn-lg mb-5"
                     onClick={ProceedToShippingPage}
+                    style={{width:"100%"}}
                   >
                     Proceed to Pay
                   </button>
