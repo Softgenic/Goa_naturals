@@ -1,4 +1,5 @@
 import React, { useContext, useState } from "react";
+import toast, { Toaster } from "react-hot-toast";
 import { Container } from "react-bootstrap";
 import { Store } from "../../utils/Store";
 // import { FaWindowClose } from "react-icons/fa";
@@ -78,10 +79,25 @@ const ViewCartSection = () => {
           totalPrice: setTotalPrice,
         },
       });
+    } else {
+      toast("Cart is empty", {
+        icon: "🛒",
+        style: {
+          border: "1px solid #713200",
+          padding: "16px",
+          color: "#713200",
+        },
+        iconTheme: {
+          primary: "#713200",
+          secondary: "#FFFAEE",
+        },
+        duration: 2000,
+      });
     }
   };
   return (
     <Container fluid style={{ marginTop: "6rem" }}>
+      <Toaster />
       <section className="h-100 sec">
         <div className="container h-100 py-5">
           <div className="row d-flex justify-content-center align-items-center h-100">
