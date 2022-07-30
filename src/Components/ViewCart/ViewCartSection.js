@@ -91,6 +91,16 @@ const ViewCartSection = () => {
                   Shopping Cart
                 </h3>
               </div>
+              {state?.cart?.cartItems?.length === 0 && (
+                <div className="card rounded-3 mb-4">
+                  <div className="card-body p-4">
+                    <div className="row d-flex empty-cart align-items-center">
+                      <p class="lead fw-normal mb-2 ">Cart is empty</p>
+                    </div>
+                  </div>
+                </div>
+              )}
+
               {state?.cart?.cartItems?.map((item, index) => {
                 return (
                   <div className="card rounded-3 mb-4">
