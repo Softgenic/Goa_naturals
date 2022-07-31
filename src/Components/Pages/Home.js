@@ -12,7 +12,7 @@ const Home = () => {
       <NavbarMenu />
       <HeroSection />
       <FarmToFork />
-      <Why />
+      {/* <Why /> */}
       <Benefits />
       <Footer />
     </div>

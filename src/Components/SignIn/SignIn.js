@@ -33,8 +33,6 @@ const SignIn = () => {
               const data = response.data;
               console.log(data)
               localStorage.setItem("token", JSON.stringify(data.token));
-              localStorage.setItem("id",(data.id));
-              localStorage.setItem("email",(data.email));
               
              navigate("/")
             }

@@ -3,7 +3,9 @@
   font-family: Roboto Condensed;
   font-weight: 900;
 }
-
+.why {
+  overflow: hidden;
+}
 .why .row .col-md-4{
   justify-content: center;
   align-items: center;

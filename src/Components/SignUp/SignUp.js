@@ -6,6 +6,7 @@ const SignUp = () => {
   const [email,setemail]=useState([]);
   const [fname, setfname]= useState([]);
   const [password, setpassword] = useState([]);
+  const [confirmpassword, setconfirmpassword] = useState([]);
   const [number ,setnumber] = useState("125637");
   console.log(setnumber)
   const handleSignUp =(e)=>{
@@ -16,26 +17,21 @@ const SignUp = () => {
       number:number,
       password:password
     }).then((res)=>{
+      if(password===confirmpassword){
       if(res && res.status===200){
         alert('signup success')
       }else(
         alert("failed")
       )
-    })
+    }else{
+      alert("pwd not match")
+    }})
   }
+
   return (
     <div className='signup'>
       <Form onSubmit={(e)=>handleSignUp(e)}>
       <InputGroup className="mb-4 mt-3">
-        <InputGroup.Text ><i className='fas fa-at' /></InputGroup.Text>
-        <Form.Control
-          placeholder="E-mail"
-          type='email'
-          value={email}
-          onChange={(e)=>setemail(e.target.value)}
-        />
-      </InputGroup>
-        <InputGroup className="mb-4 mt-3">
         <InputGroup.Text ><i className='fas fa-user' /></InputGroup.Text>
         <Form.Control
           placeholder="Full Name"
@@ -45,6 +41,16 @@ const SignUp = () => {
           
         />
       </InputGroup>
+      <InputGroup className="mb-4 mt-3">
+        <InputGroup.Text ><i className='fas fa-at' /></InputGroup.Text>
+        <Form.Control
+          placeholder="E-mail"
+          type='email'
+          value={email}
+          onChange={(e)=>setemail(e.target.value)}
+        />
+      </InputGroup>
+
       <InputGroup className="mb-3 ">
         <InputGroup.Text><i className='fas fa-lock' /></InputGroup.Text>
         <Form.Control
@@ -61,6 +67,8 @@ const SignUp = () => {
           placeholder="Confirm Password"
           aria-label="Password"
           type='password'
+          value={confirmpassword}
+          onChange={(e)=>setconfirmpassword(e.target.value)}
         
         />
       </InputGroup>
