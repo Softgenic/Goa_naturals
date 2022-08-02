@@ -16,6 +16,7 @@ import { StoreProvider } from "./utils/Store";
 import CheckOut from "./Components/CheckOut/CheckOut";
 import Admin from "./Components/Admin/index"
 import Dashboard from "./Components/Admin/Dashboard/Dashboard";
+import Blog from "./Components/Blog/Blog";
 // import Cart from "./Components/Pages/Cart";
 function App() {
   return (
@@ -37,6 +38,7 @@ function App() {
             <Route path="/CheckOut" element={<CheckOut />}/>
             <Route path="/admin" element={<Admin />}/>
             <Route path="/Dashbaord" element={<Dashboard />}/>
+            <Route path="/Blog" element={<Blog />} />
           </Routes>
         </BrowserRouter>
         <WhatsApp />
