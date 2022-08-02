@@ -153,7 +153,7 @@ const NavbarMenu = () => {
               </Nav.Link>
               <Nav.Link
                 as={Link}
-                to="/About-Us"
+                to="/blog"
                 onClick={closeMobileMenu}
                 eventKey={2}
               >
@@ -163,7 +163,7 @@ const NavbarMenu = () => {
                 as={Link}
                 to="/About-Us"
                 onClick={closeMobileMenu}
-                eventKey={2}
+                eventKey={3}
               >
                 About Us
               </Nav.Link>

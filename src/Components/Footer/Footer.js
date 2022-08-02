@@ -26,11 +26,11 @@ const Footer = () => {
                 <Col md={4}>
                     <h5>QUICK LINKS</h5>
                     <ul>
-                        <li><Link to="/">About us</Link></li>
-                        <li><Link to="/">Contact us</Link></li>
-                        <li><Link to="/">View all products</Link></li>
-                        <li><Link to="/">Blog</Link></li>
-                        <li><Link to="/">Rewards</Link></li>
+                        <li><Link to="/About-Us">About us</Link></li>
+                        <li><Link to="/Contact-Us">Contact us</Link></li>
+                        <li><Link to="/products">View all products</Link></li>
+                        <li><Link to="/blog">Blog</Link></li>
+                        <li><Link to="">Rewards</Link></li>
                     </ul>
                     <h5>Follow us on Social Media</h5>
                     <div className="d-flex social-icon mb-3">

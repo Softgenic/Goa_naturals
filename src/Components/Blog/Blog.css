@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed:400&subset=latin,latin-ext");
+.blog-bg {
+    background-color: rgb(229, 229, 229);
+    overflow: hidden;
+}
+.blog {
+    margin-top: 7rem;
+}
+.blog h1 {
+    font-family: Roboto Condensed;
+    font-weight: 800;
+    
+}
+.blog .text-head-desc{
+    font-family: Roboto Condensed;
+    text-align: center;
+    font-weight: 500;
+    font-size: 19px;
+    color: gray;
+}
+.blog .row .col-lg-4{
+    padding: 1rem;
+}
+.blog .row .col-lg-4 .card .card-image{
+    overflow: hidden;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+.blog .row .col-lg-4 .card,.card-body{
+    overflow: hidden;
+}
+.blog .row .col-lg-4 .card .card-body{
+    padding: 2rem;
+}
+.blog .row .col-lg-4 .card img {
+    height: 250px;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+    
+}
+.blog .row .col-lg-4 .card img:hover{
+    -webkit-transform: scale(1.2) rotate(-7deg);
+    -moz-transform: scale(1.2) rotate(-7deg);
+    -ms-transform: scale(1.2) rotate(-7deg);
+    -o-transform: scale(1.2) rotate(-7deg);
+    transform: scale(1.2) rotate(-7deg);
+}
+.blog .row .col-lg-4 .card .card-body small{
+    font-weight: 600;
+    
+}
+.blog .row .col-lg-4 .card .card-body .card-title {
+    font-family: Roboto Condensed;
+    font-weight: 700;
+}
+.blog .row .col-lg-4 .card .card-body .card-text{
+    font-family: Roboto Condensed;
+    color: rgb(96, 95, 95);  
+}
+.blog .row .col-lg-4 .card .card-body .read-more{
+    font-family: Roboto Condensed;
+    color: rgb(96, 95, 95);  
+    font-weight: 600;
+}
+.blog .row .col-lg-4 .card .card-body .read-more:hover{
+    color: rgb(7, 159, 7);
+    transition: all 0.2s ease-in-out;
+}
+.blog .row .col-lg-4 .card .card-body .read-more .fa-angle-right{
+    width: 18px;
+    position: absolute;
+    right: 100%;
+    line-height: 18px;
+    opacity: 0;
+    transition: all 0.2s ease-out 0s;
+}
+.blog .row .col-lg-4 .card .card-body .read-more .fa-angle-right:hover{
+    left: 0;
+    position: relative;
+    transition: all 0.2s ease-out 0s;
+}
+.blog .row .col-lg-4 .card .card-body .read-more:hover .fa-angle-right{
+    opacity: 1;
+    right: 220px;
+    margin-top: 3px;
+}
+.blog-post{
+    margin-top: 7rem;
+}
+.blog-post .post-img {
+    width: 100vw;
+    height: 330px;
+}

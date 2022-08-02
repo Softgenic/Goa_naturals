@@ -4,9 +4,24 @@ import NavbarMenu from '../NavbarMenu/NavbarMenu';
 import "./ContactUs.css";
 import Logo from "../Assets/images/goa-natural-logo.jpg";
 import Iframe from 'react-iframe';
-import { TextField } from '@mui/material';
+import { Button, TextField, Box, MenuItem } from '@mui/material';
 import { Container, Row, Col } from 'react-bootstrap';
 const ContactUs = () => {
+    const Help=[
+        {
+            value: "Factory Visit",
+            label: "Factory Visit",
+          },
+          {
+            value: "DealerShip Model",
+            label: "DealerShip Model",
+          },
+    ];
+    const [help, sethelp] = React.useState([]);
+
+    const handleChange = (event) => {
+        sethelp(event.target.value);
+    };
   return (
     <div>
         <NavbarMenu />
@@ -49,9 +64,36 @@ oil.</p>
             <Col md={3}></Col>
             <Col md={6} className="contact-us-form">
                 <h5 className='mt-4 text-center'>Send Us What Your Thought's</h5>
-                <TextField type="Name" variant='standard' label="Name" fullWidth sx={{mb:2}} />
-                <TextField type="Email" variant='standard' label="Email" fullWidth sx={{mb:2}} />
-                <TextField type="Mobile No" variant='standard' label="Mobile No" fullWidth sx={{mb:2}} />
+                <TextField type="Name" color="success" variant='standard' label="Name" fullWidth sx={{mb:2}} />
+                <TextField type="Email" color="success" variant='standard' label="Email" fullWidth sx={{mb:2}} />
+                <TextField type="Mobile No" color="success" variant='standard' label="Mobile No" fullWidth sx={{mb:2}} />
+                <Box
+                    component="form"
+                    sx={{
+                        "& .MuiTextField-root": { mb: 2 },
+                    }}
+                    noValidate
+                    autoComplete="off"
+                    >
+                    <TextField
+                        color="success"
+                        select
+                        label="How we Can Help You?"
+                        fullWidth
+                        variant='standard'
+                        value={help}
+                        onChange={handleChange}
+                       sx={{mb:4}}
+                    >
+                        {Help.map((option) => (
+                        <MenuItem key={option.value} value={option.value}>
+                            {option.label}
+                        </MenuItem>
+                        ))}
+                    </TextField>
+                    </Box>
+                <TextField type="Comment" color="success" variant='standard' label="Comment" fullWidth sx={{mb:2}} />
+                <Button color='success' sx={{mt:3}} variant='contained'>Send</Button>
             </Col>
             <Col md={3}></Col>
         </Row>
