@@ -42,6 +42,7 @@ display: block;
 color: #131313;
 font-size: 36px;
 line-height: 46px;
+font-family: Roboto Condensed;
 font-weight: 700;
 text-transform: uppercase;
 }
@@ -357,99 +358,22 @@ background: #ffffff;
 position: relative;
 display: block;
 }
-.contact-form form .input-box{
-position: relative;
-display: block;
+section .contact-details p{
+    font-family: Roboto Condensed;
+    font-size: 19px;
+    color: #848484;
+    line-height: 35px;
+    margin-top: 2rem;
 }
-.contact-form form input[type="number"],
-.contact-form form input[type="text"],
-.contact-form form input[type="email"],
-.contact-form form textarea{
-position: relative;
-display: block;   
-background: #ffffff;
-border: 1px solid rgb(8, 193, 67);
-width: 100%;
-height: 55px;
-font-size: 16px;
-padding-left: 19px;
-padding-right: 15px;
-border-radius: 0px;
-margin-bottom: 20px;
-transition: all 500ms ease;
-font-family: Signika,serif;
+section .contact-details h2{
+    color: green;
+    font-family: Roboto Condensed;
+    font-weight: 600;
 }
-.contact-form form textarea {
-height: 130px;
-padding-left: 19px;
-padding-right: 15px;
-padding-top: 14px;
-padding-bottom: 15px;
-font-family: Signika,serif;
+section iframe {
+    border-radius: 10px;
 }
-.contact-form form input[type="text"]:focus{
-color: #222222;
-border-color: rgb(8, 193, 67); 
-}
-.contact-form form input[type="email"]:focus{
-color: #222222;
-border-color: #d4d4d4;
-}
-.contact-form form textarea:focus{
-color: #222222;
-border-color:rgb(8, 193, 67);
-
-}
-.contact-form form input[type="text"]::-webkit-input-placeholder {
-color: #848484;
-font-family: Signika,serif;
-}
-.contact-form form input[type="text"]:-moz-placeholder {
-color: #848484;
-font-family: Signika,serif;
-}
-.contact-form form input[type="text"]::-moz-placeholder {
-color: #848484;
-font-family: Signika,serif;
-}
-.contact-form form input[type="text"]:-ms-input-placeholder {
-color: #848484;
-font-family: Signika,serif;
-}
-.contact-form form input[type="email"]::-webkit-input-placeholder {
-color: #848484;
-font-family: Signika,serif;
-}
-.contact-form form input[type="email"]:-moz-placeholder {
-color: #848484;
-font-family: Signika,serif;
-}
-.contact-form form input[type="email"]::-moz-placeholder {
-color: #848484;
-font-family: Signika,serif;
-}
-.contact-form form input[type="email"]:-ms-input-placeholder {
-color: #848484;
-font-family: Signika,serif;
-}
-.contact-form form button {
-position: relative;
-display: block;
-width: 100%;
-background: rgb(8, 193, 67);
-border: 1px solid rgb(8, 193, 67);
-color: #f5f1f1;
-font-size: 16px;
-line-height: 55px;
-font-weight: 700;
-text-align: center;
-text-transform: capitalize;
-transition: all 200ms linear;
-transition-delay: 0.1s;
-cursor: pointer;
-}
-
-.contact-form form button:hover{
-color: #ffffff;
-background: #0a6604;
+section .contact-us-form h5{
+    font-family: Roboto Condensed;
+    font-weight: 700;
 }

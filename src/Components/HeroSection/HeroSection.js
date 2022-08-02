@@ -3,6 +3,7 @@ import { Button, Carousel } from "react-bootstrap";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import "./HeroSection.css";
+import 'animate.css';
 const HeroSection = () => {
   AOS.init();
   const [index, setIndex] = useState(0);
@@ -18,36 +19,36 @@ const HeroSection = () => {
           
           <img className="" src="/Banner/safflower.jpg" alt="Safflower" />
           <Carousel.Caption>
-            <p className="carousel-head saff-head" data-aos='fade-up' data-aos-duration='2000'>Safflower Oil</p>
-            <p className="carousel-desc saff-desc" data-aos='fade-up' data-aos-duration='2000'>Keeps the Heart Healthy</p>
-            <Button data-aos='fade-up' data-aos-duration='3000'>Buy Now</Button>
+            <p className="carousel-head saff-head animate__animated animate__slideInDown animate__delay-1s" >Safflower Oil</p>
+            <p className="carousel-desc saff-desc animate__animated animate__slideInDown " >Keeps the Heart Healthy</p>
+            <Button className="animate__slideInDown animate__delay-1s">Buy Now</Button>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
           <img className="" src="/Banner/turmeric.jpg" alt="Turmeric" />
 
           <Carousel.Caption>
-          <p className="carousel-head tur-head" data-aos='fade-up' data-aos-duration='2000'>Turmeric Powder</p>
-          <p className="carousel-desc tur-desc" data-aos='fade-up' data-aos-duration='2000'>Include Spoonful illusion in your food</p>
-            <Button data-aos='fade-up' data-aos-duration='3000' className="tur-btn">Buy Now</Button>
+          <p className="carousel-head tur-head animate__animated animate__slideInDown animate__delay-1s" >Turmeric Powder</p>
+          <p className="carousel-desc tur-desc animate__animated animate__slideInDown" >Include Spoonful illusion in your food</p>
+            <Button className="tur-btn">Buy Now</Button>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
-          <img className="" src="/Banner/grndnut.jpg" alt="Groundnut" />
+          <img className="" src="/Banner/groundnut.jpg" alt="Groundnut" />
 
           <Carousel.Caption>
-          <p className="carousel-head gnd-head" data-aos='fade-up' data-aos-duration='2000'>Groundnut Oil</p>
-          <p className="carousel-desc gnd-desc" data-aos='fade-up' data-aos-duration='2000'>Dont't Compromise with Health And Taste</p>
-            <Button data-aos='fade-up' data-aos-duration='3000'>Buy Now</Button>
+          <p className="carousel-head gnd-head animate__animated animate__slideInDown animate__delay-1s" >Groundnut Oil</p>
+          <p className="carousel-desc gnd-desc animate__animated animate__slideInDown" >Dont't Compromise with Health And Taste</p>
+            <Button >Buy Now</Button>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
 
           <img className="" src="/Banner/coconut.jpg" alt="Coconut" />
           <Carousel.Caption>
-          <p className="carousel-head coco-head" data-aos='fade-up' data-aos-duration='2000'>Coconut Oil</p>
-        <p className="carousel-desc coco-desc" data-aos='fade-up' data-aos-duration='2000'>The Real Super Food From Nature</p>
-            <Button data-aos='fade-up' data-aos-duration='3000'>Buy Now</Button>
+          <p className="carousel-head coco-head animate__animated animate__slideInDown animate__delay-1s" >Coconut Oil</p>
+        <p className="carousel-desc coco-desc animate__animated animate__slideInDown " >The Real Super Food From Nature</p>
+            <Button >Buy Now</Button>
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>

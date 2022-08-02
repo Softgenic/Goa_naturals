@@ -16,7 +16,7 @@ import {
 import { Store } from "../../utils/Store";
 
 // Logo components
-import Logo from "../Assets/images/goalogo.png";
+import Logo from "../Assets/Goa-natural/logo170x60.png";
 
 // Modal Left Image
 import ModalImage from "../Assets/Goa-natural/Goa-Natural-modal1.png";
@@ -31,27 +31,6 @@ const NavbarMenu = () => {
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
 
-  const [color, setcolor] = useState(false);
-  const changeColor = () => {
-    if (window.scrollY >= 90) {
-      setcolor(true);
-    } else {
-      setcolor(false);
-    }
-  };
-
-  window.addEventListener("scroll", changeColor);
-
-  // lOGO size changed
-  const [size, setsize] = useState(false);
-  const changeSize = () => {
-    if (window.scrollY >= 90) {
-      setsize(true);
-    } else {
-      setsize(false);
-    }
-  };
-  window.addEventListener("scroll", changeSize);
 
   // Show drop down on mousehover
   const [showdropdown, setshowdropdown] = useState(false);
@@ -72,11 +51,12 @@ const NavbarMenu = () => {
   console.log(dispatch);
 
   // LOGGED IN STATUS CHANGE NAVBAR ITEM FROM LOGIN TO USERNAME
-  let isLoggedIn = true;
-  let gettoken=localStorage.getItem('token')
-  if(gettoken==null){
-    isLoggedIn=false;
-  }
+  let isLoggedIn=true;
+  const authToken = JSON.parse(localStorage.getItem("token"));
+    if(authToken===null){
+      isLoggedIn=false
+    }
+    const name = JSON.parse(localStorage.getItem("name"));
   let navigave = useNavigate();
   const Logout = ()=>{
     localStorage.removeItem("token")
@@ -89,15 +69,15 @@ const NavbarMenu = () => {
         collapseOnSelect
         expand="lg"
         fixed="top"
-        className={color ? "navbar navbar-bg " : "navbar"}
+        className="navbar"
       >
         <Container fluid>
           <Navbar.Brand
             as={Link}
             to="/"
-            className={
-              size ? "navbar-brand img" : "navbar-brand-changed-size img"
-            }
+            className=
+            "navbar-brand"
+            
           >
             <img src={Logo} alt="Goa Natural Logo" />
           </Navbar.Brand>
@@ -111,7 +91,7 @@ const NavbarMenu = () => {
             <Nav className="ms-auto">
               {/* Product dropdown start here */}
               <NavDropdown
-                title={"Prodcuts"}
+                title={"Produts"}
                 id="collasible-nav-dropdown"
                 show={showdropdown}
                 onMouseEnter={() => setshowdropdown(true)}
@@ -177,13 +157,21 @@ const NavbarMenu = () => {
                 onClick={closeMobileMenu}
                 eventKey={2}
               >
+                Blogs
+              </Nav.Link>
+              <Nav.Link
+                as={Link}
+                to="/About-Us"
+                onClick={closeMobileMenu}
+                eventKey={2}
+              >
                 About Us
               </Nav.Link>
 
               {/* Login Link */}
               {isLoggedIn?
               <NavDropdown                 
-              title={"Loggedin-user"}
+              title={name}
               id="collasible-nav-dropdown"
               >
                 <NavDropdown.Item onClick={closeMobileMenu} eventKey={1}>My Account</NavDropdown.Item>

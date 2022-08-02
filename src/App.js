@@ -14,6 +14,8 @@ import ViewCart from "./Components/Pages/ViewCart";
 import { StoreProvider } from "./utils/Store";
 import ScrollToTop from "./Components/ScrollToTop/ScrollToTop";
 import CheckOut from "./Components/CheckOut/CheckOut";
+import Admin from "./Components/Admin/index"
+import Dashboard from "./Components/Admin/Dashboard/Dashboard";
 // import Cart from "./Components/Pages/Cart";
 function App() {
   return (
@@ -33,6 +35,8 @@ function App() {
             <Route path="/ViewProduct/:id" element={<ViewProduct />} />
             <Route path="/ViewCart" element={<ViewCart />} />
             <Route path="/CheckOut" element={<CheckOut />}/>
+            <Route path="/admin" element={<Admin />}/>
+            <Route path="/Dashbaord" element={<Dashboard />}/>
           </Routes>
         </BrowserRouter>
         <WhatsApp />
