@@ -9,12 +9,14 @@ import Turmerics from "./Components/Pages/Turmerics";
 import Products from "./Components/Pages/Products";
 import AboutUs from "./Components/AboutUs/AboutUs";
 import ContactUs from "./Components/ContactUs/ContactUs";
-import Checkout from "./Components/Pages/Checkout";
 import ViewProduct from "./Components/Pages/ViewProduct";
 import ViewCart from "./Components/Pages/ViewCart";
 import ScrollToTop from "./Components/ScrollToTop/ScrollToTop";
 import { StoreProvider } from "./utils/Store";
-
+import CheckOut from "./Components/CheckOut/CheckOut";
+import Admin from "./Components/Admin/index"
+import Dashboard from "./Components/Admin/Dashboard/Dashboard";
+// import Cart from "./Components/Pages/Cart";
 function App() {
   return (
     <StoreProvider>
@@ -30,9 +32,11 @@ function App() {
             <Route path="/products" element={<Products />} />
             <Route path="/About-Us" element={<AboutUs />} />
             <Route path="/Contact-Us" element={<ContactUs />} />
-            <Route path="/ViewProduct" element={<ViewProduct />} />
+            <Route path="/ViewProduct/:id" element={<ViewProduct />} />
             <Route path="/ViewCart" element={<ViewCart />} />
-            <Route path="checkout" element={<Checkout />} />
+            <Route path="/CheckOut" element={<CheckOut />}/>
+            <Route path="/admin" element={<Admin />}/>
+            <Route path="/Dashbaord" element={<Dashboard />}/>
           </Routes>
         </BrowserRouter>
         <WhatsApp />

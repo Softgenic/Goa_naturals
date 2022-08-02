@@ -111,8 +111,9 @@
   color: rgb(115, 113, 113);
 }
 .did-u-know img {
-  width: 150px;
-  height: 150px;
+  width: 100px;
+  height: 100px;
+  margin-bottom: 1.5rem;
 }
 
 
@@ -136,7 +137,11 @@
 .related-product-slider .card-title, .card-text{
   color: black;
 }
-
+@media(max-width: 768px){
+  .related-product-slider{
+    width: 100%;
+  }
+}
 /* :root {
   --forest-green-traditional: #134611ff;
   --india-green: #3e8914ff;

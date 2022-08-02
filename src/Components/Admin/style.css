@@ -1,0 +1,30 @@
+.admin-login{
+    background-color: black;
+    width: 100%;
+    object-fit: contain;
+    animation: changeBackgroundImage 13s infinite;
+    height: 100vh;
+    overflow: hidden !important;
+    justify-content: center;
+    text-align: center;
+ 
+    
+}
+.admin-login img{
+    height: 150px;
+    width: 450px;
+    padding-top: 20px;
+}
+
+.admin-login .form-card{
+    width: 30rem;
+    padding: 4rem;
+    position: absolute;
+    top: 25%;
+}
+
+@media(max-width:412px){
+    .admin-login .form-card{
+        width: auto;
+    }
+}

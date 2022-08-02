@@ -15,7 +15,7 @@
   color: rgb(55, 52, 52);
 }
 .Product .Product-col .card {
-  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+  margin-bottom: 30px;
 }
 .Product .Product-col .card:hover {
   transition: all 0.4s ease 0s;
@@ -25,6 +25,7 @@
   justify-content: center;
   align-items: center;
   text-align: center;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }
 .Product .Product-col .card img {
   height: 250px;

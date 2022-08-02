@@ -1,11 +1,20 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed:400&subset=latin,latin-ext");
+/* .farm h2 {
+ 
+  font-weight: 900;
+  font-size: 40px;
+  line-height: 48px;
+} */
 .fff-container {
   text-align: center;
   height: auto;
   width: 100%;
   padding: 1rem;
   display: flex;
+  margin-top: 5rem;
   flex-direction: column;
-  background: linear-gradient(0.25turn, var(--nyanza), var(--green-pigment));
+z-index: 100;
+
 }
 
 .fff-flex {
@@ -15,9 +24,11 @@
 }
 
 .fff-heading {
-  font-weight: 700;
+  font-weight: 800;
   font-style: normal;
   color: #2d2c2c;
+ 
+  text-align: center;
   
 }
 
@@ -27,8 +38,8 @@
   padding: 2rem;
   height: 370px;
   color: black;
-  border: 2px solid var(--light-green);
-  box-shadow: 5px 5px 10px var(--india-green);
+  /* border: 2px solid var(--light-green);
+  box-shadow: 5px 5px 10px var(--india-green); */
   border-radius: 1rem;
   margin: 1rem;
 }
@@ -42,10 +53,13 @@
 .fff-card-title {
   padding-top: 1rem;
   font-weight: bold;
+  text-align: center;
+  font-family: Roboto Condensed;
 }
 
 .fff-card-description {
-  padding-top: 1rem;
+  padding-top: 0.5rem;
+  font-family: Roboto Condensed;
 }
 
 @media only screen and (max-width: 1100px) {

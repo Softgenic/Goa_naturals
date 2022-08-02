@@ -4,13 +4,15 @@ import fff1 from "../Assets/images/fff1.jpg";
 import fff2 from "../Assets/images/fff2.jpg";
 import fff3 from "../Assets/images/fff3.jpg";
 import fff4 from "../Assets/images/fff4.jpg";
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 const FarmToFork = () => {
+  AOS.init();
   return (
     <div className="fff-container">
-      <h1 className="fff-heading">Farm To Fork</h1>
+      <h1 className="fff-heading">From Farm To Fork</h1>
       <div className="fff-flex">
-        <div className="fff-card">
+        <div className="fff-card"  data-aos='fade-up' data-aos-duration='2000' >
           <img
             className="fff-card-img"
             src={fff1}
@@ -22,7 +24,7 @@ const FarmToFork = () => {
             modified organisms.
           </p>
         </div>
-        <div className="fff-card">
+        <div className="fff-card"  data-aos='fade-up' data-aos-duration='2000' >
           <img
             className="fff-card-img"
             src={fff2}
@@ -34,7 +36,7 @@ const FarmToFork = () => {
             to prevent pollution & emissions.
           </p>
         </div>
-        <div className="fff-card">
+        <div className="fff-card"  data-aos='fade-up' data-aos-duration='2000' >
           <img className="fff-card-img" src={fff3} alt="rural empowerment" />
           <p className="fff-card-title">Rural Empowerment</p>
           <p className="fff-card-description">
@@ -42,7 +44,7 @@ const FarmToFork = () => {
             employment for rural Indians, especially women.
           </p>
         </div>
-        <div className="fff-card">
+        <div className="fff-card"  data-aos='fade-up' data-aos-duration='2000' >
           <img
             className="fff-card-img"
             src={fff4}
