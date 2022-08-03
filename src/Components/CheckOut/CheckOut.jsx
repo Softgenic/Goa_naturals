@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState,useEffect } from "react";
 import NavbarMenu from "../NavbarMenu/NavbarMenu";
 import Footer from "../Footer/Footer";
 import { Card, Col, Container, Row } from "react-bootstrap";
@@ -9,6 +9,8 @@ import { Store } from "../../utils/Store";
 //table components @mui
 
 const CheckOut = () => {
+  const [checked, setchecked] = useState();
+  const handleChecked=()=>setchecked(!checked)
   const { state, dispatch } = useContext(Store);
 
   const { promoCode, promoAmount, vatAmount, totalPrice } =
@@ -40,6 +42,7 @@ const CheckOut = () => {
   const handleChange = (event) => {
     setindstate(event.target.value);
   };
+  
   return (
     <div>
       <NavbarMenu />
@@ -47,37 +50,33 @@ const CheckOut = () => {
         <Row>
           <Col md={6}>
             <h2 className="mb-5">Billing Detail</h2>
-            <TextField
-              id="outlined-textarea"
-              label="Full Name"
+            <label>Name</label>
+            <br></br>
+            <input
+              type="text"
               placeholder="Enter your full name"
               required
-              fullWidth
-              color="success"
-              sx={{ mb: "2rem" }}
-              multiline
+              className="mb-2"
             />
-
-            <TextField
-              id="outlined-textarea"
-              label="Address"
+            <br></br>
+            <label>Address</label>
+            <br></br>
+            <input
+              className="mb-2"
               placeholder="House number and street name"
               required
-              fullWidth
-              sx={{ mb: "2rem" }}
-              color="success"
-              multiline
             />
-            <TextField
-              id="outlined-textarea"
-              label="City"
+            <br></br>
+            <label>City</label>
+            <br></br>
+            <input
+              className="mb-2"
               placeholder="Enter your city"
               required
-              fullWidth
-              sx={{ mb: "2rem" }}
-              color="success"
-              multiline
             />
+            <br></br>
+            <label className="mb-2">State</label>
+            <br></br>
             <Box
               component="form"
               sx={{
@@ -102,78 +101,81 @@ const CheckOut = () => {
                 ))}
               </TextField>
             </Box>
-            <TextField
-              id="outlined-textarea"
-              label="Postcode / ZIP"
+            <label>Postcode / ZIP</label>
+            <br></br>
+            <input
               placeholder="Enter your Pin code"
               required
-              fullWidth
-              color="success"
-              sx={{ mb: "2rem" }}
-              multiline
+              className="mb-2"
             />
+            <br></br>
             {/* phone and email field in row col*/}
             {/* start row */}
             <Row>
               <Col md={6}>
-                <TextField
-                  id="outlined-textarea"
-                  label="Phone"
+                <label>Phone</label>
+                <br></br>
+                <input
+                  
                   placeholder="Enter Phone number"
-                  required
-                  fullWidth
-                  color="success"
-                  sx={{ mb: "2rem" }}
-                  multiline
+                  className="mb-2"
                 />
+                <br></br>
               </Col>
               <Col md={6}>
-                <TextField
-                  id="outlined-textarea"
-                  label="Email"
+                <label>Input</label>
+                <br></br>
+                <input
+                  type="email"
                   placeholder="Enter Email address"
                   required
-                  fullWidth
-                  color="success"
-                  sx={{ mb: "2rem" }}
-                  multiline
+                  className="mb-2"
                 />
+                <br></br>
               </Col>
             </Row>
           </Col>
           <Col md={6}>
+            <div className="d-flex">
+            <input type="checkbox" 
+            style={{width:"20px"}} 
+            className="me-2 mt-3"
+            onClick={handleChecked}
+            />
             <h2 className="mb-5">Ship to a different address?</h2>
-            <TextField
-              id="outlined-textarea"
-              label="Full Name"
+            </div>
+            {checked?
+            <>
+            <label>Name</label>
+            <br></br>
+            <input
+              type="text"
               placeholder="Enter your full name"
               required
-              fullWidth
-              color="success"
-              sx={{ mb: "2rem" }}
-              multiline
+              className="mb-2"
+              
             />
-
-            <TextField
-              id="outlined-textarea"
-              label="Address"
+            
+            <br></br>
+            
+            <label>Address</label>
+            <br></br>
+            <input
+              className="mb-2"
               placeholder="House number and street name"
               required
-              fullWidth
-              sx={{ mb: "2rem" }}
-              color="success"
-              multiline
             />
-            <TextField
-              id="outlined-textarea"
-              label="City"
+            <br></br>
+            <label>City</label>
+            <br></br>
+            <input
+              className="mb-2"
               placeholder="Enter your city"
               required
-              fullWidth
-              sx={{ mb: "2rem" }}
-              color="success"
-              multiline
             />
+            <br></br>
+            <label className="mb-2">State</label>
+            <br></br>
             <Box
               component="form"
               sx={{
@@ -198,16 +200,15 @@ const CheckOut = () => {
                 ))}
               </TextField>
             </Box>
-            <TextField
-              id="outlined-textarea"
-              label="Postcode / ZIP"
+            <label>Postcode / ZIP</label>
+            <br></br>
+            <input
               placeholder="Enter your Pin code"
               required
-              fullWidth
-              color="success"
-              sx={{ mb: "2rem" }}
-              multiline
+              className="mb-2"
             />
+            <br></br>
+            </>:<></>}
           </Col>
         </Row>
 

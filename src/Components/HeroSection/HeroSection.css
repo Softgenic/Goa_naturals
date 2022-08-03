@@ -151,7 +151,8 @@ background-repeat:center center/cover no-repeat;
             margin-top: 4.5rem;
         }
         .carousel img{
-            height: 40vh;
+            height: 60vh;
+            width: 100%;
             
         }
         .carousel .carousel-caption{
@@ -200,6 +201,13 @@ background-repeat:center center/cover no-repeat;
             font-size: 10px !important;
             margin-left: 5rem;
             margin-top: 0;
+        }
+     }
+     @media(max-width:412px){
+        .carousel img{
+            height: 40vh;
+            width: 100%;
+            
         }
      }
      @media(max-width:1024px){

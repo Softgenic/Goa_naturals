@@ -10,6 +10,12 @@
 }
 .my-account .row .col-md-4 .card ul li {
     line-height: 38px;
+    font-family: Roboto Condensed;
+    color: #3a3a3a;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
     
 }
 .my-account .row .col-md-4 .card ul li a{
@@ -26,9 +32,42 @@
 .my-account .row .col-md-8 p{
     font-family: Roboto Condensed;
     color: #6a6969;
-    font-weight: 600;
+    font-weight: 500;
     letter-spacing: 1px;  
 }
 .my-account .row .col-md-8 p strong{
     color: #3a3a3a;
+}
+.my-account h4{
+    font-family: Roboto Condensed;
+    font-weight: 700;
+}
+.my-account button {
+    background-color: black;
+    color: aliceblue;
+    font-family: Roboto Condensed;
+    text-transform: uppercase;
+    padding: 0.4rem;
+}
+
+
+/* form css :start */
+.my-account .row .col-md-8 label{
+    font-family: Roboto Condensed;
+    color: #6a6969;
+    font-weight: 500;
+    letter-spacing: 1px; 
+    margin-top: 1rem;
+}
+.my-account .row .col-md-8 input {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid rgb(142, 140, 140);
+}
+.my-account .row .col-md-8 ::placeholder {
+    font-family: Roboto Condensed;
+
+}
+.my-account .row .col-md-8 input:focus{
+    border: 1px solid green !important;
 }
