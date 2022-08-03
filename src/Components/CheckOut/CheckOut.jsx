@@ -216,6 +216,11 @@ const CheckOut = () => {
             <div className="card-header py-3">
               <h5 className="mb-0 nt-2">Order Summary</h5>
             </div>
+            <div className=" d-flex justify-content-between align-items-center border-0 p-4 pb-0">
+              Products
+              <span>Sub total</span>
+            </div>
+            <hr />
             <div className="card-body ">
               <ul className="list-group list-group-flush">
                 <li className="list-group-item d-flex justify-content-between align-items-center border-0 px-0 pb-0">
