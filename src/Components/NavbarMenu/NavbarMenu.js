@@ -174,8 +174,8 @@ const NavbarMenu = () => {
               title={name}
               id="collasible-nav-dropdown"
               >
-                <NavDropdown.Item onClick={closeMobileMenu} eventKey={1}>My Account</NavDropdown.Item>
-                <NavDropdown.Item onClick={Logout} eventKey={2}>logout</NavDropdown.Item>
+                <NavDropdown.Item onClick={closeMobileMenu} eventKey={1} as={Link} to="/My-Account">My Account</NavDropdown.Item>
+                <NavDropdown.Item onClick={Logout} eventKey={2}>Logout</NavDropdown.Item>
               </NavDropdown>
               :
               <Nav.Link onClick={closeMobileMenu && handleShow}>Login</Nav.Link>

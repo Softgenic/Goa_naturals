@@ -17,6 +17,8 @@ import CheckOut from "./Components/CheckOut/CheckOut";
 import Admin from "./Components/Admin/index";
 import Blog from "./Components/Blog/Blog";
 import BlogPost from "./Components/Blog/BlogPost";
+import MyAccount from "./Components/MyAccount/MyAccount";
+import OrderHistory from "./Components/MyAccount/OrderHistory";
 // import Cart from "./Components/Pages/Cart";
 function App() {
   return (
@@ -39,6 +41,8 @@ function App() {
             <Route path="/admin" element={<Admin />}/>
             <Route path="/blog" element={<Blog />}/>
             <Route path="/blog-post" element={<BlogPost />}/>
+            <Route path="/My-Account" element={<MyAccount />}/>
+            <Route path="/Order-History" element={<OrderHistory />}/>
           </Routes>
         </BrowserRouter>
         <WhatsApp />

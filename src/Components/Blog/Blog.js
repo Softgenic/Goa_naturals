@@ -4,11 +4,10 @@ import Footer from '../Footer/Footer';
 import NavbarMenu from '../NavbarMenu/NavbarMenu';
 import "./Blog.css";
 import { Link } from 'react-router-dom';
-import BlogPost from './BlogPost';
 const Blog = () => {
   const BlogData=[{bno:1,date:"02-08-22",title:"Cold Press Oil",imgblog:"/blog/1.jpg", desc:"You may see some unrefined coconut oils labeled “cold pressed,” which means that no heat was used in its extraction. Unrefined coconut oil is solid at room temperature and has a strong coconut flavor and scent, which it can impart to foods that include it."},
-  {bno:2,date:Date(),date:"02-08-22",title:"safflower oil",imgblog:"/blog/2.jpg", desc:"You may see some unrefined coconut oils labeled “cold pressed,” which means that no heat was used in its extraction. Unrefined coconut oil is solid at room temperature and has a strong coconut flavor and scent, which it can impart to foods that include it."},
-  {bno:3,date:"02-08-22",date:"02-08-22",title:"turmeric powder",imgblog:"/blog/3.jpg", desc:"You may see some unrefined coconut oils labeled “cold pressed,” which means that no heat was used in its extraction. Unrefined coconut oil is solid at room temperature and has a strong coconut flavor and scent, which it can impart to foods that include it."}
+  {bno:2,date:Date(),title:"safflower oil",imgblog:"/blog/2.jpg", desc:"You may see some unrefined coconut oils labeled “cold pressed,” which means that no heat was used in its extraction. Unrefined coconut oil is solid at room temperature and has a strong coconut flavor and scent, which it can impart to foods that include it."},
+  {bno:3,date:"02-08-22",title:"turmeric powder",imgblog:"/blog/3.jpg", desc:"You may see some unrefined coconut oils labeled “cold pressed,” which means that no heat was used in its extraction. Unrefined coconut oil is solid at room temperature and has a strong coconut flavor and scent, which it can impart to foods that include it."}
 ]
   return (
     <div className='blog-bg'>
