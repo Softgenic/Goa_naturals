@@ -242,16 +242,16 @@ const CheckOut = () => {
                 {promoAmount != 0 && (
                   <li class="list-group-item d-flex justify-content-between border-0 align-items-center px-0">
                     Coupon code:{promoCode}
-                    <span>- {promoAmount}</span>
+                    <span>- ₹{promoAmount}</span>
                   </li>
                 )}
                 <li class="list-group-item d-flex justify-content-between border-0 align-items-center px-0">
                   Vat(0.14%)
-                  <span>{vatAmount}</span>
+                  <span>₹{vatAmount}</span>
                 </li>
                 <li class="list-group-item d-flex justify-content-between align-items-center px-0">
                   Shipping fee:
-                  <span>{shippingFee}</span>
+                  <span>₹{shippingFee}</span>
                 </li>
 
                 <li class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 mb-3">
@@ -264,7 +264,7 @@ const CheckOut = () => {
 
                   <span>
                     <strong>
-                      {totalPrice - promoAmount + vatAmount + shippingFee}
+                      ₹{totalPrice - promoAmount + vatAmount + shippingFee}
                     </strong>
                   </span>
                 </li>
