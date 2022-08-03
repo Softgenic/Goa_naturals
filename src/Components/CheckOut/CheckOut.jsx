@@ -216,22 +216,33 @@ const CheckOut = () => {
             <div className="card-header py-3">
               <h5 className="mb-0 nt-2">Order Summary</h5>
             </div>
-            <div className=" d-flex justify-content-between align-items-center border-0 p-4 pb-0">
+            <div className=" list-group-item d-flex justify-content-between align-items-center border-0 p-4 pb-0">
               Products
               <span>Sub total</span>
             </div>
             <hr />
             <div className="card-body ">
               <ul className="list-group list-group-flush">
-                <li className="list-group-item d-flex justify-content-between align-items-center border-0 px-0 pb-0">
-                  Products
+                {state?.cart?.cartItems?.map((item, index) => {
+                  return (
+                    <li
+                      key={`item${index}`}
+                      className="list-group-item d-flex justify-content-between align-items-center border-0 px-0 pb-0"
+                    >
+                      {item.p_name} * {item.quantity}
+                      <span>₹{item.price * item.quantity}</span>
+                    </li>
+                  );
+                })}
+                <li className="list-group-item d-flex justify-content-between align-items-center border-0 px-0 pt-4 pb-0">
+                  Total Price
                   <span>₹{totalPrice}</span>
                 </li>
 
                 {promoAmount != 0 && (
                   <li class="list-group-item d-flex justify-content-between border-0 align-items-center px-0">
                     Coupon code:{promoCode}
-                    <span>{promoAmount}</span>
+                    <span>- {promoAmount}</span>
                   </li>
                 )}
                 <li class="list-group-item d-flex justify-content-between border-0 align-items-center px-0">
