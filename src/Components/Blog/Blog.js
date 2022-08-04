@@ -34,7 +34,7 @@ fetchdata();
               <Card.Img src={`https://golden.softgenics.in/uploads/${item.image}`} />
             </div>
               <Card.Body>
-                <small className='text-muted'>{tiem.date.slice(0,16)}</small>
+                <small className='text-muted'>{item.date.slice(0,16)}</small>
                 <Card.Title className='mt-3'>{item.title}</Card.Title>
                 <Card.Text>{item.dics.slice(0, 300)}...</Card.Text>
                 <Link to={`/blog-post/${item.id}`} className='mt-3 read-more'>Read More <i className='fas fa-angle-right'></i></Link>
