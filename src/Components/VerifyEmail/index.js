@@ -30,8 +30,7 @@ const Index = () => {
           if (response.data) {
             const data = response.data;
             console.log(data);
-            localStorage.setItem("token1", data.token);
-            navigate("/Dashboard");
+            //navigate("/");
           }
         }
       })

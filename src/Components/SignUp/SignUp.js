@@ -27,7 +27,7 @@ const SignUp = () => {
       .then((res) => {
         if (password === confirmpassword) {
           if (res && res.status === 200) {
-            alert("signup success");
+            alert(res?.data?.message);
           } else alert("failed");
         } else {
           toast.warning("Pasword & Confirm password not matched");
