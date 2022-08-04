@@ -3,20 +3,25 @@ import { Button, Card, Container } from "react-bootstrap";
 import "./style.css";
 import { TextField, InputAdornment, InputLabel } from "@mui/material";
 import LockTwoToneIcon from "@mui/icons-material/LockTwoTone";
-import { Navigate, useNavigate } from "react-router-dom";
+import { Navigate, useNavigate, useSearchParams } from "react-router-dom";
 import axios from "axios";
 const Index = () => {
   const navigate = useNavigate();
-  const [email, setEmail] = useState("");
-  const [verifyEmail, setVerifyEmail] = useState(false);
+
+  const [searchParams, setSearchParams] = useSearchParams();
+  const [verify, setVerify] = useState(false);
 
   const handleSubmit = (event) => {
     event.preventDefault();
+
+    let email = searchParams.get("email");
+    let verifyLink = searchParams.get("verificationLink");
+
     const requestParams = {
       email: email,
-      verifyEmail: verifyEmail,
+      verifyLink: verifyLink,
     };
-    console.log("email", email);
+
     axios
       .post("http://localhost:5000/api/verifyEmail", requestParams)
       .then((response) => {
