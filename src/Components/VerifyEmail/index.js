@@ -127,7 +127,10 @@ const Index = () => {
                               className="table5-td-1"
                               bgcolor="#FFA73B"
                             >
-                              <button className="confirm-btn">
+                              <button
+                                className="confirm-btn"
+                                onClick={handleSubmit}
+                              >
                                 Confirm Account
                               </button>
                             </td>
