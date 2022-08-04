@@ -29,7 +29,10 @@ const Index = () => {
           console.log(response.data);
           if (response.data) {
             const data = response.data;
-            console.log(data);
+            alert(data.message);
+            if (data.status === true) {
+              setVerify(true);
+            }
             //navigate("/");
           }
         }
@@ -102,14 +105,16 @@ const Index = () => {
               width="100%"
               className="table-sec2"
             >
-              <tr>
-                <td bgcolor="#ffffff" align="left" className="table3-td-1">
-                  <p className="greeting-text">
-                    We're excited to have you get started. First, you need to
-                    confirm your account. Just press the button below.
-                  </p>
-                </td>
-              </tr>
+              {!verify && (
+                <tr>
+                  <td bgcolor="#ffffff" align="left" className="table3-td-1">
+                    <p className="greeting-text">
+                      We're excited to have you get started. First, you need to
+                      confirm your account. Just press the button below.
+                    </p>
+                  </td>
+                </tr>
+              )}
               <tr>
                 <td bgcolor="#ffffff" align="left">
                   <table
@@ -131,12 +136,15 @@ const Index = () => {
                               className="table5-td-1"
                               bgcolor="#FFA73B"
                             >
-                              <button
-                                className="confirm-btn"
-                                onClick={handleSubmit}
-                              >
-                                Confirm Account
-                              </button>
+                              {verify && <div> Your email is verified...</div>}
+                              {!verify && (
+                                <button
+                                  className="confirm-btn"
+                                  onClick={handleSubmit}
+                                >
+                                  Confirm Account
+                                </button>
+                              )}
                             </td>
                           </tr>
                         </table>
@@ -145,43 +153,64 @@ const Index = () => {
                   </table>
                 </td>
               </tr>
-              <tr>
-                <td bgcolor="#ffffff" align="left" className="table-main-td-3">
-                  <p className="greeting-text">
-                    If that doesn't work, contact us from the following link in
-                    your browser:
-                  </p>
-                </td>
-              </tr>
-              <tr>
-                <td bgcolor="#ffffff" align="left" className="table-main-td-4">
-                  <p className="greeting-text">
-                    <a href="#" target="_blank" className="contact-lnk">
-                      http://localhost:3000/Contact-Us
-                    </a>
-                  </p>
-                </td>
-              </tr>
-              <tr>
-                <td bgcolor="#ffffff" align="left" className="table-main-td-5">
-                  <p className="greeting-text">
-                    If you have any questions, just reply to the email&mdash;
-                    <span className="contact-lnk">
-                      goanatural2222@gmail.com
-                    </span>
-                    , we're always happy to help out.
-                  </p>
-                </td>
-              </tr>
-              <tr>
-                <td bgcolor="#ffffff" align="left" className="table-main-td-6">
-                  <p className="greeting-text">
-                    Cheers,
-                    <br />
-                    Goa Natural Team
-                  </p>
-                </td>
-              </tr>
+              {!verify && (
+                <>
+                  <tr>
+                    <td
+                      bgcolor="#ffffff"
+                      align="left"
+                      className="table-main-td-3"
+                    >
+                      <p className="greeting-text">
+                        If that doesn't work, contact us from the following link
+                        in your browser:
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td
+                      bgcolor="#ffffff"
+                      align="left"
+                      className="table-main-td-4"
+                    >
+                      <p className="greeting-text">
+                        <a href="#" target="_blank" className="contact-lnk">
+                          http://localhost:3000/Contact-Us
+                        </a>
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td
+                      bgcolor="#ffffff"
+                      align="left"
+                      className="table-main-td-5"
+                    >
+                      <p className="greeting-text">
+                        If you have any questions, just reply to the
+                        email&mdash;
+                        <span className="contact-lnk">
+                          goanatural2222@gmail.com
+                        </span>
+                        , we're always happy to help out.
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td
+                      bgcolor="#ffffff"
+                      align="left"
+                      className="table-main-td-6"
+                    >
+                      <p className="greeting-text">
+                        Cheers,
+                        <br />
+                        Goa Natural Team
+                      </p>
+                    </td>
+                  </tr>
+                </>
+              )}
             </table>
           </td>
         </tr>
