@@ -23,7 +23,7 @@ const Index = () => {
     };
 
     axios
-      .post("http://localhost:5000/api/verifyEmail", requestParams)
+      .post("https://golden.softgenics.in/api/verifyEmail", requestParams)
       .then((response) => {
         if (response && response.status === 200) {
           console.log(response.data);

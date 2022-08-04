@@ -18,7 +18,7 @@ const SignUp = () => {
   const handleSignUp = (e) => {
     e.preventDefault();
     axios
-      .post("http://localhost:5000/api/addUser", {
+      .post("https://golden.softgenics.in/api/addUser", {
         email: email,
         name: fname,
         number: number,
