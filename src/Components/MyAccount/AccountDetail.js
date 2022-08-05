@@ -10,6 +10,7 @@ const AccountDetail = () => {
     const [fname, setName]=useState('');
     const [email, setemail]=useState('');
     const [password, setPassword]=useState('');
+    const [number, setNumber]=useState('234567');
 
 
 const id=localStorage.getItem('id')
@@ -29,10 +30,11 @@ const submitform = (e) => {
     axios
       .put(
         `https://golden.softgenics.in/api/updateuser/${id}`,
-        {
+        {  email:email,
           name: fname,
-          email:email,
+         number:number,
           password:password,
+          
           
         }
        

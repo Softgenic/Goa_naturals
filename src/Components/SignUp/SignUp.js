@@ -26,7 +26,7 @@ const SignUp = () => {
     }).then((res)=>{
       if(password===confirmpassword){
       if(res && res.status===200){
-        alert('signup success')
+        toast.success("SignUp Successfull")
       }else(
         alert("failed")
       )

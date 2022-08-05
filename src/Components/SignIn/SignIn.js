@@ -37,6 +37,7 @@ const SignIn = () => {
               localStorage.setItem("token", JSON.stringify(data.token));
               localStorage.setItem("id",JSON.stringify(data.id));
               localStorage.setItem("name",JSON.stringify(data.name));
+              localStorage.setItem("email",(data.email));
               
              navigate("/products")
             }

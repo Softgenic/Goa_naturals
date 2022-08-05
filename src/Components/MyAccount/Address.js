@@ -1,17 +1,81 @@
-import React,{useState} from 'react'
+import React,{useState, useEffect} from 'react'
 import { Card, Col, Container, Row, Modal, Button } from 'react-bootstrap'
 import { Link, useNavigate, Navigate } from 'react-router-dom'
 import Footer from '../Footer/Footer'
 import NavbarMenu from '../NavbarMenu/NavbarMenu'
 import "./MyAccount.css"
+import axios from 'axios'
 import { Box, MenuItem, TextField } from "@mui/material";
 const Address = () => {
+  const id=localStorage.getItem('id')
+  const email=localStorage.getItem('email');
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
     const [show1, setShow1] = useState(false);
     const handleClose1 = () => setShow1(false);
     const handleShow1 = () => setShow1(true);
+
+    //view address by Id
+const [address,setAddress]=useState([])
+    useEffect(()=>{
+      const fetchdata=async()=>{
+        const res=await axios.get(`https://golden.softgenics.in/api/ViewAddress/${id}`);
+      if(res.data[0]){
+        setAddress(res.data[0]);
+        setfullname(res.data[0].fullname)
+        setaddress(res.data[0].address)
+        setcity(res.data[0].city)
+        setstate(res.data[0].state)
+        setpostcode(res.data[0].postcode)
+        setphone(res.data[0].phone)
+        
+      }else{
+      setAddress("");
+    }
+      }
+      fetchdata();
+      },[])
+      // post api
+      const [fullname, setfullname]=useState('')
+      const [Address, setaddress]=useState('')
+      const [city, setcity]=useState('')
+      const [state, setstate]=useState('')
+      const [postcode, setpostcode]=useState('')
+      const [phone, setphone]=useState('')
+      console.log(fullname)
+
+      const submitform = () => {
+        // e.preventDefault();
+       
+        axios
+          .post(
+            `https://golden.softgenics.in/api/adduseraddress`,
+            {
+              userId:id,
+             fullname:fullname,
+             address:Address,
+             city:city,
+             state:state,
+             postcode:postcode,
+             phone:phone,
+             
+
+            },
+           
+          )
+          .then((res) => {
+            if (res && res.status === 200) {
+               alert("address update successfully");
+            
+            }
+            console.log("response", res);
+            //navigate("/AddHairsProducts");
+          });
+      };
+
+
+
     const States = [
         {
           value: "Bihar",
@@ -33,7 +97,7 @@ const Address = () => {
       const [indstate, setindstate] = React.useState([]);
     
       const handleChange = (event) => {
-        setindstate(event.target.value);
+        setstate(event.target.value);
       };
             // LOGGED IN STATUS CHANGE NAVBAR ITEM FROM LOGIN TO USERNAME
   let isLoggedIn=true;
@@ -88,9 +152,12 @@ const Address = () => {
                 <Modal.Title>Billing Address</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
+                  <form>
                 <TextField
               id="outlined-textarea"
               label="Full Name"
+              value={fullname}
+              onChange={e=>setfullname(e.target.value)}
               placeholder="Enter your full name"
               required
               fullWidth
@@ -105,6 +172,8 @@ const Address = () => {
               placeholder="House number and street name"
               required
               fullWidth
+              defaultValue={Address}
+              onChange={e=>setaddress(e.target.value)}
               sx={{ mb: "2rem" }}
               color="success"
               multiline
@@ -115,6 +184,8 @@ const Address = () => {
               placeholder="Enter your city"
               required
               fullWidth
+              defaultValue={city}
+              onChange={e=>setcity(e.target.value)}
               sx={{ mb: "2rem" }}
               color="success"
               multiline
@@ -132,14 +203,18 @@ const Address = () => {
                 select
                 label="Select state"
                 fullWidth
-                value={indstate}
-                onChange={handleChange}
+                Value={state}
+                onChange={e=>setstate(e.target.value)}
+              
+               
                 helperText="Please select your State"
               >
+                 
                 {States.map((option) => (
                   <MenuItem key={option.value} value={option.value}>
                     {option.label}
                   </MenuItem>
+                  
                 ))}
               </TextField>
             </Box>
@@ -148,6 +223,8 @@ const Address = () => {
               label="Postcode / ZIP"
               placeholder="Enter your Pin code"
               required
+              defaultValue={postcode}
+              onChange={e=>setpostcode(e.target.value)}
               fullWidth
               color="success"
               sx={{ mb: "2rem" }}
@@ -163,6 +240,8 @@ const Address = () => {
                   placeholder="Enter Phone number"
                   required
                   fullWidth
+                  defaultValue={phone}
+                  onChange={e=>setphone(e.target.value)}
                   color="success"
                   sx={{ mb: "2rem" }}
                   multiline
@@ -175,15 +254,18 @@ const Address = () => {
                   placeholder="Enter Email address"
                   required
                   fullWidth
+                  value={email}
+                  
                   color="success"
                   sx={{ mb: "2rem" }}
                   multiline
                 />
                 </Col>
                 </Row>
+                </form>
                 </Modal.Body>
                 <Modal.Footer>
-                    <button className='btn btn-success border-0'>UPDATE</button>
+                    <button className='btn btn-success border-0' onClick={submitform}><i className='fas fa-save me-2' />Save</button>
                 </Modal.Footer>
             </Modal>
 
@@ -261,7 +343,7 @@ const Address = () => {
   
                 </Modal.Body>
                 <Modal.Footer>
-                    <button className='btn btn-success border-0'>UPDATE</button>
+                    <button className='btn btn-success border-0' >UPDATE</button>
                 </Modal.Footer>
             </Modal>
         <Footer />
