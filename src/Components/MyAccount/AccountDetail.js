@@ -7,6 +7,7 @@ import NavbarMenu from '../NavbarMenu/NavbarMenu'
 import "./MyAccount.css"
 import axios from 'axios'
 const AccountDetail = () => {
+  
     const [fname, setName]=useState('');
     const [email, setemail]=useState('');
     const [password, setPassword]=useState('');
