@@ -9,6 +9,7 @@ const WhatsApp = () => {
         allowClickAway
         accountName='Goa Naturals'
         notification
+        styles={{zIndex:"110"}}
         />
     </div>
   )

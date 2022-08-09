@@ -19,6 +19,7 @@ import axios from "axios";
 import LocalIcon from "../Assets/images/local.png";
 import SafflowerIcon from "../Assets/images/sunicon.png";
 import Memory from "../Assets/images/memory.png";
+
 const ViewProductSection = () => {
   // for store all data of product table in product state
   const [products, SetProducts] = useState([]);
